@@ -136,23 +136,23 @@ zabbi-agent：代理程序（上报信息的程序）
 
 http://zabbix-server-ip/zabbix
 
-![image-20211111103246790](zabbix.assets\image-20211111103246790-16365979687501.png)
+![image-20211111103246790](zabbix.assets/image-20211111103246790-16365979687501.png)
 
 ##### 登录
 
 用户名： Admin
  密码： zabbix
 
-![在这里插入图片描述](zabbix.assets\watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center.png)
- ![在这里插入图片描述](zabbix.assets\watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-16365980489083.png)
+![在这里插入图片描述](zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center.png)
+ ![在这里插入图片描述](zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-16365980489083.png)
 
 ##### 语言和乱码
 
 administration>users>admin user
 右上角用户图标，更换语言
-![在这里插入图片描述](zabbix.assets\20201027190120585.png#pic_center)
-![在这里插入图片描述](zabbix.assets\watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-16365980900076.png)
-![在这里插入图片描述](zabbix.assets\watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-16365980975828.png)
+![在这里插入图片描述](zabbix.assets/20201027190120585.png#pic_center)
+![在这里插入图片描述](zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-16365980900076.png)
+![在这里插入图片描述](zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-16365980975828.png)
 
 设置中文后，查看图形有乱码，文字变成了方块
 解决方案
@@ -162,7 +162,7 @@ Win+R打开运行，输入fonts，回车进入Windows字体目录，找到微软
 C:\Windows\Fonts
 ```
 
-![在这里插入图片描述](zabbix.assets\20210208165851713.png)
+![在这里插入图片描述](zabbix.assets/20210208165851713.png)
 
 将msyh.ttf上传到服务器zabbix字体目录中：/usr/share/zabbix/assets/fonts/
 注意文件权限
@@ -225,11 +225,11 @@ Hostname=web1 建议使用 $HOSTNAME
 
 
 
-![在这里插入图片描述](zabbix.assets\watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660136250311.png)
+![在这里插入图片描述](zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660136250311.png)
 
-![在这里插入图片描述](zabbix.assets\watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660137231613.png)
+![在这里插入图片描述](zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660137231613.png)
 
-![在这里插入图片描述](zabbix.assets\watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660137848415.png)
+![在这里插入图片描述](zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660137848415.png)
 
  ⑦.启动zabbix-agent：10050
 
@@ -258,27 +258,27 @@ ss -anlp |grep :10050
 
 ###### 创建主机组 （zabbix-server-192.168.100.10）
 
-![在这里插入图片描述](zabbix.assets\watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660201308917.png)
+![在这里插入图片描述](zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660201308917.png)
 选择默认模板，模板就是zabbix推荐的监控参数。（这样可以缩小选择范围）
 
 ###### 创建主机（zabbix-server-192.168.100.10）
 
-![在这里插入图片描述](zabbix.assets\watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660202000819.png)
+![在这里插入图片描述](zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660202000819.png)
 
 ###### 选择群组
 
-![在这里插入图片描述](zabbix.assets\watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660202768021.png)
-![在这里插入图片描述](zabbix.assets\watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660203804023.png)
+![在这里插入图片描述](zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660202768021.png)
+![在这里插入图片描述](zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660203804023.png)
 
-![在这里插入图片描述](zabbix.assets\watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660205014425.png)
+![在这里插入图片描述](zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660205014425.png)
 
 ###### 创建图形（zabbix-server-192.168.100.10）
 
-![在这里插入图片描述](zabbix.assets\watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660208162027.png)
+![在这里插入图片描述](zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660208162027.png)
 
-![在这里插入图片描述](zabbix.assets\watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660208971029.png)
+![在这里插入图片描述](zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660208971029.png)
 
-![在这里插入图片描述](zabbix.assets\watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660209708331.png)
+![在这里插入图片描述](zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660209708331.png)
 
 ###### 模板Template
 
@@ -292,21 +292,21 @@ ss -anlp |grep :10050
 
 自动发现：自动发现主机并添加到组中
 
-![在这里插入图片描述](zabbix.assets\watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660211033733.png)
+![在这里插入图片描述](zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660211033733.png)
 
-![在这里插入图片描述](zabbix.assets\watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660211669135.png)
+![在这里插入图片描述](zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660211669135.png)
 
-![在这里插入图片描述](zabbix.assets\watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660212312837.png)
+![在这里插入图片描述](zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660212312837.png)
 
-![在这里插入图片描述](zabbix.assets\watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660213228539.png)
+![在这里插入图片描述](zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660213228539.png)
 
-![在这里插入图片描述](zabbix.assets\watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660214428841.png)
+![在这里插入图片描述](zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660214428841.png)
 
 #### 报错及解决：
 
 #####  安装zabbix4.0图形界面不显示图
 
-![在这里插入图片描述](zabbix.assets\watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70.png)
+![在这里插入图片描述](zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70.png)
 
 解决：
  大佬提示php版本问题，yum安装为5.4 ，升级为7的版本测试
@@ -338,7 +338,7 @@ yum install php70w-fpm php70w-mysql php70w-mysqli php70w php70w-opcache php70w-g
 
 ##### 安装zabbix 后进入graph界面 显示Fail
 
-![在这里插入图片描述](zabbix.assets\watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70-163660218931344.png)
+![在这里插入图片描述](zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70-163660218931344.png)
 
 依据提示修改
 
@@ -352,11 +352,11 @@ systemctl restart httpd
 
 ```
 
-![在这里插入图片描述](zabbix.assets\20210208164134554.png)
+![在这里插入图片描述](zabbix.assets/20210208164134554.png)
 
-![在这里插入图片描述](zabbix.assets\20210208164049758.png)
+![在这里插入图片描述](zabbix.assets/20210208164049758.png)
 
-![在这里插入图片描述](zabbix.assets\watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70-163660223252548.png)
+![在这里插入图片描述](zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70-163660223252548.png)
 
 ## Zabbix 构建企业级监控告警平台 2
 
@@ -385,37 +385,37 @@ SNMP 简单的网际发现协议
 
 1、新建模板
 
-![image-20211111154251931](zabbix.assets\image-20211111154251931.png)
+![image-20211111154251931](zabbix.assets/image-20211111154251931.png)
 
 2、创建监控项
 
-![image-20211111154338090](zabbix.assets\image-20211111154338090.png)
+![image-20211111154338090](zabbix.assets/image-20211111154338090.png)
 
-![image-20211111155148598](zabbix.assets\image-20211111155148598.png)
+![image-20211111155148598](zabbix.assets/image-20211111155148598.png)
 
 3、新建图形
 
-![image-20211111155541026](zabbix.assets\image-20211111155541026.png)
+![image-20211111155541026](zabbix.assets/image-20211111155541026.png)
 
 添加模板到主机
 
 然后在检测：最新数据：查看图形
 
-![image-20211111160644405](zabbix.assets\image-20211111160644405.png)
+![image-20211111160644405](zabbix.assets/image-20211111160644405.png)
 
 #### 监控项：服务器网络进出口流量
 
 新建项 IN（新建项OUT，新建项all）
 
-![image-20211111170552282](zabbix.assets\image-20211111170552282.png)
+![image-20211111170552282](zabbix.assets/image-20211111170552282.png)
 
-![image-20211111164757594](zabbix.assets\image-20211111164757594.png)
+![image-20211111164757594](zabbix.assets/image-20211111164757594.png)
 
 
 
 #### 新建项mem
 
-![image-20211111172407040](zabbix.assets\image-20211111172407040.png)
+![image-20211111172407040](zabbix.assets/image-20211111172407040.png)
 
 创建图形
 
@@ -425,11 +425,11 @@ SNMP 简单的网际发现协议
 
 创建聚合图形
 
-![image-20211111173426460](zabbix.assets\image-20211111173426460.png)
+![image-20211111173426460](zabbix.assets/image-20211111173426460.png)
 
 #### 监控项：监控ftp服务
 
-![image-20211111175038429](zabbix.assets\image-20211111175038429.png)
+![image-20211111175038429](zabbix.assets/image-20211111175038429.png)
 
 #### 自定义Key
 
@@ -444,9 +444,9 @@ mysql.questions.zhangshoulong                 [t|801689]
 
 ```
 
-![image-20211111184515078](zabbix.assets\image-20211111184515078.png)
+![image-20211111184515078](zabbix.assets/image-20211111184515078.png)
 
-![image-20211111185909781](zabbix.assets\image-20211111185909781-163662835116850.png)
+![image-20211111185909781](zabbix.assets/image-20211111185909781-163662835116850.png)
 
 ### Zabbix Triger 触发器
 
@@ -467,9 +467,9 @@ key: item 包括自定义的key
 ```bash
 ```
 
-![image-20211111192234039](zabbix.assets\image-20211111192234039.png)
+![image-20211111192234039](zabbix.assets/image-20211111192234039.png)
 
-![image-20211111201253785](zabbix.assets\image-20211111201253785.png)
+![image-20211111201253785](zabbix.assets/image-20211111201253785.png)
 
 
 
@@ -501,7 +501,7 @@ key: item 包括自定义的key
 http://mail.126.com/或mail.qq.com
 2.开启POP3的授权码
 
-![在这里插入图片描述](zabbix.assets\watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163663468125351.png)
+![在这里插入图片描述](zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163663468125351.png)
 3.zabbix设置邮箱
 
 ##### zabbix服务器与邮箱服务器的连通性测试
@@ -515,41 +515,41 @@ http://mail.126.com/或mail.qq.com
 
 ##### 设置zabbix链接126邮箱信息
 
-![image-20211112075406077](zabbix.assets\image-20211112075406077-163667484785953.png)
+![image-20211112075406077](zabbix.assets/image-20211112075406077-163667484785953.png)
 
-![image-20211112080619306](zabbix.assets\image-20211112080619306.png)4.创建
+![image-20211112080619306](zabbix.assets/image-20211112080619306.png)4.创建
 
 
 
 ###### 用户组
 
 运维组
-![image-20211112081040025](zabbix.assets\image-20211112081040025.png)用户kk
-![image-20211112081323188](zabbix.assets\image-20211112081323188.png)
+![image-20211112081040025](zabbix.assets/image-20211112081040025.png)用户kk
+![image-20211112081323188](zabbix.assets/image-20211112081323188.png)
 密码自定义
 
-![image-20211112081431474](zabbix.assets\image-20211112081431474.png)
+![image-20211112081431474](zabbix.assets/image-20211112081431474.png)
 
 告警类型
-![image-20211112081525726](zabbix.assets\image-20211112081525726.png)
+![image-20211112081525726](zabbix.assets/image-20211112081525726.png)
 设置告警
 
-![image-20211112081716621](zabbix.assets\image-20211112081716621.png)
+![image-20211112081716621](zabbix.assets/image-20211112081716621.png)
 
 设置动作：触发器产生的告警
 
-![image-20211112082124999](zabbix.assets\image-20211112082124999.png)![image-20211112082343476](zabbix.assets\image-20211112082343476.png)
+![image-20211112082124999](zabbix.assets/image-20211112082124999.png)![image-20211112082343476](zabbix.assets/image-20211112082343476.png)
 多个条件会有逻辑关系
 
-![image-20211112082514028](zabbix.assets\image-20211112082514028.png)
+![image-20211112082514028](zabbix.assets/image-20211112082514028.png)
 
-![image-20211112082950282](zabbix.assets\image-20211112082950282.png)设置一旦模板发生问题，每隔60秒就发送邮件给用户1
+![image-20211112082950282](zabbix.assets/image-20211112082950282.png)设置一旦模板发生问题，每隔60秒就发送邮件给用户1
 
-![image-20211112083224765](zabbix.assets\image-20211112083224765.png)
+![image-20211112083224765](zabbix.assets/image-20211112083224765.png)
 
-![image-20211112092251314](zabbix.assets\image-20211112092251314.png)
+![image-20211112092251314](zabbix.assets/image-20211112092251314.png)
 
-![image-20211112092308452](zabbix.assets\image-20211112092308452.png)
+![image-20211112092308452](zabbix.assets/image-20211112092308452.png)
 
 ```bash
 {TRIGGER.STATUS}: {TRIGGER.NAME}
@@ -575,17 +575,17 @@ http://mail.126.com/或mail.qq.com
 
 获取企业ID： ww88cfc4e6401f9bb0 https://work.weixin.qq.com/wework_admin/loginpage_wx?from=myhome
 
-![image-20211112101855500](zabbix.assets\image-20211112101855500.png)
+![image-20211112101855500](zabbix.assets/image-20211112101855500.png)
 
 AgentID：1000003
 
 Secret： FrmpVSXIt8kokhQJ9neNSQwti-ZeTcFhWqzifvBWvuA
 
-![image-20211112103325012](zabbix.assets\image-20211112103325012.png)
+![image-20211112103325012](zabbix.assets/image-20211112103325012.png)
 
-![image-20211112104449707](zabbix.assets\image-20211112104449707.png)
+![image-20211112104449707](zabbix.assets/image-20211112104449707.png)
 
-![image-20211112104551488](zabbix.assets\image-20211112104551488.png)
+![image-20211112104551488](zabbix.assets/image-20211112104551488.png)
 
 vim  /usr/lib/zabbix/alertscripts/wechat.py
 
@@ -669,13 +669,13 @@ if __name__ == '__main__':
 [用户] [title] [内容]
 ```
 
-![image-20211112113333108](zabbix.assets\image-20211112113333108.png)
+![image-20211112113333108](zabbix.assets/image-20211112113333108.png)
 
-![image-20211112113513283](zabbix.assets\image-20211112113513283.png)
+![image-20211112113513283](zabbix.assets/image-20211112113513283.png)
 
-![image-20211112113741760](zabbix.assets\image-20211112113741760.png)
+![image-20211112113741760](zabbix.assets/image-20211112113741760.png)
 
-![image-20211112113812492](zabbix.assets\image-20211112113812492.png)
+![image-20211112113812492](zabbix.assets/image-20211112113812492.png)
 
 ```bash
 {TRIGGER.STATUS}: {TRIGGER.NAME}
@@ -692,27 +692,27 @@ if __name__ == '__main__':
 
 当问题发生时，可以通过远程执行命令的形式对目标主机进行控制
 
-![image-20211112115030073](zabbix.assets\image-20211112115030073.png)
+![image-20211112115030073](zabbix.assets/image-20211112115030073.png)
 
 
 
-![image-20211112121444278](zabbix.assets\image-20211112121444278.png)
+![image-20211112121444278](zabbix.assets/image-20211112121444278.png)
 
-![image-20211112121454147](zabbix.assets\image-20211112121454147.png)
-
-
+![image-20211112121454147](zabbix.assets/image-20211112121454147.png)
 
 
 
 
 
-![image-20211112123239292](zabbix.assets\image-20211112123239292.png)
-
-![image-20211112123249323](zabbix.assets\image-20211112123249323.png)
 
 
+![image-20211112123239292](zabbix.assets/image-20211112123239292.png)
 
-![image-20211112123209567](zabbix.assets\image-20211112123209567.png)
+![image-20211112123249323](zabbix.assets/image-20211112123249323.png)
+
+
+
+![image-20211112123209567](zabbix.assets/image-20211112123209567.png)
 
 ### Zabbix Macros 内置宏
 
@@ -755,23 +755,23 @@ https://www.zabbix.com/documentation/5.0/zh/manual/config/notifications/action/o
 
 ### Zabbix 自动发现
 
-![image-20211112135629262](zabbix.assets\image-20211112135629262.png)
+![image-20211112135629262](zabbix.assets/image-20211112135629262.png)
 
-![image-20211112135854785](zabbix.assets\image-20211112135854785.png)
+![image-20211112135854785](zabbix.assets/image-20211112135854785.png)
 
-![image-20211112140423794](zabbix.assets\image-20211112140423794.png)
+![image-20211112140423794](zabbix.assets/image-20211112140423794.png)
 
 自动发现动作
 
-![image-20211112141129553](zabbix.assets\image-20211112141129553.png)
+![image-20211112141129553](zabbix.assets/image-20211112141129553.png)
 
-![image-20211112141400020](zabbix.assets\image-20211112141400020.png)
+![image-20211112141400020](zabbix.assets/image-20211112141400020.png)
 
-![image-20211112141542190](zabbix.assets\image-20211112141542190.png)
+![image-20211112141542190](zabbix.assets/image-20211112141542190.png)
 
 发现的主机在哪
 
-![image-20211112141644037](zabbix.assets\image-20211112141644037.png)
+![image-20211112141644037](zabbix.assets/image-20211112141644037.png)
 
 
 
@@ -793,11 +793,11 @@ ServerActive=192.168.0.110 主动模式 zabbix-server-ip
 
 systemctl restart zabbix-agentd
 
-![image-20211112142240335](zabbix.assets\image-20211112142240335.png)
+![image-20211112142240335](zabbix.assets/image-20211112142240335.png)
 
-**![image-20211112142443866](zabbix.assets\image-20211112142443866.png)**
+**![image-20211112142443866](zabbix.assets/image-20211112142443866.png)**
 
-![image-20211112143132350](zabbix.assets\image-20211112143132350.png)
+![image-20211112143132350](zabbix.assets/image-20211112143132350.png)
 
 
 
@@ -872,7 +872,7 @@ $1 = 前方第一个[方括号里的内容]
 
 ```
 
-![image-20211112162317547](zabbix.assets\image-20211112162317547.png)
+![image-20211112162317547](zabbix.assets/image-20211112162317547.png)
 
 高级用法
 
