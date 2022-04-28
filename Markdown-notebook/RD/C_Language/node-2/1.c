@@ -3,18 +3,34 @@
 //
 #include "stdio.h"
 #include "include/function.h"
-int main() {
-    int m, n;
-    scanf("%d%d", &m, &n);
-    int swap, sum = 0, cnt = 0;
-    for ((m < n ? m = m, n = n : (swap = m, m = n, n = swap)); m <= n; m++) {
-        if (isPrime(m)) {
-            printf("%d\t",m);
-            sum += m;
-            cnt++;
+//素数
+//int main() {
+//    int m, n;
+//    scanf("%d%d", &m, &n);
+//    int swap, sum = 0, cnt = 0;
+//    for ((m < n ? m = m, n = n : (swap = m, m = n, n = swap)); m <= n; m++) {
+//        if (isPrime(m)) {
+//            printf("%d\t",m);
+//            sum += m;
+//            cnt++;
+//        }
+//    }
+//    return 0;
+//}
+// 数组
+int main(void) {
+    int a[] = {
+            234, 23, 4, 3, 43, 24, 23, 43, 24, 23, 4, 32, 42, 4, 32, 534, 563426, 2,
+    };
+    {
+        int i;
+        printf("%lu\n", sizeof(a));
+        printf("%lu\n", sizeof(a[0]));
+        for (i = 0; i < sizeof(a) / sizeof(a[0]); i++) {
+            printf("%d\t", a[i]);
         }
+        printf("\n");
     }
-    return 0;
-}
 
+}
 
