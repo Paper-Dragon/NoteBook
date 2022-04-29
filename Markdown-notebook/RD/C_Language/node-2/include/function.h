@@ -18,3 +18,16 @@ int isPrime(int i) {
         }
     }
 }
+
+int search(int key, int pInt[], int length) {
+
+    int ret = -1;
+    int i;
+    for (i = 0; i < length; i++) {
+        if (pInt[i] == key) {
+            ret = i;
+            break;
+        }
+    }
+    return ret;
+}

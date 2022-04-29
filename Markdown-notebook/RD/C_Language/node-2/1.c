@@ -18,19 +18,42 @@
 //    return 0;
 //}
 // 数组
+//int main(void) {
+//    int a[] = {
+//            234, 23, 4, 3, 43, 24, 23, 43, 24, 23, 4, 32, 42, 4, 32, 534, 563426, 2,
+//    };
+//    {
+//        int i;
+//        printf("%lu\n", sizeof(a));
+//        printf("%lu\n", sizeof(a[0]));
+//        for (i = 0; i < sizeof(a) / sizeof(a[0]); i++) {
+//            printf("%d\t", a[i]);
+//        }
+//        printf("\n");
+//    }
+//
+//}
+
+
+// 搜索数组
 int main(void) {
     int a[] = {
-            234, 23, 4, 3, 43, 24, 23, 43, 24, 23, 4, 32, 42, 4, 32, 534, 563426, 2,
+            32, 45, 3, 43, 43, 24, 3, 42, 4, 23, 2345, 46, 6,\
+            45, 6, 6, 2455, 6,
     };
-    {
-        int i;
-        printf("%lu\n", sizeof(a));
-        printf("%lu\n", sizeof(a[0]));
-        for (i = 0; i < sizeof(a) / sizeof(a[0]); i++) {
-            printf("%d\t", a[i]);
-        }
-        printf("\n");
+    int x;
+    int loc;
+    printf("Please import a number");
+    scanf("%d", &x);
+    loc = search(x, a, sizeof(a) / sizeof(a[0]));
+    if (loc != -1) {
+        printf("%d is in location %d\n", x, loc);
+    } else {
+        printf("%d not found \n", x);
     }
-
+    return 0;
 }
+
+
+
 
