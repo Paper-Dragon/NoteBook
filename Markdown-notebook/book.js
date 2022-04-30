@@ -41,8 +41,8 @@ module.exports = {
       "minTocSize": 2
     },
     "donate": {
-      "wechat": "https://gitee.com/PaperDragon/note-book/raw/gitbook/Markdown-notebook/image/wechatpay.png",
-      "alipay": "https://gitee.com/PaperDragon/note-book/raw/gitbook/Markdown-notebook/image/alipay.jpg",
+      "wechat": "https://s3.bmp.ovh/imgs/2022/04/30/608cd8e1afcb7690.png",
+      "alipay": "https://s3.bmp.ovh/imgs/2022/04/30/bcc87e0a2a510deb.jpg",
       "title": "",
       "button": "赏",
       "alipayText": "支付宝打赏",
