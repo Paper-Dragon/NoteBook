@@ -12,10 +12,10 @@
         - 基础算法
         - 欧几里得算法
 - note-2
-  - [include/function.h](note-2/include/function.h); [1.c](note-2/1.c);
+  - [include/function.h](note-2/include/function.h  "title" )<a id="jump_8"></a>; [1.c](note-2/1.c);
     - 求素数
     - 数组与大小计算问题
     - 搜索数组问题
 - note-3
-  - [1.c](note-3/1.c)
+  - **[1.c](note-3/1.c)**
     - 数字计数器

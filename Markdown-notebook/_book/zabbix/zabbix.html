@@ -1,6 +1,6 @@
 
 <!DOCTYPE HTML>
-<html lang="zh-cn" >
+<html lang="zh-hans" >
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -8,7 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
-        <meta name="author" content="作者">
+        <meta name="author" content="JokerDragon">
         <meta name="identifier" content="图书编号" scheme="ISBN">
         
     
@@ -29,7 +29,27 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ancre-navigation/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
                 
             
                 
@@ -38,10 +58,6 @@
             
                 
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-lou/lou.css">
                 
             
         
@@ -79,98 +95,38 @@
 
     </head>
     <body>
-         
-<div class="donate-modal modal">
-  <div class="modal-header">
-    <div>
-      <span>
-        <img
-          id="modal-avatar"
-          class="modal-avatar"
-          src="static/wechat_logo.jpg"
-        />
-      </span>
-      <span id="nickname"> JokerDragon </span>
-      <p class="modal-close close" onclick="closeDonateModal()">×</p>
-    </div>
-    <div class="message">
-      <div class="tip">
-        <i></i>
-        <span>随意打赏，但不要超过一顿早餐钱！</span>
-      </div>
-    </div>
-  </div>
-  <div class="modal-content">
-    <div class="modal-pay-way">
-      <div id="wxpay" onclick="showDonateImg(0)">
-        <input
-          type="radio"
-          name="pay-way"
-          value="wxpay"
-          class="zs-type"
-          checked="checked"
-        />
-        <span>
-          <img
-            id="wxpay-logo"
-            src="data:image/png;base64,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"
-          />
-        </span>
-      </div>
-      <div id="alipay" onclick="showDonateImg(1)">
-        <input type="radio" name="pay-way" value="alipay" class="zs-type" />
-        <span>
-          <img
-            id="alipay-logo"
-            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAABkCAYAAAA8AQ3AAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAACAASURBVHic7Z15fFTV+f8/z7l3liQkISuriiJuEYpGgbBOWAJBcakOKm6oLWjr0vbbfrv/HPptq221rbXVirbaIosZxQUhErawI4iKEpB9SSBkmxCyzHLvPc/vj4Q9M5kkM5ME5v16XXHmnnvOM5M7zz3nOc9CCAGXLDne/2itMcaiiBskkOGTPBCE1FD0fQFSZybepBLt9mpyey+rZfXhO+J3dLRQUaJ0BaitFzIzJb9bPbIemKFJTGQgGQQllMJd8DAMAurNxMtMJP5+U2r3dYXZpHe0WFGidFbapLCS8lyX1hOe1xg5DCS3tZ8opyHmEyrxwh4xpt+XTEnc09HyRInSGWmdosnLU9JN48ZVavS8BAa3+vooLaELxm6TwE+zUpM+ic62okQ5m+AVzipW4yqr73EzPy9BfcMo00UPASUJJvE/OVrie86pZHS0PFGidBZEUK2YqYeryuaWmBVVVuGHgb4nfPy35VSd09GyRInSmQhqhhWfd+Lqeqm9JwVlhFugKGcgUZmiylFVd6d+09GiRLnoILvd3uKExul0RnQF0KLCytrAMVtLXG/6QPdEQqAoZ8Fm8EJfWvK96Nz2LBo/fvwlhtv9OADVXyMGKNZqfX3JihW7IyjbeTgcDlGwePFIBkb4byWhkPLeus2bwyYrMxOR/58gM4OIOFzj+yPPbldePnz4eYb8cWAVwTpL3LN+y5aFkZLN7811ku3HjudooMmRECbKeZBP0p3dKlx31AHvdrQw/rDb7dZjhw/NEYoyOlA7ZoYmfR8D6FCFtWLFih6qIt4G0SX+2jCLreY4nh1GMWhM1tDnRg0bOsNfg1FDh+4cOXLkrevWrasOoxznY7eD/vqXG0XLFiNVY20QgIgprIAS2fOKzA2a/AkD8ZESKMo5CAgv8HhaXnm3jhbFH3GaZgFRQGUFdJ4tZdUwHiQhehMRmjsAQAjlH6NGTQ6rohCqahVCJPk9FDHcGv3tnUVAhbXK0meQBF0fKWGiNI/GNIpVU2ZHy3EhcIfN1l1n+T3Av5MzA58rVmuBw+GQERQtShAEVFh1PpkTnV11Agjm45qR29FiXAhU+3zXEtArYCPGVykpZRUREqnTsWPHDiJwUBNi4gBGuDAQ0Iblk2wHUXCuD50AklxPkmuJgzBUCiiGQmnoPCuVgAgSA22r2FqYTZ6OlqWrYrfbzWVHip8hIrO/NszssZjNf3Y6i3yRlK295NpsfWvq654j0f7befknS4QgkRGMKlJU5dsjht58RTuHLDEpprlpffrsbGnXMaDCkkx9usbPGSAJGWvImT/pnfqOw4YWt1pzNtSlFRz2HYJC1kjI114M8DWfVlSnAzjc0bJ0VSqPHh0Axj2B7mkGv19aVbUrclKFBkmUqKrqA4F2HcMBEV2vKmq7zUZSGk+UlxY/CGBRoHZ+Z0/2vDwFgjutofdcTOClN/dOfc+RTTqIuKUjTenmARDxLeO2YjAluaHGdLQczVFvMgU9CxdSdMiMPTMz02RI4xctuRGoQv1dUVHXml1dCJAQidLgx+x2e8AECn5nWBl2OzudrtBLFiYk4LahUC/saEE6PzR2zJhJrPuGharDiqMlsSIYPUQEj+Z9KHtEli1UY5MQxSm6nOvcuNEdqF1SUlIvX31dSzOBedaEhL2hkq0zwuDdYFoHcAQf1qQCuI0ISQFbMTLHjx8vAi0LW/TDinLhYei+bJb8k0gvHxqh6TKEPxVidtdYLJsAbPfXxm63K8eKiycLQYP8tWFmyYy1+fn5F/TsiiVWjJs08clIjnn06FFl51fbBhOJgAorGHNyVGFdpHSMsgoHFCOlNAVqUVFRkUYEvw6aAMDAgRSrdQHOMRNMmDCht9TcN4ZA0LPHY5CuGVe29FeQRBPHjRxZChUwdN1TuG7T8vaNyzLS7hoOhwM7tm0LyWMqqrAuQpjpE0PXS0PVnxAwEYk/BKMEWfKLBnMJOLht85ZQBRu61VQcoAlB994E4Aa/MgG6IPHKB4WFx889V1dTNdCkmAMagttKS98XEUHXtUZvewMwDKMYwKXhkKWrEFVYFx+8ZsOGlQBWhqrDabfcklRcVdmywmKG2Wr9eHlhYWGoxm6JnJycWE9tjb0F75zDZDbPa/6U2qGz0TPHvnBmxW0nqrCiRBQiI6I7s5rbPRgQkwK34n+vWrWqrFmFoOswCB6EWFkQACIyEVHAXTHJ7GVuNJCz5A2B2jKzRMspozoov5qULU2qGWyUlpYGbBRVWFHajdlk6pTuITabTdU97seEEOn+2jCzSyWx1l9WhI2ff76UmWNDLdusWbOocNmyl5ilXwM4MyPGZL62YM2aA02ZHfx+zwmpqYdq9u17iIiuCjiw2RzOgO5mefbZZ7lgyYdPGj4Z+MEh5JqioqK2O45GidKVkV7vQKLAmUaIqFw3jNJhgwf3MwxD3JCVVTx79mztnDZhUci2kcONljwBpZRGMDI4nc46AHNDJlwIaZJ9Y9MRmC1fBDwdVVhRLlgYcpIg0aOFZldC0DpzjJWYJY4cOXI1gMimc4kSNJFRWAxJkrdDcvgCSiV/XVRhC/pJKGrKDNJNqyClJSzyEBQodAMTJYal/06ET9NaYeCJzC03fvz4RF993X1BNFWJKB0AmAkX/B+rixORu4fA3hjQL+qnJS8J3xiAsxVT9zkTe9Yz863hkmfmVqj/+qaqwDCTLVxjhILJY8deVtNQO1Rtx7KnxOWKCWoHiwg+n3vEmKwhfm1KwWCwrOh1yeUbnE6nXydPX3393QCubs84XYmcnJz0uurqHOpC4WbnwsyenFtv/dDhcPjNrhupJSETK0ZHpHsNRDjlseexlIxOn0/Jp2mDFVLeac8uGJ3x3xZh+h0Cb4wFvpwZYH7J6XQW+mszY8YM067tXw0D/GdlaAt2u91cXV3dV9H1Znfi6jStbP369fVA5P/upGlpqqrM6cquD1LKEgAfBmoTtWFF6VoQ1SmqeXGgJjt2fHm5gPJgqH+6JSUlaQrLjaJpCXmeaMzLskeO/Mmqdeu2hXjoi4Jg/l6RUljEZFxUZewz0kALj4pOX1RQMaEUBh0F0LujZQkKlnXJMbGf+zvtAEQhKz9kIOS2yYkTJ5au/GTJeiJxZ3PnFaIJhmE8YLfbt0e6mowpLu641+f5a7CV+1pCsnEJge4K1KYpQuA1AFqgdsFCgmquu+66gKueiCgsBsX4BBZa51eGbaqsSPpw8rTk+50UnI54dF1F/LxD4hAEhyVly3NlLkg1tEuScLB05dot9oyMyyvS0jo4UaM7lb20CkRXBmxG9Pf3V6zwm0Zkw+jRl0nN991wLI0cDoe0jRhRIKVxp7/+mWV2SUlJIoCIpjr5+OOPjwD4Uaj6m5A9arTXo93VQjoe38DMG//n5ZdfDlnAeOGGDR2vsECADph1JXy/CZXYlFFYSM4g23vVVPIIlxWK6BIJ/MIIOztB/qfskSP7MPSA6bgl8yEymfPgx7DscDhE4bJPhrfkPd4edKIlAjgIoF9z54lokNUkhgEI2wZTAEJmk2VWjBYnTsxISUkxQjluS3SZ9MdRLlwcDodqGNojIArsM8VcFBcX5zfj6oYNG2JY8rcAXtfcwcDm9sraq1evY2Ds9HeeiEyGzxiOLpJ6u6sRVVhRzoVaOELOhsKCawCyB2rD4N0x1pif5ufne/21GT58uNcSnzjL0i1hUnNHXEzsI9zOvHVOp9MHopZqRH47Nzc3WrwlDER3CaOcwjZsWD9dyj8FaPJlcs+ef/voo49qQzamzaZ6vO4niURyoHbENFeJidkTqE2T/45fH57csWP9KrvWICzYIH3YT0DzxRcIl9TX1AwDUBCK8aKcJqqwopzCnJBQYdTWJBNobHPGVma+u7qiTGZmZr6wdevWkOwMmYErPaDpARux3MUmizPQ7CqSpKX1PVRWUnIQ1LzCIqJuLOUNiCqskNNhS0IzgGQCUkJ0JAHc2tCcUI2dQkDIw/k7gIKCgvp4S8z9TFjX3PmmysjTExNjBzocjnbfO3fYbN0b3A3vEpFfFwRmBjO92aNHjw4tb38mTqfTzVK+Hmh5ycSjnnrqqfCEfV3EdMwMi4F0wSsSOTlgJH1rSOsB6cwO3u1pzsSe9Rl5Rd3B14Vk/GOy6q8NJJ7o6qbWJYWFx0ZnZb3K4BuJ6Dw9TKCrtAZtfmFBwT0AvmzrODabTa32+aYpipIRsCHjvcS0tJcj7dfUEorJVCINv6tPEImbv/n88xQARyMhz4wZM0zV1dUhe25WlZe3aIMjItq2bVuy3W4P2cw3Ly/vRKAIlA5bEhIgi6ZSh26nF03NCMn4zEzmeaQgYGbxrsM1Awc6d23f3p3Bz1Mzlb+FoKskyzkjRw55YN26za326nY4HGLVsmVZzPLFQH4+kuV+hcSvFi1a1NDaMcKNxrxNIVoJYGyzDZhTPaw/BuD/IiFP6cHd/Y/XetZQiJ6YRDAFkcLZWlVWWoRgChcHAbMsnTVrViYC2CGju4QhIOmD44lQaEhHyxEqZs+erZliY+cyS78ZLonoetLpP7bhw1tdRLOwsPAqZmMWkf8itszsM5ksDxZu3Ngpi5pOmDChng3/y0IiEpDIbKnOXqjwaaQQkEYUmgNA9yCGJQKlhmpMAgJuvAAdOMOSBHKsYhUo7CgR/FJks3GwHvMAoBhGT03SYISgTHhnYfny5TW2rKwnDcmvC9F8xgkhxLcMKedmjxgxbdX69UXB9Dt69JDLDY/nZSEo218bZtaY8Y8r6+u3rOyk2QccDoccPzprl0/zLx4JmlhfUZEG4Fik5Gqv28ZJWhMpEKoxGSg/evRoJ0yRTECZjsH/d6TqfdC3Ot0NGTenajkcjr8jyHJIhq5kQe10H6PdFG7cuC87O/tx3e1+Qwga2VwbIWiQbuh5o4cNu3vNpk3fIICCGZuV1UfX5D+FoPH+2nCje/Vr3dPSfjV70aKQ7ESGDXPcftbqPiVgqL8WdV73XQBeQZgVr7Bai+F234UQzeeIaaBk6WgpNMekmh7WpBYS0woZtPO1117TZ8/2n8W5w2ZYuqBUmCls+ajaDMMwIN4JVlll5RXHbNHl1AtpdnUGvHLlyt25Y8d+p8Hj/g8RNfvDFEJcx8wfjh897PaRYyftaq7unc1mS9U8nreI/CsrAAYYs3vEdfuVsxParc4lKSmprqy+9kug+e+FGkv1DLPb7f8M96ZBfn7+CQALQ9XfeJut3Of1OAK1YWZ91Lhx7wbKX9VaWprZRW1Y52Kwb1CKkh9s8616zGW6nxv2QoCI+JNVq3Zb4xPuY2a/CbeJaIDPxx9uWL36BpvNdtaD8LYRI+Kl171QCBrvP2iYIcGvxCcn/9q5fHlNiD9GWHA6nYZJMf05oHsD4wF3VVXPCIp1QRNVWOdgFfho46TEoCPtY1XlZihooQR3l4cLCgoOWOMTbmfJfuPxSIgBHo97Pmuep6ZMmRILAOPGDe1RbejLicSowEPQCwlJKc8uXry4S+VTV2JjjzCz39hCADheX5uDaGxhSIgqrDNh6PAaQXsn21YdsNZq8uGL5VYsKCgoMauqnVmu9deGiAawxB9rKitfto3M+r7WIJxCCL87qE0zqz/GJyf/vqspKwAoKChwA/yWlLyiuYMZKwQpl2VmZnapqBIOUWXuUNOlvsRwQ5IrL03WPwrWpfrLo3HXsIJWb+t3YXj5unWHR48efT/7fH8hwng0U2SDiFQAj0qDHw3sZ8UShBdiuiX8ZvHixfXhFDyMSMUa+zdUVLwSqNHWoqKQ2XkiQWdLZ36SjldYgb6WSOp4BqzA/N1TelcGe4lPKLfLllKiXICsWbOmODc399GGmpp7meUfyU9loIAGVMY3qkL/x6plYUFBgSdcskaCwsLCLi1/VyKyCosBArwkuYIlu0E42k0RmxRBRyRQY0hDCkBRGAkgSquTPEg3cC0YJFRhIkKiBJIYCLkyI8knWJcfBds+M8+V+IWB2y+W5eC55Ofnn5gxY8abO7dvL2OWjwuiFsrBn0ayLFKE+p3UXr23dLaQmyidm8iU+WL4YMhDFsJaklh8nTVm4xVGbLlzKhnB5Cmx57HSEFuTUFRnXF0ucT0JTtUljfZJXA0FKRCUwIx2RSWYgOVTHkhd63wwuPY7NDmOVbrmYralzp49W2PmjyaPH7+nvqF+UjDOhswMs2r+7ahx4zY35/4Q5cIid+zY/pqu+41xVBRFWuLjDwebsiisCoskw8xYaTb47yOHpizJH0BeANjadASLcyoZaKzGu6npAIDnHQ4WK4bUpXzu8j1kKJxGwGgPKIsFtUqPkGSYgflBe7czk29u1ZNMFJZ88F0FZqacMWOu9GjeXwkKbv+GiODTtZkrP/mkYcaMGfnnloWPcmFR7/H0hzQWkhBxzZ33aT643e6/zZgx48fB3AvhUVjMMEvkJ7D8Q+V9qWu8RBy0Y1MrcDhIAqgA8OLJ93KWHovbWGWZ4JZyjKpigoeRgRYUmMLIv7qbd0mwSjR1QWVmlUnc2C7huzhTbLbUMcOHT2fIJwSJ5hPZ+UEQ2Rhs27ntyzWTbLaH49PSiqNLwwuT5PT0za6yshMAmlVYRAQG31VU9MVsAC2Gd4XcrUFIWRGv8yPXaJq9clraakR4t6FgYs/62mlJH+j3J/8oXhjD+lnF5fEGf9dsyDnCYNd5JS4lI5Z53tYpvYP2rG5g8T3GxVnV3GazdR8zfNjTx72eTUR4LpCyCuRQSUQQijKqwevZVlZS8lubzXbluQ6nUbo+gwcPPiGl/E8LzfqYhOmGYPoLpcKSquTt6QK31k5L+c9XD/Xs2G1qIq6Yml538M6kg7XTUt4YOCDlMTNEZjrxJIuBV1WDd0KCVQMFqapYFGy3qXkVV7sJd7WnUnIXhEaOHJlkGzHsO4bHvYVBfxZE/eFnhi4lbyPiJ6zWmJsk+PfcWNG32X6JKIEIP5Nez2rp8ThGjx59bVRxXTg4HA6pKMrhlh5erBuDgkkKGbIbQ5W8o7eKew/fnRpU1H6k2XoTaQAOeoCDYC5Inuvq41Xk1d0VpXL/1KTgQkGYRf386qdZPT9H1IWIw+EQG1es6OHW9dug69+XhIFCBLinGEUS+KcpNnaRlPJIwapVusPh+GL1smXzDCmnA5hKhEubu5SIeoPwS9Z89zN4/rhRoxb0v/banVEbV9eHVWM5dCoGcIm/NhK4bePSpc+jhXqOIVFYQvKBFOC7h+9OCaisMhdx7L7KY+lKQmwaa/r1NRITDIO7gZssTAQWRHUxivw8UdCXbkOUQ/ccvyIJla1ZsrUIEbuAEgAlrZkG9nS6rikXmIYLfHplt9vN1aWlfVcsXTqZwI8CuIECBHczcxkR/qjExL6TLWWZY+XKU06STTuBRQ6b7eeF8P1Heo2HCXQfiPo01xcR9QPo55qu3ffN118vGD06K08Iy87CwkIvOmmqmSiB6dHj0pJjxcWHSPhXWABd4gWGA/g4UF/tV1iS62J0+auyB9I2NXe635ts1eMq+lZqyv1f11UPM2Isgw1N7wkiQAGg0jndAfVQ7qsHQIJhslhKttfha9PbleU9zPzmceg7enarO7F38oCIFiTIfI1NX2mVz0iTEkxisy6H3W5XPB6Ppdbluq68pOQnDL5GEA0KsFuhM/MByTLPTMpHKX36bnU6ncZKP40dhYU6gO12u/1nrtLS1zVdn8GER0RjGubzEvk1Ki78jHVMk/B+MWbEsNdiE5LWDx06tO5CcYdgvjhC45xOp9s2YsR/mGWzKYoAoPE+oMEIt8IyGfzRNfWpzvN22JgpZX5V9lFy/dhnKNkwnZldMsAE5YxTTAQf0BcK+kIhlDA/DMPsOlyTtDZxftX862PlkvW3pdZFwrB/JK5qsCbEA+EeJ9LY7XZzxZEj15UWFz9JxKkEup2I/Dq1MbNk5r1CKP+IU9X5+WvXVqIVM5+m3cDdAH4yxWZ7vk735hiGfBygkdSMIxcBlwK4lCVurz/uWrs8P3/znTk5f3y/oKCiNeN2NqZMmRJTU1meSEG6g7QEM9PMmTNDZuLZt2tXiy47RER79uyJnTFjhrultnt37arRfd6A0Q+6NB632+0vOp1Ov/35vdrBLBxOVx3g39dISD6aDJldeW/aWeF3l88r61FKyp88JO6BgLmFz9J2dDashLfjmP87Vk1Z5wxjjviBHx9P2l2tPSLMZHNLugVKiO60YGFUg9QsTE1od8rgBx98MK54z54sKTCJma8n0MSWnD6Z2SDCHIJ4Ma1Pn32BbqrWMmXKlNia8nIbKWRnRi61EO7EzDrA/yKIFX27d186tzEXVIvkjh3bv97dsNffZ5VS4pKU1OR5IQ7Czh4+/C4QTrnBMEExDNlTED0c6DqWcrdJ8vAVmzdXtTRGjs12fYO74etQyEtoqpAUyF7ZhJSyxYyjTdWWWsx1xcwVPsaQTZs2HfTXpu0amQGTId95clrqXse9p9+2/Kvi6hKieZoibkC43cBVUjzAw16me97XXftj5le9kSD1D8vu77E/1EN9fWv3agB/zsjjv9dZ6vqX1vvuYRNP1phuhtJ1TFoZGRnmA7t2LVZUZRgBlhYySgLgjUTKqyZF+TS5V6994fCXaioyscRmsxUowneZ3iDvAzgLRJObk68xuJpmMvOjxcert48YMuQf6zdv/leo5QoVPl17Q1XV06YEBkQwZlBBXyTX1gXlAU5ELIRoVWrjUBBwE6b1pFoVuhvAC/4atFlhEXNdvAmvOYhO2RP6LzyWfthD/9aUyDpVMsGqq3SdznjBS6an4ha4nArLhT/albKlybk0ZDRV+tkJ5lmXzqt5qc5sXFuv8UMaYawkGtDZrRJWq1UFYYy/85L5MIEPgrFFNZnzfMx71q5dezwS0fuFjXaufQ6H4/dbFy2yemNiBrp1fQwR3wrGjed6SxORCcANYHkPgE6rsIDWrzKklMWKUJ53FhUFtUvKzNRYw7HLrpIBgHRdjmDmF/3db21WWCaJ9eY4rfjk68zP2FS0u+oHmiKGt7XPdkMQknB5PeN/BYnHfj+ganXy/KoXhyYmb82fTKE10hPx4cZwoQ0OB2966brqvizlDfU6fmAIGiCJeoJClWE7fDTNovYDOChIeT3GYtle43Yfzs3NPWXcjvRTu2ncBgCfOhyOLfn5+f+MNZsH6pp2IxE/BEY/EiL1tPydHMbfDMMYEdyCg0HgdUqMaV5h4YYiBGunM5sPKLo+qqs7sEnDCDjBaPPnE0Rbj57hanBsf0WGVyhPdopYYAIkkOIziW9XM8Yuq65enfx21fOuB1Ka3clsL02zuMMADtvz+OMVcF2tSR7aYOARVjBAgnp2iu8FgNlsZhjGfkNKnwDNFSaxVxjYEpeSUnpm/b9PP/20I8U8RZPyOgFgPYANt40Y8VYN+64RwnStpvtGE2gUU3BVaURMjEs1fNP8njcUSrniipDnkp9wyy2/fPbZZ4NSPLNmzaK27IIWFBTUA81X7O5qBHpAts3oLoEMK2cU3ZGyAwDATJZ5rr94TfRMCOQNPQxvnE7frZ/W/e1IhgrZVrH6TYXrqloDExsMfgwm0YvBSW2asoTO6E6jRo1KHTx48ImXX345oq4hoYaZaerUqXGlpaWmdevWdblspVFaT9tmWAbD7aMjJ19eOu9w91Kl280hkyqUMDjGMF69pu7Qgq10U0TXD4XZpAPYAWAHmP96tbOm32Hd+LYBeZdG4iZWoCLy+Wl47dq1FWvX+s1y3GVosnPUdbQcUSJH2xQWA/tjkk4ZAw9Tt94ABodKqFBi1Xh2Dy3151tnpnVsiAcR7wIOoDGzxIuDFtam76r33SdUDPUB9xkCF7oDfZQo7aZtCosAHC09/VozzDApsZ1sh4xNPnYmJyb/6OAU6nQpbL/6dnw5gJdsq1jdW1HyZLVmzfVA2ISCIRpjUFdylYgSJVKEZFPBrChejVDHQLdQ9BcCDFWTH15iFjP2T6GgjaipcyquricxeFRa8scFEyki2Saalo0uAHMdzPP/7DzRPRF8uc8wRjcwZ7Og6w1GP1DrkhJGiXIh0uYlIXr3OvXy8nhZvN+tbNGA7BDJ1XYYhsnAgvQY8zP7v50QdEHOvnmVfcoMvKYJGrbSVbUpfkHVf3oI38d7p/aqCKe4Z9Lk0+ZqOrZmvvbZ3/cl9O9jsNbXLEQ/n15XFZQXYZQoFyht2yXUGUPSTambxyc0hgwwU+y8qp83mMTvwidqy5BkzSzxlhneX9ROC776TUZeTfIeQ/+TT9Cjp74RCaiMLwTjvTjdM+eZB3uVnOkkGyVKlMjTNoXFwGXEww9NTdl48q2UdyuvceliDQukhUnWgJDB9XHgv5gN+pPrgZSgYsuAxpQ3X56o/qOhYgYIpvMaMKBKuUcw3k1S1df7VieWbJ1JF2WOJpvNpqalpZ20VBphSmtMdrv91N+hoqJCNnnAh5XMzEzTFVdcQQCwf/9+3rp1a7v/xjMyM03VTX0GIgKfkXJzc83dunXjuro6ys/P9yEEgeMOh0MUFRWdWqUF+TnO+vtixw40efMHJU+bg59NmnxVm5by/ZN+TQ4Hi99fWTXLZ6JfRto1Whh8NE6XT0yyrFrsnDo16B+RbRWrG466nvOp9DSo5fAJkqg0MQous8jfJlQc3Lt15k0Xk+Ii24gRj7KUEwEQhHhl9fr1q0I9SE5OTpynru7nRHwVJEiyXrB205bXQz3OmdhsNhW67xlmHtr01hdXZwx8oT3JA5vp0z8SHl3KN3vHx3/uXL78BEKchSIrKytGhfy5EOIaaUgRY7b8sGDNmuKWrwyM3W6PKS8ufgpEN0EAbHCRsFp/F0hpTZgwobe3rvavJBq9uyHEy+m9e28I9uHXdqO7oJuSnNUJ1UAN0Ojtnfka/+brBFdfn4KHEQkTMUOaJRb1UrQfHrqv5wFnKy6157HyT6fipwAAEMZJREFUwZGqlzSzmIEgvwcWSPUB0/b4aJopvt/K5HlVfxr3reSVzozwZYnoLNhttrhjHvczQoiBAMBS7zF9+vSNb731Vkh3YH0+H4F5GIBxDAYzykPZv18YN4Bhb/zf9mcYqa2tpXir5VSfASFAEfTgsbra5aOHDXt57KRJSxwOR8hmXFarcp3h4V+DG4OVvT7fBgB/QTsVo9Pp9NiGDz3KoDvBUBk8yvB4FgH43M8l5K07MY1I2JtG3mWKiTnUmpl6mx0RNKJMAZl55ntbZ5I2XDGeMvnk2wDCN8VlQDV4TzdNf3rgif32Q1N7HmjN5SPWcfwHWtUbmlnMRFuUtiBoqhjrUuij97a5PoudX/XoJfMrere6ny6EyzAuJaKBp9+hy0r27x/QcRJ1LZi5RJD4rxD05pkHEc1l5i+ICEKI8SC8tbqg4PZg8psHw4zMTJPu0X525qJHEibbbLZmq9i0Ek7rc+l7UsptACCE6EnAw3a7vdkY2tzc3HjGWQV3/5WUlHSkubb+aPuXIiBqdDzT+7WjZxVJLJyaXpcs9SesuvwDGRzapyMDwuBDVp0dPcwYW3d/2iutXZalLyjrv6XEtUBT6UGgncHJBJNUaWCDoFdLILZ0m1f52+5zqwfb87jTBz23hszMTJOm68+cs9K/1OvzjUDU2SIoSIjPLxswYGZqrz7fPfOwTciZbo5T7yDwb5kZRJRksHx99Yqlo0Ix7l6zOZ1A15wlCzBC8fkG+rumNTidTrcilL8y4GnqfHJFRUWzdmxvTc0wAkYAgJTyUEJq6puttYO2S4sbCk04EW/JPff9sod61g/rleKIJ77VrPN7ZHDAxPItD8Q+ofOOeMk/6SaNCVNMyb89cldKSaviApkpYW7lkGpW5/qIJoModEqFYGaFetcp4pc1ivxkkXS9Hje3auKgpRyKp1iHk56e3h2QZ93gTQnZptlD86S+4CGAzWaz4XQ6zzocDoe+fPm6w1az9V8MLgIAIkrSNel3ptIamGgwgOvPkoXIqkuZFYr+ASA+JWUhS/66qe9LoGm345wHWe7QoQk6G08TkZWZpSDxj0WLFrWYmPBc2qWwmCimgfDrHu8dP682XWE26SfuTd3S23vigRhNToxn/JR03iYkHyXJEozmV9AMEANCwiV03mmV/GYcYUoyyQm196W8cOL+9D1NlaCDpt+bB6wJC6oeqBWYqyk0NGxzAgJYUA+PoEcaVCwsclUt7ja38onk+VWXgLmrzkSo/kT1KCKRBQAmkwmKcvI+58wyzZPTgbJdMAyz2Q4LoZ7O6UWYZK6ra9fDIDc316KzcT8RgZmZhDjAzCcAgAmPnDh2LL2dYgNoTMBIRH9lwAvAwmx8d9y4cclntnGbTMMBGg0AzHy0b/fur6ENNrR2e7pLQd+q9hm/zsgrf6poavp5gagHH7ncA+AzAJ/N+Iz/smhv1ZXHdcoQKserhBRmupwZtzBhvwpeo4OOGRpOxCpyX7808c3WCck1ANBWt/N+eeU9SzXxK5+gRyNZWp6JYg2FxtQJHmNi/NA6r2ph4ntls/tell7cVHKsSzAlMzPmuOQZTTc9EhO7/5sUMsqPld1PRLFs8BBmfj8SCf4uZBwOh5yUnb2rweNGU079Xr5usLSnz9rq6sECyAEBDNSmpabdW1VV9QPD0O8DcL1PaqMA5IVCfmGxfGR4PF+SoKEAXe/z1N8J4A2gcTexrLj4CRIUD8BQSLwUbFrrc2l/aA4BPsL9+zS1LCOP/19RgLzqsxt/qDubjjP5/rlt3QBaPV88A9sqVovKjw8/ohuvaqq4rsMsLUTQCAM0QT/1aeK71btdS9Pzql5O6Jb8+d5QJxUMAw2xsf1I1xqXFMxl3RMSnFXV1RVCiNuYORaEh8ePH/8ntO/PFQWAlFI5aSdkZng8arseAkR0MxGlgBmKUFZ875lnPn/+N7/5RNe1O4nIquvyTrvd/l4o/OkKCwvrxttG/MDnM/IIdAkMfuLBB3Pmz5lTUF9RWjziZJZbKeXRhJTUNmeHDU24siCTR8WPd/uqXpq+6sB5JZsizZXvVfXdWOp6tYLl6g5VVucgBZJ9Kt1XLlF48LhrTcK8ygemLDp706KTQZqmDaSmGoIms/nICa935diJE/cw42R+mgTD1xASA/HFTF5enuLWvLYz3tpmraxsczyr3W6PIfBMAGAir8ViWpmdna2nJCdvpKYFCyl0Y0VFRVL7JD9NTHzyV5B4HwCEEIOK99Xc6XA4VF2XTxNRIjO7VJPyxOJ2FPkIXX4FgqKZxYy5pfGrey2ovDZk/baCvnmVfWLnVc3a56MvvCo9hgDFPzsUQWZdpSEnVPHWx7WW3d3mu37XY4Hr+s5m57rtttu6gfAU0Fg1xxoTOy8jI0N/+umnT3TvnrC3aVcrVuryiVBtw1+svPLSSzcT457T7/AG58aNbZ6Bl5WU3ABCz8auuD42Jm4FAFw1cOA+oSgfMDPAGMAez4PtFP0UixYtarBYlTnMfASAKpmeWr1s2c8FicYaAoxViiW2XVlRQ50CWmiqGHLM4IKYuVUvJJF37tFWxPS1CWZKmlOW4TWbvn3UwKNSpb5or7tC5FBYpT51wC/qJX/P+k71IjHXtaA387q9rQgvChfVlZVjCWhMzMhcnZyc/NnJ9L1ms/VdIcTDzNwLoNErV67sA6Dd3tMXKgyYamtrE+12+yn7ZZym0ZGKilhdiGt1XXtNNM1kJcsii2p+Ho2+4G2BiNkGotTGFyiYdNtte99fvBgOh0PmjLNtNBqM+4nIKlneaLfbzU6nMyTOz2pMwtde7/F3ATxDREMkyyFN9k+XUNU3li9fHnRCguYIy1ORFerrVumFcmFZ0m1+xePpC8r6h3L2wMx0+byyHjFvV95pWeDKqzGbljUQOaRCl6HrKKuzYEHdPQIPuhXOO6hgeeK8ipk951f36yh5HA6HIKlnEZEZAMwW6/abs7JO5cS/4dprD6qKevJpaYHuewhRnyy/MPPoI4cOrC8/UvLpyeNAedkmrzTWGbo2XxD1BwAp5TaFlAeWr1t3uK1jjR8/PkEST2sa12e1WtfPnDnzlKJMjI1fSUTlAEBC3HrsWPH1/vpqLfn5+V5m/i/zeT6YKxKY17e3//BN4wmqLujmOlJerYKpwDTf9WZSnuuW1AUVV+UuYQsQvAJzMIsRH1bEx84vvyH5naqp5vmu14qFusyt0kKvQndLQT39liruYrCgOF2hm2uE8kq5kEst8yr+krig4kbbKo6obXDjxo3dmegOAGBmb2J8/JKnn3761BLlF889VxXfrdsWZvYRETFz1pQpUyK2C9vVIKAbga4CcPWZBxFdDiCNmQ8y+HdmE6bZcnK+as9YekPdnU1jgYiOxSTE5J95fvytt5YAvKZJru5k4M72jHcu1w4a9DURCk6+ZmYIhf770fr17c6OFP6qQAIwgCsMQVdUS35YJXFsWY3rC/xXusymyh3JqvhCUanUKxS3r84jWSGKNStmFRzvkeKqKo8xetbcqu5mVUnWiYc3MMxQLwjdFBgBIUFXeVXlKk3y9HWlrhWYX/E07ks7Gonh3XU144lEHwAgErVxCQmrz20Tn5i41HW8+vsALiPQLXXVFQMBdI5yO50O3kZCfVMwn70jJ9gwmOrYp6/rcdllR5xOp2/F2rZ/hcxMY4YPG0YkTADAUm4cPHho8QcfnNZZM2fO1CaNs61raPDcS0QqM985ZcqU586smtQeZs+erY24+aYa1WQ6KRMMHSG5b/0qrCKnk4BxoRjjNIKgAz2hIBeKAh8DxyQALwPQAKVRnFofA6BGD1KTAFOjR9rFuuKQgrpLwliQJT4S49ntduVYyeHHBFE3AFAV5dOcyZO/GTFmzFnpd/bu3VteVlZa7vF4LyMiGAY/YbfbPwtT2pmuDdO+tF69/h7wu9m8ud3DjB49uieBHgYaFUW3+G5rAejnbop8+eWmpR6Pbx8zX00krjxeXt4PjQVTQoLks51CdV0PiZ+eX4WVYbez09m+iJoWoTP/pWZOROkIjh07li5A3zr5WrK81jl/7hxmOseEIMnn0y49+YqZRzR5T5ciSkdAxHo2EamNLwhej++ODatXDTq3oZSwsuRUNGbetpBCTzqAJx1tN/RHBL8Ky0EkscBVB4GoXaITYBIo6R4raiKRr1no+ncY6HEq+aqUVxyvPj/86rzrhLjSy9wfUYXVIUy32Sz7vO5niMSp37Vu6ON1f3O6M+YFUvLMT22236OwsCTMYraLgDYslfigDuqQDKJRzoGxw1Yf52pNzq+2kJuba6mvrh5Gp33YNgJ8qAXZEkGUCwDS0H+YlZW1dePGje4wixrlHI5IeQmBhgAAmI8BtAHE/t0VmASDRxJRbyGEqPd4RqAxVKfThlkFVFiKggW6gUxQJyvgdRFCzDud94Q/UWBtbWUfQco4AGApayCUn43NmbiuqKjI7zq9rqqqX727YW9TWMmApJiYdACBlVyUkGK325Wy4uKZJx80DPqqe1radIvF4teQnpGRQSs+WfJHIuWHAMDEd+fm5n6Qn5/faUPGAiqsJDOWlrn5fxnUI1ICRTkfYvbEqMqiCKQ1JROb7zVgmACAiFam9+mz5aSzqD+m22xH9oELCJRDRANrGxpyAbQpGv8sYYhAQvQeM3xIlm4EDq62Mu9ZsXnzRRvPWFFREQ/im0+t8wT/98MPP6wLFJTudDqRnZ39L8Pjnk5EScTI1urrr8D5sb6dhoAzp8c/T96pEH2KTjxFvBgwES2PMzd8E+5xJk6cmKRLYyYRCWaGATnf6XS2mAL5rcJCLyA2oek+IcL03NzckOxoEugOKWmDIGwMdBgWteNLzHUgwucbcip9i5T1seaYz4LJoJHq8eznkz5ZQqT4fL6HO3OYVUDBHA6ScST/RozjkRIoyjkwG1YF/zw6pXdIfGQC4al19SfgUgBg8C5rXMJWBPewYhPRv5m50TGQub+nrrodGS1PD9mUOjjgQUSGEKLNrhRX1dbSWZ+SA9h9giQTaPwYzI1HIFtSO8nNzbVoUn/q5GsGfUxW68GgLu7b1wemUubGL4CJb162bFm7kzIS2HeyTwC6YRgh2X1s0XH0h0Upq/6QUf22W+KpqLdBxGEL4a0TRtIn4R7I4XCIgiWL0pnlLxpHpoOu0tKgd4xS+vQpLdm3byoUuhEScHuMNv1AKyoqfAlW678hsCLoi1iWxYDOc2wNlt5TphjbP/7YydSY8VMwLayurm7XD+zcPk1CfTcjI4OdztBvm7h37iRfUlKeUMUGALAIdU5TKa8WcTqdxvDhg55lr+kwBCANLr40IabdKyq3IV+0slYJAUiWJbHV1bva2ycQrMPT/Op+JOQ7TE07EFEigsrYNjDeO+GLyZGrPh0lSmcmuLXqfUkHe1qV7wugXTFOUYKHmEtMgr8XVVZRopwmaONa6ReJn6eo+L5gbAunQFEAAd4Tp4qH3PaUDR0tS5QonYnWWaWYKflD17U1Xsw2SNwEcLtyTkc5D10FrzIRHFFlFSXK+bTJjJ76Xn2vBun5jkdipgT1ijqWth9iHLQIfivVGvNGyZTYVhWXjBLlYqFd+3693628pprpOx6JW0G4lEEWhDPH1oUFE+AB45gZ+Li7Ba+Xffm3IrTgpBklysVMSBwVsjZwzN4j1TedYL5ZCGEzIHuCRNTZ1A+qlEd0ps0JKm3M7tl9s3M4RePuokQJgv8Pd+VMT6N9z1UAAAAASUVORK5CYII="
-          />
-        </span>
-      </div>
-    </div>
-    <div class="modal-pay-qrcode">
-      <img id="wxpay-code" src="你的微信收款码地址" />
-      <img
-        id="alipay-code"
-        src="你的支付宝收款码地址"
-        hidden
-      />
-    </div>
-  </div>
-</div>
-<div class="mask"></div>
-
-
+        
 <div class="book">
-  <div class="header-inner">
-    <!-- LOGO -->
-    <div class="logo"></div>
-    <span class="title"></span>
-
-    <!-- Search -->
-    
+    <div class="book-summary">
+        
+            
 <div id="book-search-input" role="search">
-    <input type="text" placeholder="輸入並搜尋" />
+    <input type="text" placeholder="输入并搜索" />
 </div>
 
-
-    <!-- Nav -->
-    <ul class="header-nav">
-      <li>
-        <a href="https://gitee.com/PaperDragon/note-book.git" target="_blank">本页面gitee仓库</a>
-      </li>
-    </ul>
-  </div>
-
-  <div class="book-summary">
-    <div class="book-summary-title">文档目录</div>
-     
-    <nav role="navigation">
+            
+                <nav role="navigation">
+                
 
 
 <ul class="summary">
     
     
+    
+        
+        <li>
+            <a href="https://www.baidu.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+        
+        <li>
+            <a href="2678885646@qq.com" target="_blank" class="custom-link">邮箱</a>
+        </li>
+    
+    
 
+    
+    <li class="divider"></li>
     
 
     
@@ -203,6 +159,38 @@
             
         </li>
     
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    [语言学习]
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../RD/C_Language/">
+            
+                <a href="../RD/C_Language/">
+            
+                    
+                    C语言基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
     
 
@@ -210,26 +198,22 @@
 
     <li>
         <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            本書使用 GitBook 釋出
+            本书使用 GitBook 发布
         </a>
     </li>
 </ul>
 
-</nav>
-     
-  </div>
 
-  <!-- Content nav -->
-  <div class="book-anchor">
-    <div class="book-anchor-title"></div>
+                </nav>
+            
+        
+    </div>
 
-    <div class="book-anchor-body"></div>
-  </div>
-
-  <div class="book-body">
-    
-    <div class="body-inner">
-       
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
 
 <div class="book-header" role="navigation">
     
@@ -243,18 +227,20 @@
 
 
 
-      <div class="page-wrapper" tabindex="-1" role="main">
-        <div class="page-inner">
-          
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
 <div id="book-search-results">
     <div class="search-noresults">
     
-          <section class="normal markdown-section">
-             <h1 id="zabbix-&#x6784;&#x5EFA;&#x4F01;&#x4E1A;&#x7EA7;&#x76D1;&#x63A7;&#x544A;&#x8B66;&#x5E73;&#x53F0;">Zabbix &#x6784;&#x5EFA;&#x4F01;&#x4E1A;&#x7EA7;&#x76D1;&#x63A7;&#x544A;&#x8B66;&#x5E73;&#x53F0;</h1>
-<h2 id="zabbix-&#x6784;&#x5EFA;&#x4F01;&#x4E1A;&#x7EA7;&#x76D1;&#x63A7;&#x544A;&#x8B66;&#x5E73;&#x53F0;">Zabbix &#x6784;&#x5EFA;&#x4F01;&#x4E1A;&#x7EA7;&#x76D1;&#x63A7;&#x544A;&#x8B66;&#x5E73;&#x53F0;</h2>
-<h3 id="&#x4E00;-&#x7B80;&#x4ECB;">&#x4E00;. &#x7B80;&#x4ECB;</h3>
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#zabbix-&#x6784;&#x5EFA;&#x4F01;&#x4E1A;&#x7EA7;&#x76D1;&#x63A7;&#x544A;&#x8B66;&#x5E73;&#x53F0;"><b></b>Zabbix &#x6784;&#x5EFA;&#x4F01;&#x4E1A;&#x7EA7;&#x76D1;&#x63A7;&#x544A;&#x8B66;&#x5E73;&#x53F0;</a></li><ul><li><span class="title-icon "></span><a href="#zabbix-&#x6784;&#x5EFA;&#x4F01;&#x4E1A;&#x7EA7;&#x76D1;&#x63A7;&#x544A;&#x8B66;&#x5E73;&#x53F0;_1"><b></b>Zabbix &#x6784;&#x5EFA;&#x4F01;&#x4E1A;&#x7EA7;&#x76D1;&#x63A7;&#x544A;&#x8B66;&#x5E73;&#x53F0;</a></li><ul><li><span class="title-icon "></span><a href="#&#x4E00;-&#x7B80;&#x4ECB;"><b></b>&#x4E00;. &#x7B80;&#x4ECB;</a></li><li><span class="title-icon "></span><a href="#&#x4E8C;&#x76D1;&#x63A7;&#x5BF9;&#x8C61;"><b></b>&#x4E8C;.&#x76D1;&#x63A7;&#x5BF9;&#x8C61;</a></li><li><span class="title-icon "></span><a href="#&#x4E09;&#x76D1;&#x63A7;&#x6536;&#x96C6;&#x4FE1;&#x606F;&#x65B9;&#x5F0F;"><b></b>&#x4E09;.&#x76D1;&#x63A7;&#x6536;&#x96C6;&#x4FE1;&#x606F;&#x65B9;&#x5F0F;</a></li><li><span class="title-icon "></span><a href="#&#x56DB;zabbix-&#x90E8;&#x7F72;"><b></b>&#x56DB;.Zabbix &#x90E8;&#x7F72;</a></li></ul><li><span class="title-icon "></span><a href="#zabbix-&#x6784;&#x5EFA;&#x4F01;&#x4E1A;&#x7EA7;&#x76D1;&#x63A7;&#x544A;&#x8B66;&#x5E73;&#x53F0;-2"><b></b>Zabbix &#x6784;&#x5EFA;&#x4F01;&#x4E1A;&#x7EA7;&#x76D1;&#x63A7;&#x544A;&#x8B66;&#x5E73;&#x53F0; 2</a></li><ul><li><span class="title-icon "></span><a href="#zabbix-items-&#x76D1;&#x63A7;&#x9879;"><b></b>Zabbix Items &#x76D1;&#x63A7;&#x9879;</a></li><li><span class="title-icon "></span><a href="#zabbix-triger-&#x89E6;&#x53D1;&#x5668;"><b></b>Zabbix Triger &#x89E6;&#x53D1;&#x5668;</a></li><li><span class="title-icon "></span><a href="#zabbix-macros-&#x5185;&#x7F6E;&#x5B8F;"><b></b>Zabbix Macros &#x5185;&#x7F6E;&#x5B8F;</a></li><li><span class="title-icon "></span><a href="#zabbix-&#x81EA;&#x52A8;&#x53D1;&#x73B0;"><b></b>Zabbix &#x81EA;&#x52A8;&#x53D1;&#x73B0;</a></li><li><span class="title-icon "></span><a href="#zabbix&#x81EA;&#x52A8;&#x6CE8;&#x518C;"><b></b>Zabbix&#x81EA;&#x52A8;&#x6CE8;&#x518C;</a></li></ul><li><span class="title-icon "></span><a href="#&#x5B9E;&#x6218;&#xFF1A;tcp&#x8FDE;&#x63A5;&#x72B6;&#x6001;&#x76D1;&#x63A7;"><b></b>&#x5B9E;&#x6218;&#xFF1A;TCP&#x8FDE;&#x63A5;&#x72B6;&#x6001;&#x76D1;&#x63A7;</a></li><li><span class="title-icon "></span><a href="#&#x5B9E;&#x6218;&#xFF1A;tcp&#x8FDE;&#x63A5;&#x72B6;&#x6001;&#x76D1;&#x63A7;2"><b></b>&#x5B9E;&#x6218;&#xFF1A;TCP&#x8FDE;&#x63A5;&#x72B6;&#x6001;&#x76D1;&#x63A7;2</a></li></ul></ul></div><a href="#zabbix-&#x6784;&#x5EFA;&#x4F01;&#x4E1A;&#x7EA7;&#x76D1;&#x63A7;&#x544A;&#x8B66;&#x5E73;&#x53F0;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="zabbix-&#x6784;&#x5EFA;&#x4F01;&#x4E1A;&#x7EA7;&#x76D1;&#x63A7;&#x544A;&#x8B66;&#x5E73;&#x53F0;"><a name="zabbix-&#x6784;&#x5EFA;&#x4F01;&#x4E1A;&#x7EA7;&#x76D1;&#x63A7;&#x544A;&#x8B66;&#x5E73;&#x53F0;" class="anchor-navigation-ex-anchor" href="#zabbix-&#x6784;&#x5EFA;&#x4F01;&#x4E1A;&#x7EA7;&#x76D1;&#x63A7;&#x544A;&#x8B66;&#x5E73;&#x53F0;"><i class="fa fa-link" aria-hidden="true"></i></a>Zabbix &#x6784;&#x5EFA;&#x4F01;&#x4E1A;&#x7EA7;&#x76D1;&#x63A7;&#x544A;&#x8B66;&#x5E73;&#x53F0;</h1>
+<h2 id="zabbix-&#x6784;&#x5EFA;&#x4F01;&#x4E1A;&#x7EA7;&#x76D1;&#x63A7;&#x544A;&#x8B66;&#x5E73;&#x53F0;_1"><a name="zabbix-&#x6784;&#x5EFA;&#x4F01;&#x4E1A;&#x7EA7;&#x76D1;&#x63A7;&#x544A;&#x8B66;&#x5E73;&#x53F0;_1" class="anchor-navigation-ex-anchor" href="#zabbix-&#x6784;&#x5EFA;&#x4F01;&#x4E1A;&#x7EA7;&#x76D1;&#x63A7;&#x544A;&#x8B66;&#x5E73;&#x53F0;_1"><i class="fa fa-link" aria-hidden="true"></i></a>Zabbix &#x6784;&#x5EFA;&#x4F01;&#x4E1A;&#x7EA7;&#x76D1;&#x63A7;&#x544A;&#x8B66;&#x5E73;&#x53F0;</h2>
+<h3 id="&#x4E00;-&#x7B80;&#x4ECB;"><a name="&#x4E00;-&#x7B80;&#x4ECB;" class="anchor-navigation-ex-anchor" href="#&#x4E00;-&#x7B80;&#x4ECB;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E00;. &#x7B80;&#x4ECB;</h3>
 <p>Zabbix &#x662F;&#x4E00;&#x4E2A;&#x57FA;&#x4E8E; WEB &#x754C;&#x9762;&#x7684;&#x63D0;&#x4F9B;&#x5206;&#x5E03;&#x5F0F;&#x7CFB;&#x7EDF;&#x76D1;&#x89C6;&#x4EE5;&#x53CA;&#x7F51;&#x7EDC;&#x76D1;&#x89C6;&#x529F;&#x80FD;&#x7684;&#x4F01;&#x4E1A;&#x7EA7;&#x7684;&#x5F00;&#x6E90;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x3002;&#x5B83;&#x80FD;&#x76D1;&#x89C6;&#x5404;&#x79CD;&#x7F51;&#x7EDC;&#x53C2;&#x6570;&#xFF0C;&#x4FDD;&#x8BC1;&#x670D;&#x52A1;&#x5668;&#x7CFB;&#x7EDF;&#x7684;&#x5B89;&#x5168;&#x8FD0;&#x8425;&#xFF1B;&#x5E76;&#x63D0;&#x4F9B;&#x7075;&#x6D3B;&#x7684;&#x901A;&#x77E5;&#x673A;&#x5236;&#x4EE5;&#x8BA9;&#x7CFB;&#x7EDF;&#x7BA1;&#x7406;&#x5458;&#x5FEB;&#x901F;&#x5B9A;&#x4F4D;/&#x89E3;&#x51B3;&#x5B58;&#x5728;&#x7684;&#x5404;&#x79CD;&#x95EE;&#x9898;&#x3002;</p>
-<h3 id="&#x4E8C;&#x76D1;&#x63A7;&#x5BF9;&#x8C61;">&#x4E8C;.&#x76D1;&#x63A7;&#x5BF9;&#x8C61;</h3>
+<h3 id="&#x4E8C;&#x76D1;&#x63A7;&#x5BF9;&#x8C61;"><a name="&#x4E8C;&#x76D1;&#x63A7;&#x5BF9;&#x8C61;" class="anchor-navigation-ex-anchor" href="#&#x4E8C;&#x76D1;&#x63A7;&#x5BF9;&#x8C61;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E8C;.&#x76D1;&#x63A7;&#x5BF9;&#x8C61;</h3>
 <hr>
 <p>&#x6E90;&#x4EE3;&#x7801;: <em>.html </em>.jsp <em>.php </em>.py
 &#x6570;&#x636E;&#x5E93;&#xFF1A; MySQL,MariaDB,Oracle,SQL Server,DB2
@@ -267,17 +253,17 @@
 <p>&#x786C;&#x4EF6;&#xFF1A; &#x670D;&#x52A1;&#x5668;&#xFF0C;&#x5B58;&#x50A8; IPMI
 &#x7F51;&#x7EDC;&#xFF1A; &#x7F51;&#x7EDC;&#x73AF;&#x5883;&#xFF08;&#x8DEF;&#x7531;&#x5668;&#xFF0C;&#x4EA4;&#x6362;&#x673A;&#xFF0C;&#x9632;&#x706B;&#x5899;&#xFF0C;&#x5185;&#x7F51;&#x73AF;&#x5883;&#xFF0C;&#x5916;&#x7F51;&#x73AF;&#x5883;&#xFF09; SNMP</p>
 <hr>
-<h3 id="&#x4E09;&#x76D1;&#x63A7;&#x6536;&#x96C6;&#x4FE1;&#x606F;&#x65B9;&#x5F0F;">&#x4E09;.&#x76D1;&#x63A7;&#x6536;&#x96C6;&#x4FE1;&#x606F;&#x65B9;&#x5F0F;</h3>
+<h3 id="&#x4E09;&#x76D1;&#x63A7;&#x6536;&#x96C6;&#x4FE1;&#x606F;&#x65B9;&#x5F0F;"><a name="&#x4E09;&#x76D1;&#x63A7;&#x6536;&#x96C6;&#x4FE1;&#x606F;&#x65B9;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x4E09;&#x76D1;&#x63A7;&#x6536;&#x96C6;&#x4FE1;&#x606F;&#x65B9;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E09;.&#x76D1;&#x63A7;&#x6536;&#x96C6;&#x4FE1;&#x606F;&#x65B9;&#x5F0F;</h3>
 <pre><code>&#x88AB;&#x52A8;&#x6A21;&#x5F0F;
 &#x4E3B;&#x52A8;&#x6A21;&#x5F0F;
-</code></pre><h3 id="&#x56DB;zabbix-&#x90E8;&#x7F72;">&#x56DB;.Zabbix &#x90E8;&#x7F72;</h3>
-<h4 id="zabbix-server19216810010">zabbix-server(192.168.100.10)</h4>
-<h5 id="1&#x5B98;&#x7F51;&#xFF1A;&#x6211;&#x662F;&#x94FE;&#x63A5;">1.&#x5B98;&#x7F51;&#xFF1A;&#x6211;&#x662F;&#x94FE;&#x63A5;</h5>
-<h5 id="2&#x73AF;&#x5883;">2.&#x73AF;&#x5883;</h5>
+</code></pre><h3 id="&#x56DB;zabbix-&#x90E8;&#x7F72;"><a name="&#x56DB;zabbix-&#x90E8;&#x7F72;" class="anchor-navigation-ex-anchor" href="#&#x56DB;zabbix-&#x90E8;&#x7F72;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x56DB;.Zabbix &#x90E8;&#x7F72;</h3>
+<h4 id="zabbix-server19216810010"><a name="zabbix-server19216810010" class="anchor-navigation-ex-anchor" href="#zabbix-server19216810010"><i class="fa fa-link" aria-hidden="true"></i></a>zabbix-server(192.168.100.10)</h4>
+<h5 id="1&#x5B98;&#x7F51;&#xFF1A;&#x6211;&#x662F;&#x94FE;&#x63A5;"><a name="1&#x5B98;&#x7F51;&#xFF1A;&#x6211;&#x662F;&#x94FE;&#x63A5;" class="anchor-navigation-ex-anchor" href="#1&#x5B98;&#x7F51;&#xFF1A;&#x6211;&#x662F;&#x94FE;&#x63A5;"><i class="fa fa-link" aria-hidden="true"></i></a>1.&#x5B98;&#x7F51;&#xFF1A;&#x6211;&#x662F;&#x94FE;&#x63A5;</h5>
+<h5 id="2&#x73AF;&#x5883;"><a name="2&#x73AF;&#x5883;" class="anchor-navigation-ex-anchor" href="#2&#x73AF;&#x5883;"><i class="fa fa-link" aria-hidden="true"></i></a>2.&#x73AF;&#x5883;</h5>
 <p>  IP    &#x4E3B;&#x673A;&#x540D;    &#x89D2;&#x8272;
   192.168.100.10    zabbix_server    &#x76D1;&#x63A7;&#x670D;&#x52A1;&#x5668;
   192.168.100.20    web1    &#x4E1A;&#x52A1;&#x4E3B;&#x673A;</p>
-<h5 id="3installing-zabbix-packages">3.Installing Zabbix packages</h5>
+<h5 id="3installing-zabbix-packages"><a name="3installing-zabbix-packages" class="anchor-navigation-ex-anchor" href="#3installing-zabbix-packages"><i class="fa fa-link" aria-hidden="true"></i></a>3.Installing Zabbix packages</h5>
 <p>  &#x2460;.&#x8BBE;&#x7F6E;&#x4E3B;&#x673A;&#x540D;</p>
 <pre><code>hostnamectl set-hostname zabbix_server
 </code></pre><p>&#x2461;.&#x9632;&#x706B;&#x5899;</p>
@@ -298,7 +284,7 @@ yum clean all
 </code></pre><p>zabbix-server-mysql&#xFF1A;&#x6570;&#x636E;&#x5E93;
 zabbix-web-mysql&#xFF1A;WEB
 zabbi-agent&#xFF1A;&#x4EE3;&#x7406;&#x7A0B;&#x5E8F;&#xFF08;&#x4E0A;&#x62A5;&#x4FE1;&#x606F;&#x7684;&#x7A0B;&#x5E8F;&#xFF09;</p>
-<h5 id="4-creating-initial-database">4. Creating initial database</h5>
+<h5 id="4-creating-initial-database"><a name="4-creating-initial-database" class="anchor-navigation-ex-anchor" href="#4-creating-initial-database"><i class="fa fa-link" aria-hidden="true"></i></a>4. Creating initial database</h5>
 <p>&#x2460;.&#x5B89;&#x88C5;&#x6570;&#x636E;&#x5E93;</p>
 <p> yum -y install mariadb mariadb-server</p>
 <p>&#x2461;.&#x542F;&#x52A8;&#x6570;&#x636E;&#x5E93;</p>
@@ -312,7 +298,7 @@ create user zabbix@localhost identified by &apos;123456&apos;;
 grant all privileges on zabbix.* to zabbix@localhost;
 
 flush privileges;
-</code></pre><h5 id="5starting-zabbix-server-process">5.Starting Zabbix server process</h5>
+</code></pre><h5 id="5starting-zabbix-server-process"><a name="5starting-zabbix-server-process" class="anchor-navigation-ex-anchor" href="#5starting-zabbix-server-process"><i class="fa fa-link" aria-hidden="true"></i></a>5.Starting Zabbix server process</h5>
 <p>&#x2460;.&#x914D;&#x7F6E;sql&#x8D26;&#x53F7;&#x5BC6;&#x7801;</p>
 <pre><code>&#x5BFC;&#x5165;&#x521D;&#x59CB;&#x67B6;&#x6784;&#x548C;&#x6570;&#x636E;&#xFF0C;&#x7CFB;&#x7EDF;&#x5C06;&#x63D0;&#x793A;&#x60A8;&#x8F93;&#x5165;&#x65B0;&#x521B;&#x5EFA;&#x7684;&#x5BC6;&#x7801;&#x3002;
 zcat /usr/share/doc/zabbix-server-mysql*/create.sql.gz | mysql -uzabbix -p zabbix
@@ -336,26 +322,26 @@ Zend Engine v3.0.0, Copyright (c) 1998-2017 Zend Technologies
 with Zend OPcache v7.0.33, Copyright (c) 1999-2017, by Zend Technologies
 [root@zabbix-server ~]# rpm -qa zabbix-web
 zabbix-web-4.0.28-1.el7.noarch
-</code></pre><h5 id="&#x6B22;&#x8FCE;&#x9875;&#x9762;">&#x6B22;&#x8FCE;&#x9875;&#x9762;</h5>
+</code></pre><h5 id="&#x6B22;&#x8FCE;&#x9875;&#x9762;"><a name="&#x6B22;&#x8FCE;&#x9875;&#x9762;" class="anchor-navigation-ex-anchor" href="#&#x6B22;&#x8FCE;&#x9875;&#x9762;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6B22;&#x8FCE;&#x9875;&#x9762;</h5>
 <p><a href="http://zabbix-server-ip/zabbix" target="_blank">http://zabbix-server-ip/zabbix</a></p>
-<p><img src="zabbix.assets/image-20211111103246790-16365979687501.png" alt="image-20211111103246790"></p>
-<h5 id="&#x767B;&#x5F55;">&#x767B;&#x5F55;</h5>
+<p><a href="zabbix.assets/image-20211111103246790-16365979687501.png" data-lightbox="8c587266-dcdd-4856-adb3-38954ecb09d6" data-title="image-20211111103246790"><img src="zabbix.assets/image-20211111103246790-16365979687501.png" alt="image-20211111103246790"></a></p>
+<h5 id="&#x767B;&#x5F55;"><a name="&#x767B;&#x5F55;" class="anchor-navigation-ex-anchor" href="#&#x767B;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x767B;&#x5F55;</h5>
 <p>&#x7528;&#x6237;&#x540D;&#xFF1A; Admin
  &#x5BC6;&#x7801;&#xFF1A; zabbix</p>
-<p><img src="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;">
- <img src="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-16365980489083.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
-<h5 id="&#x8BED;&#x8A00;&#x548C;&#x4E71;&#x7801;">&#x8BED;&#x8A00;&#x548C;&#x4E71;&#x7801;</h5>
+<p><a href="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center.png" data-lightbox="32f235f9-00c4-40a5-911f-c3587b4f34d2" data-title="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"><img src="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></a>
+ <a href="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-16365980489083.png" data-lightbox="361b262e-02aa-4f16-aae9-c82114d09a8c" data-title="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"><img src="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-16365980489083.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></a></p>
+<h5 id="&#x8BED;&#x8A00;&#x548C;&#x4E71;&#x7801;"><a name="&#x8BED;&#x8A00;&#x548C;&#x4E71;&#x7801;" class="anchor-navigation-ex-anchor" href="#&#x8BED;&#x8A00;&#x548C;&#x4E71;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BED;&#x8A00;&#x548C;&#x4E71;&#x7801;</h5>
 <p>administration&gt;users&gt;admin user
 &#x53F3;&#x4E0A;&#x89D2;&#x7528;&#x6237;&#x56FE;&#x6807;&#xFF0C;&#x66F4;&#x6362;&#x8BED;&#x8A00;
-<img src="zabbix.assets/20201027190120585.png#pic_center" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;">
-<img src="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-16365980900076.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;">
-<img src="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-16365980975828.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
+<a href="zabbix.assets/20201027190120585.png#pic_center" data-lightbox="cb02e1ad-de80-47bc-9c81-c802b89d7204" data-title="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"><img src="zabbix.assets/20201027190120585.png#pic_center" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></a>
+<a href="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-16365980900076.png" data-lightbox="408f8fad-ebd8-4c2b-a568-3a5b28b4f92e" data-title="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"><img src="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-16365980900076.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></a>
+<a href="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-16365980975828.png" data-lightbox="b89b4d9c-7c60-4dfe-8e0c-d1ba3f817b33" data-title="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"><img src="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-16365980975828.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></a></p>
 <p>&#x8BBE;&#x7F6E;&#x4E2D;&#x6587;&#x540E;&#xFF0C;&#x67E5;&#x770B;&#x56FE;&#x5F62;&#x6709;&#x4E71;&#x7801;&#xFF0C;&#x6587;&#x5B57;&#x53D8;&#x6210;&#x4E86;&#x65B9;&#x5757;
 &#x89E3;&#x51B3;&#x65B9;&#x6848;
 Win+R&#x6253;&#x5F00;&#x8FD0;&#x884C;&#xFF0C;&#x8F93;&#x5165;fonts&#xFF0C;&#x56DE;&#x8F66;&#x8FDB;&#x5165;Windows&#x5B57;&#x4F53;&#x76EE;&#x5F55;&#xFF0C;&#x627E;&#x5230;&#x5FAE;&#x8F6F;&#x96C5;&#x9ED1;-&#x5E38;&#x89C4;&#x5B57;&#x4F53;&#x53F3;&#x952E;&#x590D;&#x5236;&#xFF0C;&#x627E;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x70B9;&#x51FB;&#x7C98;&#x8D34;&#xFF0C;&#x590D;&#x5236;&#x51FA;&#x6765;&#x5C06;&#x6587;&#x4EF6;&#x540D;&#x4FEE;&#x6539;&#x4E3A;msyh.ttf&#xFF0C;&#x6CE8;&#x610F;&#x540E;&#x7F00;ttf &#x53EA;&#x9700;&#x8981;&#x6539;&#x4E00;&#x4E2A;</p>
 <pre><code class="lang-cmd"><span class="hljs-function">C:\<span class="hljs-title">Windows</span>\<span class="hljs-title">Fonts</span>
 </span></code></pre>
-<p><img src="zabbix.assets/20210208165851713.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
+<p><a href="zabbix.assets/20210208165851713.png" data-lightbox="367b8af2-913e-4900-ac6b-9504b45c2d92" data-title="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"><img src="zabbix.assets/20210208165851713.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></a></p>
 <p>&#x5C06;msyh.ttf&#x4E0A;&#x4F20;&#x5230;&#x670D;&#x52A1;&#x5668;zabbix&#x5B57;&#x4F53;&#x76EE;&#x5F55;&#x4E2D;&#xFF1A;/usr/share/zabbix/assets/fonts/
 &#x6CE8;&#x610F;&#x6587;&#x4EF6;&#x6743;&#x9650;</p>
 <pre><code>[root@zabbix_server fonts]# mv msyh.ttc msyh.ttf
@@ -368,8 +354,8 @@ chmod 777  /usr/share/zabbix/assets/fonts/msyh.ttf
 45:define(&apos;ZBX_GRAPH_FONT_NAME&apos;,        &apos;msyh&apos;); // font file name
 93:define(&apos;ZBX_FONT_NAME&apos;, &apos;msyh&apos;);
 </code></pre><p>&#x5B57;&#x4F53;&#x914D;&#x7F6E;&#x4FEE;&#x6539;&#x6210;&#x529F;&#x540E;&#xFF0C;&#x5237;&#x65B0;&#x56FE;&#x5F62;&#x754C;&#x9762;&#x5373;&#x53EF;&#x770B;&#x5230;&#x56FE;&#x5F62;&#x5B57;&#x4F53;&#x663E;&#x793A;&#x6B63;&#x5E38;&#x4E86;&#x3002;</p>
-<h4 id="zabbix-agent19216810020">zabbix-agent(192.168.100.20)</h4>
-<h5 id="&#x5B89;&#x88C5;&#x548C;&#x914D;&#x7F6E;">&#x5B89;&#x88C5;&#x548C;&#x914D;&#x7F6E;</h5>
+<h4 id="zabbix-agent19216810020"><a name="zabbix-agent19216810020" class="anchor-navigation-ex-anchor" href="#zabbix-agent19216810020"><i class="fa fa-link" aria-hidden="true"></i></a>zabbix-agent(192.168.100.20)</h4>
+<h5 id="&#x5B89;&#x88C5;&#x548C;&#x914D;&#x7F6E;"><a name="&#x5B89;&#x88C5;&#x548C;&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x5B89;&#x88C5;&#x548C;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B89;&#x88C5;&#x548C;&#x914D;&#x7F6E;</h5>
 <p>&#x2460;.&#x8BBE;&#x7F6E;&#x4E3B;&#x673A;&#x540D;</p>
 <pre><code>hostnamectl set-hostname  web1
 </code></pre><p>&#x2461;.&#x9632;&#x706B;&#x5899;</p>
@@ -391,9 +377,9 @@ systemctl disable firewalld.service
 ServerActive=192.168.100.10,192.168.100.11 &#x4E3B;&#x52A8;&#x6A21;&#x5F0F; zabbix-server-ip &#xFF08;&#x8C01;&#x4ECE;&#x6211;&#x8FD9;&#x91CC;&#x91C7;&#x96C6;&#x6570;&#x636E;&#x3002;&#xFF09;
 Hostname=web1 &#x5EFA;&#x8BAE;&#x4F7F;&#x7528; <span class="hljs-variable">$HOSTNAME</span>
 </code></pre>
-<p><img src="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660136250311.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
-<p><img src="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660137231613.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
-<p><img src="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660137848415.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
+<p><a href="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660136250311.png" data-lightbox="e9eba31f-b87e-4ac2-9bc5-b75ddfde05fd" data-title="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"><img src="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660136250311.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></a></p>
+<p><a href="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660137231613.png" data-lightbox="31565e0e-6a64-46e1-8578-af56abba7679" data-title="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"><img src="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660137231613.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></a></p>
+<p><a href="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660137848415.png" data-lightbox="4ba8e362-c215-46be-a446-23a46b6a585e" data-title="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"><img src="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660137848415.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></a></p>
 <p> &#x2466;.&#x542F;&#x52A8;zabbix-agent&#xFF1A;10050</p>
 <pre><code class="lang-bash">systemctl start zabbix-agent
 systemctl <span class="hljs-built_in">enable</span> zabbix-agent
@@ -411,34 +397,34 @@ Linux server 3.10.0-693.el7.x86_64 #1 SMP Tue Aug 22 21:09:27 UTC 2017 x86_64
 # 0&#x5047;
 
 # 1&#x771F;
-</code></pre><h5 id="apache&#x76D1;&#x63A7;&#x793A;&#x4F8B;&#xFF08;&#x56FE;&#x5F62;&#x76D1;&#x63A7;&#xFF09;">Apache&#x76D1;&#x63A7;&#x793A;&#x4F8B;&#xFF08;&#x56FE;&#x5F62;&#x76D1;&#x63A7;&#xFF09;</h5>
-<h6 id="&#x521B;&#x5EFA;&#x4E3B;&#x673A;&#x7EC4;-&#xFF08;zabbix-server-19216810010&#xFF09;">&#x521B;&#x5EFA;&#x4E3B;&#x673A;&#x7EC4; &#xFF08;zabbix-server-192.168.100.10&#xFF09;</h6>
-<p><img src="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660201308917.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;">
+</code></pre><h5 id="apache&#x76D1;&#x63A7;&#x793A;&#x4F8B;&#xFF08;&#x56FE;&#x5F62;&#x76D1;&#x63A7;&#xFF09;"><a name="apache&#x76D1;&#x63A7;&#x793A;&#x4F8B;&#xFF08;&#x56FE;&#x5F62;&#x76D1;&#x63A7;&#xFF09;" class="anchor-navigation-ex-anchor" href="#apache&#x76D1;&#x63A7;&#x793A;&#x4F8B;&#xFF08;&#x56FE;&#x5F62;&#x76D1;&#x63A7;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>Apache&#x76D1;&#x63A7;&#x793A;&#x4F8B;&#xFF08;&#x56FE;&#x5F62;&#x76D1;&#x63A7;&#xFF09;</h5>
+<h6 id="&#x521B;&#x5EFA;&#x4E3B;&#x673A;&#x7EC4;-&#xFF08;zabbix-server-19216810010&#xFF09;"><a name="&#x521B;&#x5EFA;&#x4E3B;&#x673A;&#x7EC4;-&#xFF08;zabbix-server-19216810010&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x521B;&#x5EFA;&#x4E3B;&#x673A;&#x7EC4;-&#xFF08;zabbix-server-19216810010&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521B;&#x5EFA;&#x4E3B;&#x673A;&#x7EC4; &#xFF08;zabbix-server-192.168.100.10&#xFF09;</h6>
+<p><a href="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660201308917.png" data-lightbox="d5303d91-232e-42f7-827b-699649fa8bd1" data-title="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"><img src="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660201308917.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></a>
 &#x9009;&#x62E9;&#x9ED8;&#x8BA4;&#x6A21;&#x677F;&#xFF0C;&#x6A21;&#x677F;&#x5C31;&#x662F;zabbix&#x63A8;&#x8350;&#x7684;&#x76D1;&#x63A7;&#x53C2;&#x6570;&#x3002;&#xFF08;&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x7F29;&#x5C0F;&#x9009;&#x62E9;&#x8303;&#x56F4;&#xFF09;</p>
-<h6 id="&#x521B;&#x5EFA;&#x4E3B;&#x673A;&#xFF08;zabbix-server-19216810010&#xFF09;">&#x521B;&#x5EFA;&#x4E3B;&#x673A;&#xFF08;zabbix-server-192.168.100.10&#xFF09;</h6>
-<p><img src="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660202000819.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
-<h6 id="&#x9009;&#x62E9;&#x7FA4;&#x7EC4;">&#x9009;&#x62E9;&#x7FA4;&#x7EC4;</h6>
-<p><img src="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660202768021.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;">
-<img src="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660203804023.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
-<p><img src="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660205014425.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
-<h6 id="&#x521B;&#x5EFA;&#x56FE;&#x5F62;&#xFF08;zabbix-server-19216810010&#xFF09;">&#x521B;&#x5EFA;&#x56FE;&#x5F62;&#xFF08;zabbix-server-192.168.100.10&#xFF09;</h6>
-<p><img src="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660208162027.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
-<p><img src="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660208971029.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
-<p><img src="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660209708331.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
-<h6 id="&#x6A21;&#x677F;template">&#x6A21;&#x677F;Template</h6>
+<h6 id="&#x521B;&#x5EFA;&#x4E3B;&#x673A;&#xFF08;zabbix-server-19216810010&#xFF09;"><a name="&#x521B;&#x5EFA;&#x4E3B;&#x673A;&#xFF08;zabbix-server-19216810010&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x521B;&#x5EFA;&#x4E3B;&#x673A;&#xFF08;zabbix-server-19216810010&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521B;&#x5EFA;&#x4E3B;&#x673A;&#xFF08;zabbix-server-192.168.100.10&#xFF09;</h6>
+<p><a href="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660202000819.png" data-lightbox="ba3aeb07-9c7d-450a-9913-2267dda949a1" data-title="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"><img src="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660202000819.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></a></p>
+<h6 id="&#x9009;&#x62E9;&#x7FA4;&#x7EC4;"><a name="&#x9009;&#x62E9;&#x7FA4;&#x7EC4;" class="anchor-navigation-ex-anchor" href="#&#x9009;&#x62E9;&#x7FA4;&#x7EC4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9009;&#x62E9;&#x7FA4;&#x7EC4;</h6>
+<p><a href="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660202768021.png" data-lightbox="d6bb1261-0c42-4311-b810-5ba79b314798" data-title="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"><img src="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660202768021.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></a>
+<a href="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660203804023.png" data-lightbox="22002779-9ff6-4677-baa6-54e266823b03" data-title="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"><img src="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660203804023.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></a></p>
+<p><a href="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660205014425.png" data-lightbox="b03ca059-3be1-411a-937f-4bfbf2816fe1" data-title="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"><img src="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660205014425.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></a></p>
+<h6 id="&#x521B;&#x5EFA;&#x56FE;&#x5F62;&#xFF08;zabbix-server-19216810010&#xFF09;"><a name="&#x521B;&#x5EFA;&#x56FE;&#x5F62;&#xFF08;zabbix-server-19216810010&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x521B;&#x5EFA;&#x56FE;&#x5F62;&#xFF08;zabbix-server-19216810010&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521B;&#x5EFA;&#x56FE;&#x5F62;&#xFF08;zabbix-server-192.168.100.10&#xFF09;</h6>
+<p><a href="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660208162027.png" data-lightbox="a8290f3a-1e89-4351-af9d-1bc7a53c968f" data-title="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"><img src="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660208162027.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></a></p>
+<p><a href="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660208971029.png" data-lightbox="0adcb19d-baa4-416d-af93-fa64c5dc93d9" data-title="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"><img src="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660208971029.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></a></p>
+<p><a href="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660209708331.png" data-lightbox="f3631162-8728-45a7-b551-07920fddadfb" data-title="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"><img src="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660209708331.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></a></p>
+<h6 id="&#x6A21;&#x677F;template"><a name="&#x6A21;&#x677F;template" class="anchor-navigation-ex-anchor" href="#&#x6A21;&#x677F;template"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6A21;&#x677F;Template</h6>
 <p>&#x5E94;&#x7528;&#x96C6;&#xFF08;app&#xFF09;&#xFF1A;&#x5BF9;&#x76D1;&#x63A7;&#x9879;&#x7684;&#x5206;&#x7C7B;</p>
 <p>&#x76D1;&#x63A7;&#x9879;&#xFF08;item&#xFF09;&#xFF1A;&#x5177;&#x4F53;&#x76D1;&#x63A7;&#x7684;&#x9879;&#x76EE; &#x6BD4;&#x4F8B;&#x3002;&#x3002;&#x5927;&#x5C0F;&#x3002;&#x3002;</p>
 <p>&#x56FE;&#x5F62;&#xFF1A;&#x76D1;&#x63A7;&#x9879;&#x4EA7;&#x751F;&#x7684;&#x8FDE;&#x7EED;&#x6570;&#x636E;&#x7528;&#x56FE;&#x5F62;&#x8868;&#x793A;</p>
 <p>&#x805A;&#x5408;&#x56FE;&#x5F62;&#xFF1A;&#x591A;&#x4E2A;&#x56FE;&#x5F62;&#x5728;&#x4E00;&#x4E2A;&#x9875;&#x9762;&#x663E;&#x793A;</p>
 <p>&#x81EA;&#x52A8;&#x53D1;&#x73B0;&#xFF1A;&#x81EA;&#x52A8;&#x53D1;&#x73B0;&#x4E3B;&#x673A;&#x5E76;&#x6DFB;&#x52A0;&#x5230;&#x7EC4;&#x4E2D;</p>
-<p><img src="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660211033733.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
-<p><img src="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660211669135.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
-<p><img src="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660212312837.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
-<p><img src="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660213228539.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
-<p><img src="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660214428841.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
-<h4 id="&#x62A5;&#x9519;&#x53CA;&#x89E3;&#x51B3;&#xFF1A;">&#x62A5;&#x9519;&#x53CA;&#x89E3;&#x51B3;&#xFF1A;</h4>
-<h5 id="&#x5B89;&#x88C5;zabbix40&#x56FE;&#x5F62;&#x754C;&#x9762;&#x4E0D;&#x663E;&#x793A;&#x56FE;">&#x5B89;&#x88C5;zabbix4.0&#x56FE;&#x5F62;&#x754C;&#x9762;&#x4E0D;&#x663E;&#x793A;&#x56FE;</h5>
-<p><img src="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
+<p><a href="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660211033733.png" data-lightbox="44ea0972-3a36-4b85-b6e9-fe65517f0be8" data-title="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"><img src="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660211033733.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></a></p>
+<p><a href="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660211669135.png" data-lightbox="79e0dce9-f8e8-4f8f-b9e3-d0d561471e27" data-title="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"><img src="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660211669135.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></a></p>
+<p><a href="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660212312837.png" data-lightbox="9a9b06b0-fb17-4581-8f2b-f3cf754cfbf9" data-title="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"><img src="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660212312837.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></a></p>
+<p><a href="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660213228539.png" data-lightbox="3826b5d6-fc75-465a-87f4-d3d69a3757d2" data-title="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"><img src="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660213228539.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></a></p>
+<p><a href="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660214428841.png" data-lightbox="928c9db4-27ef-4a1e-a681-2f1ea917c096" data-title="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"><img src="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70#pic_center-163660214428841.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></a></p>
+<h4 id="&#x62A5;&#x9519;&#x53CA;&#x89E3;&#x51B3;&#xFF1A;"><a name="&#x62A5;&#x9519;&#x53CA;&#x89E3;&#x51B3;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x62A5;&#x9519;&#x53CA;&#x89E3;&#x51B3;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x62A5;&#x9519;&#x53CA;&#x89E3;&#x51B3;&#xFF1A;</h4>
+<h5 id="&#x5B89;&#x88C5;zabbix40&#x56FE;&#x5F62;&#x754C;&#x9762;&#x4E0D;&#x663E;&#x793A;&#x56FE;"><a name="&#x5B89;&#x88C5;zabbix40&#x56FE;&#x5F62;&#x754C;&#x9762;&#x4E0D;&#x663E;&#x793A;&#x56FE;" class="anchor-navigation-ex-anchor" href="#&#x5B89;&#x88C5;zabbix40&#x56FE;&#x5F62;&#x754C;&#x9762;&#x4E0D;&#x663E;&#x793A;&#x56FE;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B89;&#x88C5;zabbix4.0&#x56FE;&#x5F62;&#x754C;&#x9762;&#x4E0D;&#x663E;&#x793A;&#x56FE;</h5>
+<p><a href="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70.png" data-lightbox="03ab35ec-d3c9-487a-a2cb-c945d0283c76" data-title="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"><img src="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></a></p>
 <p>&#x89E3;&#x51B3;&#xFF1A;
  &#x5927;&#x4F6C;&#x63D0;&#x793A;php&#x7248;&#x672C;&#x95EE;&#x9898;&#xFF0C;yum&#x5B89;&#x88C5;&#x4E3A;5.4 &#xFF0C;&#x5347;&#x7EA7;&#x4E3A;7&#x7684;&#x7248;&#x672C;&#x6D4B;&#x8BD5;</p>
 <pre><code class="lang-bash">1.&#x6267;&#x884C;&#x4E0B;&#x9762;&#x7684;&#x547D;&#x4EE4;&#x5347;&#x7EA7;&#x8F6F;&#x4EF6;&#x4ED3;&#x5E93;
@@ -463,8 +449,8 @@ yum install -y php56w php56w-opcache php56w-xml php56w-mcrypt php56w-gd php56w-d
 
 yum install php70w-fpm php70w-mysql php70w-mysqli php70w php70w-opcache php70w-gd php70w-intl php70w-mbstring php70w-exif php70w-mcrypt php70w-openssl
 </code></pre>
-<h5 id="&#x5B89;&#x88C5;zabbix-&#x540E;&#x8FDB;&#x5165;graph&#x754C;&#x9762;-&#x663E;&#x793A;fail">&#x5B89;&#x88C5;zabbix &#x540E;&#x8FDB;&#x5165;graph&#x754C;&#x9762; &#x663E;&#x793A;Fail</h5>
-<p><img src="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70-163660218931344.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
+<h5 id="&#x5B89;&#x88C5;zabbix-&#x540E;&#x8FDB;&#x5165;graph&#x754C;&#x9762;-&#x663E;&#x793A;fail"><a name="&#x5B89;&#x88C5;zabbix-&#x540E;&#x8FDB;&#x5165;graph&#x754C;&#x9762;-&#x663E;&#x793A;fail" class="anchor-navigation-ex-anchor" href="#&#x5B89;&#x88C5;zabbix-&#x540E;&#x8FDB;&#x5165;graph&#x754C;&#x9762;-&#x663E;&#x793A;fail"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B89;&#x88C5;zabbix &#x540E;&#x8FDB;&#x5165;graph&#x754C;&#x9762; &#x663E;&#x793A;Fail</h5>
+<p><a href="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70-163660218931344.png" data-lightbox="0be253a6-e1b2-4b01-b39d-e76fec5bee88" data-title="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"><img src="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70-163660218931344.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></a></p>
 <p>&#x4F9D;&#x636E;&#x63D0;&#x793A;&#x4FEE;&#x6539;</p>
 <pre><code class="lang-bash">vim /etc/php.ini
 date.timezone = Asia/Shanghai
@@ -472,11 +458,11 @@ date.timezone = Asia/Shanghai
 systemctl restart php-fpm
 systemctl restart httpd
 </code></pre>
-<p><img src="zabbix.assets/20210208164134554.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
-<p><img src="zabbix.assets/20210208164049758.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
-<p><img src="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70-163660223252548.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
-<h2 id="zabbix-&#x6784;&#x5EFA;&#x4F01;&#x4E1A;&#x7EA7;&#x76D1;&#x63A7;&#x544A;&#x8B66;&#x5E73;&#x53F0;-2">Zabbix &#x6784;&#x5EFA;&#x4F01;&#x4E1A;&#x7EA7;&#x76D1;&#x63A7;&#x544A;&#x8B66;&#x5E73;&#x53F0; 2</h2>
-<h3 id="zabbix-items-&#x76D1;&#x63A7;&#x9879;">Zabbix Items &#x76D1;&#x63A7;&#x9879;</h3>
+<p><a href="zabbix.assets/20210208164134554.png" data-lightbox="5d53d6e4-9125-412a-84db-0a873b3afdf2" data-title="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"><img src="zabbix.assets/20210208164134554.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></a></p>
+<p><a href="zabbix.assets/20210208164049758.png" data-lightbox="b446bb13-a865-4c04-ad7e-f772d05d3a7c" data-title="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"><img src="zabbix.assets/20210208164049758.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></a></p>
+<p><a href="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70-163660223252548.png" data-lightbox="c84d961d-17c3-4b02-ac9b-cbce4078a818" data-title="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"><img src="zabbix.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzcxODEz,size_16,color_FFFFFF,t_70-163660223252548.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></a></p>
+<h2 id="zabbix-&#x6784;&#x5EFA;&#x4F01;&#x4E1A;&#x7EA7;&#x76D1;&#x63A7;&#x544A;&#x8B66;&#x5E73;&#x53F0;-2"><a name="zabbix-&#x6784;&#x5EFA;&#x4F01;&#x4E1A;&#x7EA7;&#x76D1;&#x63A7;&#x544A;&#x8B66;&#x5E73;&#x53F0;-2" class="anchor-navigation-ex-anchor" href="#zabbix-&#x6784;&#x5EFA;&#x4F01;&#x4E1A;&#x7EA7;&#x76D1;&#x63A7;&#x544A;&#x8B66;&#x5E73;&#x53F0;-2"><i class="fa fa-link" aria-hidden="true"></i></a>Zabbix &#x6784;&#x5EFA;&#x4F01;&#x4E1A;&#x7EA7;&#x76D1;&#x63A7;&#x544A;&#x8B66;&#x5E73;&#x53F0; 2</h2>
+<h3 id="zabbix-items-&#x76D1;&#x63A7;&#x9879;"><a name="zabbix-items-&#x76D1;&#x63A7;&#x9879;" class="anchor-navigation-ex-anchor" href="#zabbix-items-&#x76D1;&#x63A7;&#x9879;"><i class="fa fa-link" aria-hidden="true"></i></a>Zabbix Items &#x76D1;&#x63A7;&#x9879;</h3>
 <p>&#x83B7;&#x53D6;&#x76D1;&#x63A7;&#x6570;&#x636E;&#x65B9;&#x5F0F;</p>
 <pre><code class="lang-bash">zabbix-agent
 SNMP &#x7B80;&#x5355;&#x7684;&#x7F51;&#x9645;&#x53D1;&#x73B0;&#x534F;&#x8BAE;
@@ -486,32 +472,32 @@ SNMP &#x7B80;&#x5355;&#x7684;&#x7F51;&#x9645;&#x53D1;&#x73B0;&#x534F;&#x8BAE;
 <p>&#x83B7;&#x53D6;&#x6570;&#x636E;&#x7684;&#x95F4;&#x9694;&#xFF1A;&#x4E0D;&#x80FD;&#x592A;&#x5C0F;&#xFF0C;1s 1m </p>
 <p>&#x5386;&#x53F2;&#x6570;&#x636E;&#x4FDD;&#x5B58;&#x7684;&#x65F6;&#x95F4;&#xFF1A;</p>
 <p>&#x8D8B;&#x52BF;&#x6570;&#x636E;&#x4FDD;&#x5B58;&#x65F6;&#x95F4;&#xFF1A;</p>
-<h4 id="&#x65B0;&#x5EFA;item&#x76D1;&#x63A7;&#x9879;">&#x65B0;&#x5EFA;item&#x76D1;&#x63A7;&#x9879;</h4>
-<h4 id="&#x76D1;&#x63A7;&#x9879;&#xFF1A;&#x670D;&#x52A1;&#x5668;&#x542F;&#x52A8;&#x5206;&#x533A;&#x5269;&#x4F59;&#x7A7A;&#x95F4;">&#x76D1;&#x63A7;&#x9879;&#xFF1A;&#x670D;&#x52A1;&#x5668;&#x542F;&#x52A8;&#x5206;&#x533A;&#x5269;&#x4F59;&#x7A7A;&#x95F4;</h4>
+<h4 id="&#x65B0;&#x5EFA;item&#x76D1;&#x63A7;&#x9879;"><a name="&#x65B0;&#x5EFA;item&#x76D1;&#x63A7;&#x9879;" class="anchor-navigation-ex-anchor" href="#&#x65B0;&#x5EFA;item&#x76D1;&#x63A7;&#x9879;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x65B0;&#x5EFA;item&#x76D1;&#x63A7;&#x9879;</h4>
+<h4 id="&#x76D1;&#x63A7;&#x9879;&#xFF1A;&#x670D;&#x52A1;&#x5668;&#x542F;&#x52A8;&#x5206;&#x533A;&#x5269;&#x4F59;&#x7A7A;&#x95F4;"><a name="&#x76D1;&#x63A7;&#x9879;&#xFF1A;&#x670D;&#x52A1;&#x5668;&#x542F;&#x52A8;&#x5206;&#x533A;&#x5269;&#x4F59;&#x7A7A;&#x95F4;" class="anchor-navigation-ex-anchor" href="#&#x76D1;&#x63A7;&#x9879;&#xFF1A;&#x670D;&#x52A1;&#x5668;&#x542F;&#x52A8;&#x5206;&#x533A;&#x5269;&#x4F59;&#x7A7A;&#x95F4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x76D1;&#x63A7;&#x9879;&#xFF1A;&#x670D;&#x52A1;&#x5668;&#x542F;&#x52A8;&#x5206;&#x533A;&#x5269;&#x4F59;&#x7A7A;&#x95F4;</h4>
 <p>1&#x3001;&#x65B0;&#x5EFA;&#x6A21;&#x677F;</p>
-<p><img src="zabbix.assets/image-20211111154251931.png" alt="image-20211111154251931"></p>
+<p><a href="zabbix.assets/image-20211111154251931.png" data-lightbox="5db6c551-2e45-41f8-9cc8-20eacd45a6c7" data-title="image-20211111154251931"><img src="zabbix.assets/image-20211111154251931.png" alt="image-20211111154251931"></a></p>
 <p>2&#x3001;&#x521B;&#x5EFA;&#x76D1;&#x63A7;&#x9879;</p>
-<p><img src="zabbix.assets/image-20211111154338090.png" alt="image-20211111154338090"></p>
-<p><img src="zabbix.assets/image-20211111155148598.png" alt="image-20211111155148598"></p>
+<p><a href="zabbix.assets/image-20211111154338090.png" data-lightbox="e4363d02-d218-435a-8dd6-a19f1cc76e42" data-title="image-20211111154338090"><img src="zabbix.assets/image-20211111154338090.png" alt="image-20211111154338090"></a></p>
+<p><a href="zabbix.assets/image-20211111155148598.png" data-lightbox="6249a065-d38a-4159-9ecc-f18cef547df1" data-title="image-20211111155148598"><img src="zabbix.assets/image-20211111155148598.png" alt="image-20211111155148598"></a></p>
 <p>3&#x3001;&#x65B0;&#x5EFA;&#x56FE;&#x5F62;</p>
-<p><img src="zabbix.assets/image-20211111155541026.png" alt="image-20211111155541026"></p>
+<p><a href="zabbix.assets/image-20211111155541026.png" data-lightbox="43b19b71-af1d-4602-960b-49f0bb5e77af" data-title="image-20211111155541026"><img src="zabbix.assets/image-20211111155541026.png" alt="image-20211111155541026"></a></p>
 <p>&#x6DFB;&#x52A0;&#x6A21;&#x677F;&#x5230;&#x4E3B;&#x673A;</p>
 <p>&#x7136;&#x540E;&#x5728;&#x68C0;&#x6D4B;&#xFF1A;&#x6700;&#x65B0;&#x6570;&#x636E;&#xFF1A;&#x67E5;&#x770B;&#x56FE;&#x5F62;</p>
-<p><img src="zabbix.assets/image-20211111160644405.png" alt="image-20211111160644405"></p>
-<h4 id="&#x76D1;&#x63A7;&#x9879;&#xFF1A;&#x670D;&#x52A1;&#x5668;&#x7F51;&#x7EDC;&#x8FDB;&#x51FA;&#x53E3;&#x6D41;&#x91CF;">&#x76D1;&#x63A7;&#x9879;&#xFF1A;&#x670D;&#x52A1;&#x5668;&#x7F51;&#x7EDC;&#x8FDB;&#x51FA;&#x53E3;&#x6D41;&#x91CF;</h4>
+<p><a href="zabbix.assets/image-20211111160644405.png" data-lightbox="be2d7cdc-c8f1-4f76-b510-8b65824f3e20" data-title="image-20211111160644405"><img src="zabbix.assets/image-20211111160644405.png" alt="image-20211111160644405"></a></p>
+<h4 id="&#x76D1;&#x63A7;&#x9879;&#xFF1A;&#x670D;&#x52A1;&#x5668;&#x7F51;&#x7EDC;&#x8FDB;&#x51FA;&#x53E3;&#x6D41;&#x91CF;"><a name="&#x76D1;&#x63A7;&#x9879;&#xFF1A;&#x670D;&#x52A1;&#x5668;&#x7F51;&#x7EDC;&#x8FDB;&#x51FA;&#x53E3;&#x6D41;&#x91CF;" class="anchor-navigation-ex-anchor" href="#&#x76D1;&#x63A7;&#x9879;&#xFF1A;&#x670D;&#x52A1;&#x5668;&#x7F51;&#x7EDC;&#x8FDB;&#x51FA;&#x53E3;&#x6D41;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x76D1;&#x63A7;&#x9879;&#xFF1A;&#x670D;&#x52A1;&#x5668;&#x7F51;&#x7EDC;&#x8FDB;&#x51FA;&#x53E3;&#x6D41;&#x91CF;</h4>
 <p>&#x65B0;&#x5EFA;&#x9879; IN&#xFF08;&#x65B0;&#x5EFA;&#x9879;OUT&#xFF0C;&#x65B0;&#x5EFA;&#x9879;all&#xFF09;</p>
-<p><img src="zabbix.assets/image-20211111170552282.png" alt="image-20211111170552282"></p>
-<p><img src="zabbix.assets/image-20211111164757594.png" alt="image-20211111164757594"></p>
-<h4 id="&#x65B0;&#x5EFA;&#x9879;mem">&#x65B0;&#x5EFA;&#x9879;mem</h4>
-<p><img src="zabbix.assets/image-20211111172407040.png" alt="image-20211111172407040"></p>
+<p><a href="zabbix.assets/image-20211111170552282.png" data-lightbox="b3f5bb48-3e18-49f8-b5a8-d8fce01656c1" data-title="image-20211111170552282"><img src="zabbix.assets/image-20211111170552282.png" alt="image-20211111170552282"></a></p>
+<p><a href="zabbix.assets/image-20211111164757594.png" data-lightbox="75cb9db9-e04e-473e-b961-029361322c85" data-title="image-20211111164757594"><img src="zabbix.assets/image-20211111164757594.png" alt="image-20211111164757594"></a></p>
+<h4 id="&#x65B0;&#x5EFA;&#x9879;mem"><a name="&#x65B0;&#x5EFA;&#x9879;mem" class="anchor-navigation-ex-anchor" href="#&#x65B0;&#x5EFA;&#x9879;mem"><i class="fa fa-link" aria-hidden="true"></i></a>&#x65B0;&#x5EFA;&#x9879;mem</h4>
+<p><a href="zabbix.assets/image-20211111172407040.png" data-lightbox="9423c64a-86e1-4365-94f4-752482f5da72" data-title="image-20211111172407040"><img src="zabbix.assets/image-20211111172407040.png" alt="image-20211111172407040"></a></p>
 <p>&#x521B;&#x5EFA;&#x56FE;&#x5F62;</p>
 <p>&#x6A21;&#x677F;&#x5173;&#x8054;&#x4E3B;&#x673A;</p>
 <p>&#x6700;&#x65B0;&#x6570;&#x636E;</p>
 <p>&#x521B;&#x5EFA;&#x805A;&#x5408;&#x56FE;&#x5F62;</p>
-<p><img src="zabbix.assets/image-20211111173426460.png" alt="image-20211111173426460"></p>
-<h4 id="&#x76D1;&#x63A7;&#x9879;&#xFF1A;&#x76D1;&#x63A7;ftp&#x670D;&#x52A1;">&#x76D1;&#x63A7;&#x9879;&#xFF1A;&#x76D1;&#x63A7;ftp&#x670D;&#x52A1;</h4>
-<p><img src="zabbix.assets/image-20211111175038429.png" alt="image-20211111175038429"></p>
-<h4 id="&#x81EA;&#x5B9A;&#x4E49;key">&#x81EA;&#x5B9A;&#x4E49;Key</h4>
+<p><a href="zabbix.assets/image-20211111173426460.png" data-lightbox="b9fe154a-4c03-4b49-b96f-8de3d8892ff8" data-title="image-20211111173426460"><img src="zabbix.assets/image-20211111173426460.png" alt="image-20211111173426460"></a></p>
+<h4 id="&#x76D1;&#x63A7;&#x9879;&#xFF1A;&#x76D1;&#x63A7;ftp&#x670D;&#x52A1;"><a name="&#x76D1;&#x63A7;&#x9879;&#xFF1A;&#x76D1;&#x63A7;ftp&#x670D;&#x52A1;" class="anchor-navigation-ex-anchor" href="#&#x76D1;&#x63A7;&#x9879;&#xFF1A;&#x76D1;&#x63A7;ftp&#x670D;&#x52A1;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x76D1;&#x63A7;&#x9879;&#xFF1A;&#x76D1;&#x63A7;ftp&#x670D;&#x52A1;</h4>
+<p><a href="zabbix.assets/image-20211111175038429.png" data-lightbox="2489c95e-1fb1-4a21-a1e9-57e1ef8b5349" data-title="image-20211111175038429"><img src="zabbix.assets/image-20211111175038429.png" alt="image-20211111175038429"></a></p>
+<h4 id="&#x81EA;&#x5B9A;&#x4E49;key"><a name="&#x81EA;&#x5B9A;&#x4E49;key" class="anchor-navigation-ex-anchor" href="#&#x81EA;&#x5B9A;&#x4E49;key"><i class="fa fa-link" aria-hidden="true"></i></a>&#x81EA;&#x5B9A;&#x4E49;Key</h4>
 <p>vim /etc/zabbix/zabbix_agentd.d/userparamenter_mysql.conf &#x4EE5;conf&#x7ED3;&#x5C3E;&#x5373;&#x53EF;</p>
 <pre><code class="lang-bash">[root@zabbix_server ~]<span class="hljs-comment"># vim /etc/zabbix/zabbix_agentd.d/userparamenter_mysql.conf</span>
 
@@ -519,18 +505,18 @@ UserParameter=mysql.questions.zhangshoulong,mysqladmin -uroot -p123456 status | 
 [root@zabbix_server ~]<span class="hljs-comment"># zabbix_agentd -t mysql.questions.zhangshoulong</span>
 mysql.questions.zhangshoulong                 [t|801689]
 </code></pre>
-<p><img src="zabbix.assets/image-20211111184515078.png" alt="image-20211111184515078"></p>
-<p><img src="zabbix.assets/image-20211111185909781-163662835116850.png" alt="image-20211111185909781"></p>
-<h3 id="zabbix-triger-&#x89E6;&#x53D1;&#x5668;">Zabbix Triger &#x89E6;&#x53D1;&#x5668;</h3>
+<p><a href="zabbix.assets/image-20211111184515078.png" data-lightbox="dfb0f50a-a107-4889-b89e-a96d5ffab70b" data-title="image-20211111184515078"><img src="zabbix.assets/image-20211111184515078.png" alt="image-20211111184515078"></a></p>
+<p><a href="zabbix.assets/image-20211111185909781-163662835116850.png" data-lightbox="2e16c34b-9ed1-447d-a5ef-4e25e297e51a" data-title="image-20211111185909781"><img src="zabbix.assets/image-20211111185909781-163662835116850.png" alt="image-20211111185909781"></a></p>
+<h3 id="zabbix-triger-&#x89E6;&#x53D1;&#x5668;"><a name="zabbix-triger-&#x89E6;&#x53D1;&#x5668;" class="anchor-navigation-ex-anchor" href="#zabbix-triger-&#x89E6;&#x53D1;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>Zabbix Triger &#x89E6;&#x53D1;&#x5668;</h3>
 <p>&#x89E6;&#x53D1;&#x5668;&#x7528;&#x4E8E;&#x5B9A;&#x4E49;item&#x7684;&#x62A5;&#x8B66;&#x9608;&#x503C;</p>
-<h4 id="&#x89E6;&#x53D1;&#x5668;&#x8868;&#x8FBE;&#x5F0F;">&#x89E6;&#x53D1;&#x5668;&#x8868;&#x8FBE;&#x5F0F;</h4>
+<h4 id="&#x89E6;&#x53D1;&#x5668;&#x8868;&#x8FBE;&#x5F0F;"><a name="&#x89E6;&#x53D1;&#x5668;&#x8868;&#x8FBE;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x89E6;&#x53D1;&#x5668;&#x8868;&#x8FBE;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x89E6;&#x53D1;&#x5668;&#x8868;&#x8FBE;&#x5F0F;</h4>
 <pre><code class="lang-json">{&lt;server&gt;:&lt;key&gt;.&lt;function&gt;(&lt;parameter&gt;)}&lt;operation&gt;&lt;constant&gt;
 server: &#x53EF;&#x4EE5;&#x662F;host &#x4E5F;&#x53EF;&#x4EE5;&#x662F;template
 key: item &#x5305;&#x62EC;&#x81EA;&#x5B9A;&#x4E49;&#x7684;key
 &#x51FD;&#x6570;
 &#x5E38;&#x7528;&#x6A21;&#x677F;
 </code></pre>
-<h4 id="&#x4F8B;&#x5B50;&#xFF1A;cpu&#x8D1F;&#x8F7D;&#x8D85;&#x8FC7;2">&#x4F8B;&#x5B50;&#xFF1A;CPU&#x8D1F;&#x8F7D;&#x8D85;&#x8FC7;2</h4>
+<h4 id="&#x4F8B;&#x5B50;&#xFF1A;cpu&#x8D1F;&#x8F7D;&#x8D85;&#x8FC7;2"><a name="&#x4F8B;&#x5B50;&#xFF1A;cpu&#x8D1F;&#x8F7D;&#x8D85;&#x8FC7;2" class="anchor-navigation-ex-anchor" href="#&#x4F8B;&#x5B50;&#xFF1A;cpu&#x8D1F;&#x8F7D;&#x8D85;&#x8FC7;2"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F8B;&#x5B50;&#xFF1A;CPU&#x8D1F;&#x8F7D;&#x8D85;&#x8FC7;2</h4>
 <pre><code class="lang-bash">```
 
 ![image-20211111192234039](zabbix.assets/image-20211111192234039.png)
@@ -629,14 +615,14 @@ http://mail.126.com/&#x6216;mail.qq.com
 &#x4E8B;&#x4EF6;&#x4EE3;&#x7801;:{EVENT.ID}
 </code></pre>
 <p>&#x5F53;&#x4E8B;&#x4EF6;&#x5347;&#x7EA7;&#xFF0C;&#x53D1;&#x9001;&#x7ED9;&#x66F4;&#x9AD8;&#x7EA7;&#x7528;&#x6237;&#x3002;</p>
-<h5 id="&#x5FAE;&#x4FE1;&#x544A;&#x8B66;">&#x5FAE;&#x4FE1;&#x544A;&#x8B66;</h5>
+<h5 id="&#x5FAE;&#x4FE1;&#x544A;&#x8B66;"><a name="&#x5FAE;&#x4FE1;&#x544A;&#x8B66;" class="anchor-navigation-ex-anchor" href="#&#x5FAE;&#x4FE1;&#x544A;&#x8B66;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5FAE;&#x4FE1;&#x544A;&#x8B66;</h5>
 <p>&#x83B7;&#x53D6;&#x4F01;&#x4E1A;ID&#xFF1A; ww88cfc4e6401f9bb0 <a href="https://work.weixin.qq.com/wework_admin/loginpage_wx?from=myhome" target="_blank">https://work.weixin.qq.com/wework_admin/loginpage_wx?from=myhome</a></p>
-<p><img src="zabbix.assets/image-20211112101855500.png" alt="image-20211112101855500"></p>
+<p><a href="zabbix.assets/image-20211112101855500.png" data-lightbox="a29de3ec-f0ce-41eb-aa93-279d0e9efc5f" data-title="image-20211112101855500"><img src="zabbix.assets/image-20211112101855500.png" alt="image-20211112101855500"></a></p>
 <p>AgentID&#xFF1A;1000003</p>
 <p>Secret&#xFF1A; FrmpVSXIt8kokhQJ9neNSQwti-ZeTcFhWqzifvBWvuA</p>
-<p><img src="zabbix.assets/image-20211112103325012.png" alt="image-20211112103325012"></p>
-<p><img src="zabbix.assets/image-20211112104449707.png" alt="image-20211112104449707"></p>
-<p><img src="zabbix.assets/image-20211112104551488.png" alt="image-20211112104551488"></p>
+<p><a href="zabbix.assets/image-20211112103325012.png" data-lightbox="e838ad13-891f-47a2-92e2-f71c4d8a2456" data-title="image-20211112103325012"><img src="zabbix.assets/image-20211112103325012.png" alt="image-20211112103325012"></a></p>
+<p><a href="zabbix.assets/image-20211112104449707.png" data-lightbox="ef11f20d-e655-421c-ac40-6e0f2f2b6309" data-title="image-20211112104449707"><img src="zabbix.assets/image-20211112104449707.png" alt="image-20211112104449707"></a></p>
+<p><a href="zabbix.assets/image-20211112104551488.png" data-lightbox="ae767003-f3a8-4602-9d96-04b7a9ba21bd" data-title="image-20211112104551488"><img src="zabbix.assets/image-20211112104551488.png" alt="image-20211112104551488"></a></p>
 <p>vim  /usr/lib/zabbix/alertscripts/wechat.py</p>
 <p>chown zabbix:zabbix /usr/lib/zabbix/alertscripts/wechat.py</p>
 <pre><code class="lang-python"><span class="hljs-comment">#!/usr/bin/env python</span>
@@ -713,10 +699,10 @@ sys.setdefaultencoding( <span class="hljs-string">&quot;utf-8&quot;</span> )
 
 [&#x7528;&#x6237;] [title] [&#x5185;&#x5BB9;]
 </code></pre>
-<p><img src="zabbix.assets/image-20211112113333108.png" alt="image-20211112113333108"></p>
-<p><img src="zabbix.assets/image-20211112113513283.png" alt="image-20211112113513283"></p>
-<p><img src="zabbix.assets/image-20211112113741760.png" alt="image-20211112113741760"></p>
-<p><img src="zabbix.assets/image-20211112113812492.png" alt="image-20211112113812492"></p>
+<p><a href="zabbix.assets/image-20211112113333108.png" data-lightbox="3885b374-5164-4a0c-ac22-9f4d913c171d" data-title="image-20211112113333108"><img src="zabbix.assets/image-20211112113333108.png" alt="image-20211112113333108"></a></p>
+<p><a href="zabbix.assets/image-20211112113513283.png" data-lightbox="8106bd14-fd8f-4b37-b13a-4e3674f9fc9d" data-title="image-20211112113513283"><img src="zabbix.assets/image-20211112113513283.png" alt="image-20211112113513283"></a></p>
+<p><a href="zabbix.assets/image-20211112113741760.png" data-lightbox="3bafb9d0-9439-484d-9e96-4375801e6e37" data-title="image-20211112113741760"><img src="zabbix.assets/image-20211112113741760.png" alt="image-20211112113741760"></a></p>
+<p><a href="zabbix.assets/image-20211112113812492.png" data-lightbox="c1f14dc4-3027-45ba-b14b-a7a3a03a9f04" data-title="image-20211112113812492"><img src="zabbix.assets/image-20211112113812492.png" alt="image-20211112113812492"></a></p>
 <pre><code class="lang-bash">{TRIGGER.STATUS}: {TRIGGER.NAME}
 &#x544A;&#x8B66;&#x4E3B;&#x673A;:{HOST.NAME}
 &#x4E3B;&#x673A;&#x5730;&#x5740;:{HOST.IP}
@@ -726,15 +712,15 @@ sys.setdefaultencoding( <span class="hljs-string">&quot;utf-8&quot;</span> )
 &#x95EE;&#x9898;&#x8BE6;&#x60C5;:{ITEM.NAME}:{ITEM.VALUE}
 &#x4E8B;&#x4EF6;&#x4EE3;&#x7801;:{EVENT.ID}
 </code></pre>
-<h4 id="&#x8FDC;&#x7A0B;&#x6267;&#x884C;">&#x8FDC;&#x7A0B;&#x6267;&#x884C;</h4>
+<h4 id="&#x8FDC;&#x7A0B;&#x6267;&#x884C;"><a name="&#x8FDC;&#x7A0B;&#x6267;&#x884C;" class="anchor-navigation-ex-anchor" href="#&#x8FDC;&#x7A0B;&#x6267;&#x884C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FDC;&#x7A0B;&#x6267;&#x884C;</h4>
 <p>&#x5F53;&#x95EE;&#x9898;&#x53D1;&#x751F;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8FDC;&#x7A0B;&#x6267;&#x884C;&#x547D;&#x4EE4;&#x7684;&#x5F62;&#x5F0F;&#x5BF9;&#x76EE;&#x6807;&#x4E3B;&#x673A;&#x8FDB;&#x884C;&#x63A7;&#x5236;</p>
-<p><img src="zabbix.assets/image-20211112115030073.png" alt="image-20211112115030073"></p>
-<p><img src="zabbix.assets/image-20211112121444278.png" alt="image-20211112121444278"></p>
-<p><img src="zabbix.assets/image-20211112121454147.png" alt="image-20211112121454147"></p>
-<p><img src="zabbix.assets/image-20211112123239292.png" alt="image-20211112123239292"></p>
-<p><img src="zabbix.assets/image-20211112123249323.png" alt="image-20211112123249323"></p>
-<p><img src="zabbix.assets/image-20211112123209567.png" alt="image-20211112123209567"></p>
-<h3 id="zabbix-macros-&#x5185;&#x7F6E;&#x5B8F;">Zabbix Macros &#x5185;&#x7F6E;&#x5B8F;</h3>
+<p><a href="zabbix.assets/image-20211112115030073.png" data-lightbox="bc4bb35b-a060-4390-bca9-9d7fbccc40dd" data-title="image-20211112115030073"><img src="zabbix.assets/image-20211112115030073.png" alt="image-20211112115030073"></a></p>
+<p><a href="zabbix.assets/image-20211112121444278.png" data-lightbox="99b08dd1-de48-4f5a-a53a-2a9ccf520699" data-title="image-20211112121444278"><img src="zabbix.assets/image-20211112121444278.png" alt="image-20211112121444278"></a></p>
+<p><a href="zabbix.assets/image-20211112121454147.png" data-lightbox="ab5dfde3-882f-493b-b31c-bb00e1d6d501" data-title="image-20211112121454147"><img src="zabbix.assets/image-20211112121454147.png" alt="image-20211112121454147"></a></p>
+<p><a href="zabbix.assets/image-20211112123239292.png" data-lightbox="531cc305-6699-4707-aca8-1f5d04cabe2c" data-title="image-20211112123239292"><img src="zabbix.assets/image-20211112123239292.png" alt="image-20211112123239292"></a></p>
+<p><a href="zabbix.assets/image-20211112123249323.png" data-lightbox="ba81a214-04f7-4f38-8a04-17204ca5f0e3" data-title="image-20211112123249323"><img src="zabbix.assets/image-20211112123249323.png" alt="image-20211112123249323"></a></p>
+<p><a href="zabbix.assets/image-20211112123209567.png" data-lightbox="56450411-a427-414c-a257-1bf22b2ca283" data-title="image-20211112123209567"><img src="zabbix.assets/image-20211112123209567.png" alt="image-20211112123209567"></a></p>
+<h3 id="zabbix-macros-&#x5185;&#x7F6E;&#x5B8F;"><a name="zabbix-macros-&#x5185;&#x7F6E;&#x5B8F;" class="anchor-navigation-ex-anchor" href="#zabbix-macros-&#x5185;&#x7F6E;&#x5B8F;"><i class="fa fa-link" aria-hidden="true"></i></a>Zabbix Macros &#x5185;&#x7F6E;&#x5B8F;</h3>
 <p><a href="https://www.zabbix.com/documentation/5.0/zh/manual/config/notifications/action/operation/macros" target="_blank">https://www.zabbix.com/documentation/5.0/zh/manual/config/notifications/action/operation/macros</a></p>
 <pre><code class="lang-php"><span class="hljs-comment">## &#x4E3B;&#x673A;&#x76F8;&#x5173;</span>
 {HOSTNAME1}  &#x544A;&#x8B66;&#x4E3B;&#x673A;
@@ -769,27 +755,27 @@ sys.setdefaultencoding( <span class="hljs-string">&quot;utf-8&quot;</span> )
 {EVENT.ID}  &#x89E6;&#x53D1;&#x52A8;&#x4F5C;&#x7684;&#x4E8B;&#x4EF6;&#x6570;&#x5B57;&#x6807;&#x8BC6;
 {EVENT.STATUS} &#x89E6;&#x53D1;&#x52A8;&#x4F5C;&#x7684;&#x4E8B;&#x4EF6;&#x72B6;&#x6001;
 </code></pre>
-<h3 id="zabbix-&#x81EA;&#x52A8;&#x53D1;&#x73B0;">Zabbix &#x81EA;&#x52A8;&#x53D1;&#x73B0;</h3>
-<p><img src="zabbix.assets/image-20211112135629262.png" alt="image-20211112135629262"></p>
-<p><img src="zabbix.assets/image-20211112135854785.png" alt="image-20211112135854785"></p>
-<p><img src="zabbix.assets/image-20211112140423794.png" alt="image-20211112140423794"></p>
+<h3 id="zabbix-&#x81EA;&#x52A8;&#x53D1;&#x73B0;"><a name="zabbix-&#x81EA;&#x52A8;&#x53D1;&#x73B0;" class="anchor-navigation-ex-anchor" href="#zabbix-&#x81EA;&#x52A8;&#x53D1;&#x73B0;"><i class="fa fa-link" aria-hidden="true"></i></a>Zabbix &#x81EA;&#x52A8;&#x53D1;&#x73B0;</h3>
+<p><a href="zabbix.assets/image-20211112135629262.png" data-lightbox="af32ea6d-af68-478f-8e95-3f659df94b29" data-title="image-20211112135629262"><img src="zabbix.assets/image-20211112135629262.png" alt="image-20211112135629262"></a></p>
+<p><a href="zabbix.assets/image-20211112135854785.png" data-lightbox="cdde3848-30df-4fe0-848f-43bb932abaf2" data-title="image-20211112135854785"><img src="zabbix.assets/image-20211112135854785.png" alt="image-20211112135854785"></a></p>
+<p><a href="zabbix.assets/image-20211112140423794.png" data-lightbox="e39e0640-7628-4a6e-affc-2ab8e6a97e82" data-title="image-20211112140423794"><img src="zabbix.assets/image-20211112140423794.png" alt="image-20211112140423794"></a></p>
 <p>&#x81EA;&#x52A8;&#x53D1;&#x73B0;&#x52A8;&#x4F5C;</p>
-<p><img src="zabbix.assets/image-20211112141129553.png" alt="image-20211112141129553"></p>
-<p><img src="zabbix.assets/image-20211112141400020.png" alt="image-20211112141400020"></p>
-<p><img src="zabbix.assets/image-20211112141542190.png" alt="image-20211112141542190"></p>
+<p><a href="zabbix.assets/image-20211112141129553.png" data-lightbox="383801c6-69f7-476a-bb8f-22861ce008ea" data-title="image-20211112141129553"><img src="zabbix.assets/image-20211112141129553.png" alt="image-20211112141129553"></a></p>
+<p><a href="zabbix.assets/image-20211112141400020.png" data-lightbox="01b43d54-a1a8-4789-9061-dbf81c501f08" data-title="image-20211112141400020"><img src="zabbix.assets/image-20211112141400020.png" alt="image-20211112141400020"></a></p>
+<p><a href="zabbix.assets/image-20211112141542190.png" data-lightbox="7432161e-5e6b-42d3-b657-e269a0760440" data-title="image-20211112141542190"><img src="zabbix.assets/image-20211112141542190.png" alt="image-20211112141542190"></a></p>
 <p>&#x53D1;&#x73B0;&#x7684;&#x4E3B;&#x673A;&#x5728;&#x54EA;</p>
-<p><img src="zabbix.assets/image-20211112141644037.png" alt="image-20211112141644037"></p>
-<h3 id="zabbix&#x81EA;&#x52A8;&#x6CE8;&#x518C;">Zabbix&#x81EA;&#x52A8;&#x6CE8;&#x518C;</h3>
+<p><a href="zabbix.assets/image-20211112141644037.png" data-lightbox="8f265db0-d0cd-4467-afb2-b00a76a34e41" data-title="image-20211112141644037"><img src="zabbix.assets/image-20211112141644037.png" alt="image-20211112141644037"></a></p>
+<h3 id="zabbix&#x81EA;&#x52A8;&#x6CE8;&#x518C;"><a name="zabbix&#x81EA;&#x52A8;&#x6CE8;&#x518C;" class="anchor-navigation-ex-anchor" href="#zabbix&#x81EA;&#x52A8;&#x6CE8;&#x518C;"><i class="fa fa-link" aria-hidden="true"></i></a>Zabbix&#x81EA;&#x52A8;&#x6CE8;&#x518C;</h3>
 <p>&#x7531;&#x5BA2;&#x6237;&#x7AEF;&#x4E3B;&#x52A8;&#x53D1;&#x8D77;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x5FC5;&#x987B;&#x5B89;&#x88C5;Agentd&#x3002;&#x5426;&#x5219;&#x65E0;&#x6CD5;&#x88AB;&#x81EA;&#x52A8;&#x6CE8;&#x518C;&#x6DFB;&#x52A0;&#x81F3;&#x4E3B;&#x673A;&#x5217;&#x8868;</p>
 <p>zabbix_agent &#x914D;&#x7F6E;</p>
 <p>vim /etc/zabbix/zabbix_agentd.conf</p>
 <pre><code class="lang-bash">ServerActive=192.168.0.110 &#x4E3B;&#x52A8;&#x6A21;&#x5F0F; zabbix-server-ip
 </code></pre>
 <p>systemctl restart zabbix-agentd</p>
-<p><img src="zabbix.assets/image-20211112142240335.png" alt="image-20211112142240335"></p>
-<p><strong><img src="zabbix.assets/image-20211112142443866.png" alt="image-20211112142443866"></strong></p>
-<p><img src="zabbix.assets/image-20211112143132350.png" alt="image-20211112143132350"></p>
-<h2 id="&#x5B9E;&#x6218;&#xFF1A;tcp&#x8FDE;&#x63A5;&#x72B6;&#x6001;&#x76D1;&#x63A7;">&#x5B9E;&#x6218;&#xFF1A;TCP&#x8FDE;&#x63A5;&#x72B6;&#x6001;&#x76D1;&#x63A7;</h2>
+<p><a href="zabbix.assets/image-20211112142240335.png" data-lightbox="9a8a09c4-00ba-4504-8ba1-b087b427930e" data-title="image-20211112142240335"><img src="zabbix.assets/image-20211112142240335.png" alt="image-20211112142240335"></a></p>
+<p><strong><a href="zabbix.assets/image-20211112142443866.png" data-lightbox="9c179e39-633a-4bef-8be0-e420e6e52c85" data-title="image-20211112142443866"><img src="zabbix.assets/image-20211112142443866.png" alt="image-20211112142443866"></a></strong></p>
+<p><a href="zabbix.assets/image-20211112143132350.png" data-lightbox="16def5bd-3c8d-48dd-bc96-820436dd4646" data-title="image-20211112143132350"><img src="zabbix.assets/image-20211112143132350.png" alt="image-20211112143132350"></a></p>
+<h2 id="&#x5B9E;&#x6218;&#xFF1A;tcp&#x8FDE;&#x63A5;&#x72B6;&#x6001;&#x76D1;&#x63A7;"><a name="&#x5B9E;&#x6218;&#xFF1A;tcp&#x8FDE;&#x63A5;&#x72B6;&#x6001;&#x76D1;&#x63A7;" class="anchor-navigation-ex-anchor" href="#&#x5B9E;&#x6218;&#xFF1A;tcp&#x8FDE;&#x63A5;&#x72B6;&#x6001;&#x76D1;&#x63A7;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B9E;&#x6218;&#xFF1A;TCP&#x8FDE;&#x63A5;&#x72B6;&#x6001;&#x76D1;&#x63A7;</h2>
 <p>&#x72B6;&#x6001;&#x7801;&#xFF1A;</p>
 <pre><code class="lang-bash">&#x63E1;&#x624B;&#xFF1A;
 1-SYN_SENT &#x53D1;&#x9001;syn&#x63E1;&#x624B;
@@ -829,14 +815,14 @@ netstat -anpt | grep ESTABLISHED | wc <span class="hljs-_">-l</span>
 UserParameter=tcp.status.ESTABLISHED,netstat -anpt | grep ESTABLISHED | wc <span class="hljs-_">-l</span>
 UserParameter=tcp.status.TIME_WAIT,netstat -anpt | grep TIME_WAIT | wc <span class="hljs-_">-l</span>
 </code></pre>
-<h2 id="&#x5B9E;&#x6218;&#xFF1A;tcp&#x8FDE;&#x63A5;&#x72B6;&#x6001;&#x76D1;&#x63A7;2">&#x5B9E;&#x6218;&#xFF1A;TCP&#x8FDE;&#x63A5;&#x72B6;&#x6001;&#x76D1;&#x63A7;2</h2>
+<h2 id="&#x5B9E;&#x6218;&#xFF1A;tcp&#x8FDE;&#x63A5;&#x72B6;&#x6001;&#x76D1;&#x63A7;2"><a name="&#x5B9E;&#x6218;&#xFF1A;tcp&#x8FDE;&#x63A5;&#x72B6;&#x6001;&#x76D1;&#x63A7;2" class="anchor-navigation-ex-anchor" href="#&#x5B9E;&#x6218;&#xFF1A;tcp&#x8FDE;&#x63A5;&#x72B6;&#x6001;&#x76D1;&#x63A7;2"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B9E;&#x6218;&#xFF1A;TCP&#x8FDE;&#x63A5;&#x72B6;&#x6001;&#x76D1;&#x63A7;2</h2>
 <p>agent:</p>
 <p>vim /etc/zabbix/zabbix_agentd.d/userparamenter_mysql.conf</p>
 <pre><code class="lang-bash">UserParameter=tcp.status.[*],netstat -anpt | grep <span class="hljs-string">&quot;<span class="hljs-variable">$1</span>&quot;</span> | wc <span class="hljs-_">-l</span>
 
 <span class="hljs-variable">$1</span> = &#x524D;&#x65B9;&#x7B2C;&#x4E00;&#x4E2A;[&#x65B9;&#x62EC;&#x53F7;&#x91CC;&#x7684;&#x5185;&#x5BB9;]
 </code></pre>
-<p><img src="zabbix.assets/image-20211112162317547.png" alt="image-20211112162317547"></p>
+<p><a href="zabbix.assets/image-20211112162317547.png" data-lightbox="8cbad483-5d7a-481e-be2a-519145dbfd46" data-title="image-20211112162317547"><img src="zabbix.assets/image-20211112162317547.png" alt="image-20211112162317547"></a></p>
 <p>&#x9AD8;&#x7EA7;&#x7528;&#x6CD5;</p>
 <p>vim /etc/zabbix/zabbix_agentd.conf&#x4E2D;&#x589E;&#x52A0;</p>
 <pre><code class="lang-bash">UserParameter=tcp.status[*],/etc/zabbix/scripts/tcp_conn_status.sh <span class="hljs-variable">$1</span>
@@ -935,9 +921,12 @@ UserParameter=tcp.status.TIME_WAIT,netstat -anpt | grep TIME_WAIT | wc <span cla
          *)  
           <span class="hljs-built_in">echo</span> <span class="hljs-_">-e</span> <span class="hljs-string">&quot;\e[033mUsage: sh  <span class="hljs-variable">$0</span> [closed|closing|closewait|synrecv|synsent|finwait1|finwait2|listen|established|lastack|timewait]\e[0m&quot;</span>
 </code></pre>
- 
-          </section>
-          
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; JokerDragon 2022 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2022-04-25 13:41:09
+</span></footer>
+                                
+                                </section>
+                            
     </div>
     <div class="search-results">
         <div class="has-results">
@@ -953,67 +942,29 @@ UserParameter=tcp.status.TIME_WAIT,netstat -anpt | grep TIME_WAIT | wc <span cla
         </div>
     </div>
 </div>
- 
-          <div class="book-footer">
-            
-            <div class="donate">
-              <div>『 赠人玫瑰 🌹 手有余香 』</div>
-              <button class="donate-btn" onclick="showModal()">赞赏</button>
+
+                        </div>
+                    </div>
+                
             </div>
-             
-            <div class="copyright"></div>
+
             
-          </div>
-          
-        </div>
-      </div>
-      
+                
+                <a href="../" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Introduction">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
     </div>
 
-     
-    <a
-      href="../"
-      class="
-        navigation navigation-prev
-        navigation-unique
-      "
-      aria-label="Previous page: Introduction"
-    >
-      <i class="fa fa-angle-left"></i>
-    </a>
-       
-  </div>
-  <script>
-    function showModal() {
-      document.getElementsByClassName("mask")[0].style.display = "block";
-      document.getElementsByClassName("donate-modal")[0].style.display =
-        "block";
-    }
-    // 切换赞赏码
-    function showDonateImg(num) {
-      let alipay = "";
-      let wxpay = ""
-      if(num){
-        wxpay = "hidden"
-      }else{
-        alipay = "hidden"
-      }
-      document.getElementById("wxpay-code").hidden = wxpay;
-      document.getElementById("alipay-code").hidden = alipay;
-      document.getElementsByName("pay-way")[num].checked = "checked";
-    }
-
-    // 关闭赞赏框
-    function closeDonateModal() {
-      document.getElementsByClassName("mask")[0].style.display = "none";
-      document.getElementsByClassName("donate-modal")[0].style.display = "none";
-    }
-
-    var gitbook = gitbook || [];
-    gitbook.push(function () {
-      gitbook.page.hasChanged({"page":{"title":"zabbix企业级监控系统","level":"1.2","depth":1,"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","code","theme-lou","expandable-chapters","back-to-top-button"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search-pro":{},"code":{"copyButtons":true},"theme-lou":{"hide-elements":[".summary .gitbook-link",".summary .divider"],"color":"#FF4848","book-anchor-title":"Search In the Article","copyright":{"author":"JockerDragon"},"forbidCopy":true,"logo":"static/logo.png","book-summary-title":"目录标题","search-placeholder":"在这里输入搜索","copyrightLogo":"assets/copyright.png","favicon":"static/favicon.ico","appleTouchIconPrecomposed152":"static/apple.png"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"作者","lang":"zh-cn","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"图书编号","variables":{"themeLou":{"nav":[{"target":"_blank","url":"https://gitee.com/PaperDragon/note-book.git","name":"本页面gitee仓库"}],"footer":{"donate":{"button":"捐赠","avatar":"static/wechat_logo.jpg","nickname":"JokerDragon","message":"随意打赏，但不要超过一顿早餐钱！","text":"『 赠人玫瑰 🌹 手有余香 』","wxpay":"你的微信收款码地址","alipay":"你的支付宝收款码地址"},"copyright":true}}},"title":"书名","language":"zh-cn","gitbook":"*","description":"描述"},"file":{"path":"zabbix/zabbix.md","mtime":"2022-04-25T05:41:09.416Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-04-29T10:43:43.746Z"},"basePath":"..","book":{"language":""}});
-    });
-  </script>
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"zabbix企业级监控系统","level":"1.2","depth":1,"next":{"title":"[语言学习]","level":"1.3","depth":1,"ref":"","articles":[{"title":"C语言基础","level":"1.3.1","depth":2,"path":"RD/C_Language/README.md","ref":"RD/C_Language/README.md","articles":[]}]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","code","expandable-chapters","splitter","ancre-navigation","donate","pageview-count","lightbox","tbfed-pagefooter","edit-link","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy JokerDragon 2022","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"livereload":{},"splitter":{},"search-pro":{},"code":{"copyButtons":true},"donate":{"title":"","button":"赏","wechat":"https://s3.bmp.ovh/imgs/2022/04/30/608cd8e1afcb7690.png","alipay":"https://s3.bmp.ovh/imgs/2022/04/30/bcc87e0a2a510deb.jpg","wechatText":"微信打赏","alipayText":"支付宝打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true,"sameUuid":false},"pageview-count":{},"ancre-navigation":{"mode":"float","pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"showLevel":true,"printLog":false,"minTocSize":2,"multipleH1":true,"associatedWithSummary":true,"float":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"maxTocDepth":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"编辑此页面","base":"https://gitee.com/PaperDragon/note-book/edit/gitbook/Markdown-notebook/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"JokerDragon","lang":"zh-hans","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"图书编号","variables":{},"title":"书名","language":"zh-hans","links":{"sidebar":{"Home":"https://www.baidu.com","邮箱":"2678885646@qq.com"}},"gitbook":"*","description":"描述"},"file":{"path":"zabbix/zabbix.md","mtime":"2022-04-25T05:41:09.416Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-04-30T06:00:50.858Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
 </div>
 
         
@@ -1037,7 +988,27 @@ UserParameter=tcp.status.TIME_WAIT,netstat -anpt | grep TIME_WAIT | wc <span cla
         
     
         
-        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         
@@ -1046,10 +1017,6 @@ UserParameter=tcp.status.TIME_WAIT,netstat -anpt | grep TIME_WAIT | wc <span cla
     
         
         <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-theme-lou/lou.js"></script>
         
     
 
