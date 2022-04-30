@@ -8,7 +8,7 @@ set(CMAKE_C_STANDARD 11)
 
 
 #add_executable(C_Language
-#        note1/1.c)
+#        note-1/1.c)
 
 
 #add_executable(C_Language
