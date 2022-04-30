@@ -49,17 +49,11 @@ cmake_ninja_workdir = I$:/note-book/Markdown-notebook/RD/C_Language/cmake-build-
 
 build cmake_object_order_depends_target_C_Language: phony || CMakeFiles/C_Language.dir
 
-build CMakeFiles/C_Language.dir/note1/1.c.obj: C_COMPILER__C_Language_Debug I$:/note-book/Markdown-notebook/RD/C_Language/note1/1.c || cmake_object_order_depends_target_C_Language
-  DEP_FILE = CMakeFiles\C_Language.dir\note1\1.c.obj.d
+build CMakeFiles/C_Language.dir/note-3/1.c.obj: C_COMPILER__C_Language_Debug I$:/note-book/Markdown-notebook/RD/C_Language/note-3/1.c || cmake_object_order_depends_target_C_Language
+  DEP_FILE = CMakeFiles\C_Language.dir\note-3\1.c.obj.d
   FLAGS = -g -std=gnu11
   OBJECT_DIR = CMakeFiles\C_Language.dir
-  OBJECT_FILE_DIR = CMakeFiles\C_Language.dir\note1
-
-build CMakeFiles/C_Language.dir/node-2/1.c.obj: C_COMPILER__C_Language_Debug I$:/note-book/Markdown-notebook/RD/C_Language/node-2/1.c || cmake_object_order_depends_target_C_Language
-  DEP_FILE = CMakeFiles\C_Language.dir\node-2\1.c.obj.d
-  FLAGS = -g -std=gnu11
-  OBJECT_DIR = CMakeFiles\C_Language.dir
-  OBJECT_FILE_DIR = CMakeFiles\C_Language.dir\node-2
+  OBJECT_FILE_DIR = CMakeFiles\C_Language.dir\note-3
 
 
 # =============================================================================
@@ -69,7 +63,7 @@ build CMakeFiles/C_Language.dir/node-2/1.c.obj: C_COMPILER__C_Language_Debug I$:
 #############################################
 # Link the executable C_Language.exe
 
-build C_Language.exe: C_EXECUTABLE_LINKER__C_Language_Debug CMakeFiles/C_Language.dir/note1/1.c.obj CMakeFiles/C_Language.dir/node-2/1.c.obj
+build C_Language.exe: C_EXECUTABLE_LINKER__C_Language_Debug CMakeFiles/C_Language.dir/note-3/1.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\C_Language.dir
