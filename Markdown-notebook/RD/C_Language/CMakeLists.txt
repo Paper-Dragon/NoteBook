@@ -16,6 +16,6 @@ set(CMAKE_C_STANDARD 11)
 
 
 add_executable(C_Language
-        note-3/1.c note-3/1.c)
+        note-3/1.c note-3/1.c note-3/function.h)
 #set(CMAKE_BUILD_TYPE Debug)
 
