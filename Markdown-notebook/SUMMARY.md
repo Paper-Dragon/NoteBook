@@ -2,18 +2,19 @@
 
 * [Introduction](README.md)
 * [zabbix企业级监控系统](zabbix/zabbix.md)
-* [VIM编辑器](Vim/Vim\vi编辑器.md)
+* [VIM编辑器](Vim/Vim/vi编辑器.md)
 * [计算机语言学习]
     * [C语言基础](RD/C_Language/README.md)
 * [git]
-    * [git更新远程分支](git\git更新远程分支.md)
+    * [git更新远程分支](git/git更新远程分支.md)
+    * [Git分支管理合并与删除命令](git/Git分支管理合并与删除命令.md)
 * [JumperServer]
-    * [什么是JumperServer](JumperServer\README.md)
-    * [docker部署](JumperServer\Docker_Deploy.md)
-    * [高可用部署](JumperServer\HA_Deploy.md)
+    * [什么是JumperServer](JumperServer/README.md)
+    * [docker部署](JumperServer/Docker_Deploy.md)
+    * [高可用部署](JumperServer/HA_Deploy.md)
 * [Mysql]
-    * [国内源](MySQL\国内源.md)
+    * [国内源](MySQL/国内源.md)
 * [OpenStackOpenStack]
-    * [OpenStack-Queens版搭建详解](OpenStack\OpenStack-Queens版搭建详解.md)
+    * [OpenStack-Queens版搭建详解](OpenStack/OpenStack-Queens版搭建详解.md)
 * [RHEL]
-    * [firewalld配置](RHEL\firewalld配置.md)
+    * [firewalld配置](RHEL/firewalld配置.md)
