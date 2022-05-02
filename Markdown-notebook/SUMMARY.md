@@ -2,9 +2,27 @@
 
 * [Introduction](README.md)
 * [zabbix企业级监控系统](zabbix/zabbix.md)
-* [VIM编辑器](Vim/Vim/vi编辑器.md)
+* [VIM编辑器](Vim/vi编辑器.md)
 * [计算机语言学习]
     * [C语言基础](RD/C_Language/README.md)
+    * [Python基础]
+        * [01_认识Python](RD/python基础/01_认识Python.md)
+        * [02_第一个Python程序](RD/python基础/02_第一个Python程序.md)
+        * [03_Pycharm_初始设置（知道）](RD/python基础/03_Pycharm 初始设置（知道）.md)
+        * [04_多文件项目的演练](RD/python基础/04_多文件项目的演练.md)
+        * [05_注释](RD/python基础/05_注释.md)
+        * [06_算数运算符](RD\python基础\06_算数运算符.md)
+        * [07_程序执行原理（科普）](RD\python基础\07_程序执行原理（科普）.md)
+        * [RD\python基础\08_变量的基本使用.md](RD\python基础\08_变量的基本使用.md)
+        * [RD\python基础\09_变量的命名.md](RD\python基础\09_变量的命名.md)
+        * [RD\python基础\10_判断（if）语句.md](RD\python基础\10_判断（if）语句.md)
+        * [RD\python基础\11_运算符.md](RD\python基础\11_运算符.md)
+        * [RD\python基础\12_循环.md](RD\python基础\12_循环.md)
+        * [RD\python基础\13_函数基础.md](RD\python基础\13_函数基础.md)
+        * [RD\python基础\14_高级变量类型.md](RD\python基础\14_高级变量类型.md)
+        * [RD\python基础\15_综合应用 —— 名片管理系统.md](RD\python基础\15_综合应用 —— 名片管理系统.md)
+        * [RD\python基础\16_变量进阶（理解）.md](RD\python基础\16_变量进阶（理解）.md)
+        * [RD\python基础\17_函数进阶.md](RD\python基础\17_函数进阶.md)
 * [git]
     * [git更新远程分支](git/git更新远程分支.md)
     * [Git分支管理合并与删除命令](git/Git分支管理合并与删除命令.md)
@@ -18,3 +36,21 @@
     * [OpenStack-Queens版搭建详解](OpenStack/OpenStack-Queens版搭建详解.md)
 * [RHEL]
     * [firewalld配置](RHEL/firewalld配置.md)
+* [VPN]
+    * [广义VPN]
+    * [狭义VPN]
+* [jenkins]
+    * [jenkins构建持续化集成平台]
+* [ELK]
+* [kfaka]
+* [ha-lvs-keepalived]
+* [Kubernetes]
+* [kvm]
+* [memcache-redis]
+* [mycat]
+* [nginx]
+* [tomcat]
+* [nodejs]
+* [OpenWrt]
+* [RabbixMQ]
+* [Ansible]
