@@ -2,8 +2,10 @@
 // Created by SuperNu1L on 2022/5/3.
 //
 
+#include <malloc.h>
 #include "1.h"
 #include "stdio.h"
+#include "string.h"
 
 //// 英寸转换
 //int main(void ){
@@ -58,10 +60,87 @@
 //
 //}
 
-int main(int argc, char const *argv[]) {
-    int i ;
-    for ( i= 0; i< argc;i++){
-        printf("%d:%s\n",i,argv[i]);
-    }
+//int main(int argc, char const *argv[]) {
+//    int i ;
+//    for ( i= 0; i< argc;i++){
+//        printf("%d:%s\n",i,argv[i]);
+//    }
+//    return 0;
+//}
+
+
+//int main(int argc,char const *argv[]){
+//    int ch;
+//    while ((ch = getchar()) != EOF) {
+//        putchar(ch);
+//    }
+//    return 0;
+//}
+
+
+//int main(int argc,char *argv[]){
+//    char line[] = "Hello";
+//    printf("strlen=%u\n", strlen(line));
+//    printf("sizeof=%u\n", sizeof(line));
+//    return 0;
+//}
+
+//int main(int argc,char * argv[]){
+//    char s1[ ] = "abc";
+////    char s2[ ] = "abc";
+//    char s2[ ] = "Abc";
+//    // 因为地址永远不同，所以输出为0
+//    printf("%d\n",s1 == s2);
+//    printf("%d\n", strcmp(s1,s2));
+//
+//    if (strcmp(s1,s2) == 0 ){
+//
+//    }
+//    return 0;
+//}
+
+//char *mycpy(char *dst, const char *src) {
+//    int idx = 0;
+//    while (src[idx] != '\0') {
+//        dst[idx] = src[idx];
+//        idx++;
+//    }
+//    dst[idx] = '\0';
+//    return dst;
+//}
+//
+//char *mycpy1(char *dst, const char *src) {
+//    char * ret = dst;
+//    while (*src) *dst++ = *src++;
+//    *dst = '0';
+//    return ret;
+//}
+//
+//int main(int argc, char *argv[]) {
+//    char s1[] = "abc";
+//    char s2[] = "abc";
+//    mycpy(s1, s2);
+//    return 0;
+//}
+
+
+int main(int argc, char *argv[]) {
+    char s[] = "hello";
+    char *p = strchr(s, 'l');
+    char c = *p;
+    *p = '\0';
+    p = strchr(p + 1, 'l');
+    printf("p=%s\n", p);
+    // 将搜索的结果复制到另外的地方去
+    char *t = (char *) malloc(strlen(p) + 1);
+    strcpy(t, p);
+    printf("t=%s\n", t);
+    free(t);
+    // 找到除了搜索外的其他的
+    char *e = (char *) malloc(strlen(s) + 1);
+    strcpy(e, s);
+    printf("e=%s\n", e);
+    free(e);
+    *p = c;
     return 0;
 }

@@ -138,3 +138,173 @@ PS I:\note-book\Markdown-notebook\RD\C_Language\cmake-build-debug> .\C_Language.
 
 #### 单字符输入输出putchar
 
+![](README.assets/image-20220504172342135.png)
+
+![image-20220504172407993](README.assets/image-20220504172407993.png)
+
+
+
+
+
+```c
+int main(int argc,char const *argv[]){
+    int ch;
+    while ((ch = getchar()) != EOF) {
+        putchar(ch);
+    }
+    return 0;
+}
+```
+
+
+
+
+
+#### 字符串处理函数strlen
+
+![image-20220504173359135](README.assets/image-20220504173359135.png)
+
+
+
+```c
+//strlen
+#include "string.h"
+int main(int argc,char *argv[]){
+    char line[] = "Hello";
+    printf("strlen=%u\n", strlen(line));
+    printf("sizeof=%u\n", sizeof(line));
+    return 0;
+}
+
+
+I:\note-book\Markdown-notebook\RD\C_Language\cmake-build-debug\C_Language.exe
+strlen=5
+sizeof=6
+
+进程已结束,退出代码0
+  
+  
+
+  
+```
+
+![image-20220504174206304](README.assets/image-20220504174206304.png)
+
+
+
+```c
+//strcmp
+int main(int argc,char * argv[]){
+    char s1[ ] = "abc";
+//    char s2[ ] = "abc";
+    char s2[ ] = "Abc";
+    // 因为地址永远不同，所以输出为0
+    printf("%d\n",s1 == s2);
+    printf("%d\n", strcmp(s1,s2));
+
+    if (strcmp(s1,s2) == 0 ){
+
+    }
+    return 0;
+}
+
+I:\note-book\Markdown-notebook\RD\C_Language\cmake-build-debug\C_Language.exe
+0
+1
+
+进程已结束,退出代码0
+
+```
+
+#### 字符串函数strcpy
+
+![image-20220504175656690](README.assets/image-20220504175656690.png)
+
+
+
+```c
+//初级版本
+char *mycpy(char *dst, const char *src) {
+    int idx = 0;
+    while (src[idx] != '\0') {
+        dst[idx] = src[idx];
+        idx++;
+    }
+    dst[idx] = '\0';
+    return dst;
+}
+
+int main(int argc, char *argv[]) {
+    char s1[] = "abc";
+    char s2[] = "abc";
+    mycpy(s1,s2);
+    return 0;
+}
+//高级版本
+char *mycpy1(char *dst, const char *src) {
+    char * ret = dst;
+    while (*src) *dst++ = *src++;
+    *dst = '0';
+    return ret;
+}
+
+int main(int argc, char *argv[]) {
+    char s1[] = "abc";
+    char s2[] = "abc";
+    mycpy(s1, s2);
+    return 0;
+}
+```
+
+复制字符串的过程
+
+![image-20220504180214938](README.assets/image-20220504180214938.png)
+
+
+
+```bash
+先申请内存+1，再cp
+```
+
+#### 字符串处理函数strcat
+
+![image-20220504182019002](README.assets/image-20220504182019002.png)
+
+
+
+```c
+\\strcpy和strcat，strcmp 是不安全的，如果目的地址没有内存空间
+增加size_t n参数;
+```
+
+![image-20220504182401977](README.assets/image-20220504182401977.png)
+
+#### 字符串搜索函数
+
+![image-20220504182630296](README.assets/image-20220504182630296.png)
+
+```c
+int main(int argc, char *argv[]) {
+    char s[] = "hello";
+    char *p = strchr(s, 'l');
+    char c = *p;
+    *p = '\0';
+    p = strchr(p + 1, 'l');
+    printf("p=%s\n", p);
+    // 将搜索的结果复制到另外的地方去
+    char *t = (char *) malloc(strlen(p) + 1);
+    strcpy(t, p);
+    printf("t=%s\n", t);
+    free(t);
+    // 找到除了搜索外的其他的
+    char *e = (char *) malloc(strlen(s) + 1);
+    strcpy(e, s);
+    printf("e=%s\n", e);
+    free(e);
+    *p = c;
+    return 0;
+}
+```
+
+#### 字符串中找字符串
+
