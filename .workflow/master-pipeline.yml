@@ -27,24 +27,35 @@ stages:
           - npm run build
           - pwd
           - ls -la ./
+          - sed -i 's/if(m)for(n.handler/if\(false\)for\(n.handler/g' _book/gitbook/theme.js
         artifacts:
           - name: BUILD_ARTIFACT
             path:
               - Markdown-notebook/_book
-  - name: stage-7a9ba091
-    displayName: test
+  - name: stage-f9e5ad0f
+    displayName: Deploy_Art
     strategy: naturally
-    trigger: manual
+    trigger: auto
     executor:
       - PaperDragon
     steps:
-      - step: shell@agent
-        name: execute_shell
-        displayName: Shell 脚本执行
-        hostGroupID: gitee-go
-        script: |-
-          # 请在此输入您想执行的脚本
-          echo 'Hello Gitee!'
+      - step: publish@general_artifacts
+        name: publish_general_artifacts
+        displayName: 上传制品
+        dependArtifact: BUILD_ARTIFACT
+        artifactName: output
+  - name: stage-f8aa5e2d
+    displayName: Deploy_web
+    strategy: naturally
+    trigger: manual
+    executor: []
+    steps:
+      - step: publish@release_artifacts
+        name: publish_release_artifacts
+        displayName: 发布
+        dependArtifact: output
+        version: 1.0.0.0
+        autoIncrement: true
 permissions:
   - role: admin
     members: []
