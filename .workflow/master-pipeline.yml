@@ -31,11 +31,6 @@ stages:
           - name: BUILD_ARTIFACT
             path:
               - _book
-      - step: publish@general_artifacts
-        name: publish_general_artifacts
-        displayName: 上传制品
-        dependArtifact: BUILD_ARTIFACT
-        artifactName: output
   - name: stage-7a9ba091
     displayName: test
     strategy: naturally
