@@ -1,6 +1,6 @@
 version: '1.0'
 name: pipeline-20220504
-displayName: pipeline-20220504
+displayName: pipeline
 triggers:
   trigger: manual
   push:
@@ -43,7 +43,19 @@ stages:
         name: publish_general_artifacts
         displayName: 上传制品
         dependArtifact: BUILD_ARTIFACT
-        artifactName: MyNote-Gitbook-hemml
+        artifactName: MyNote-Gitbook-html
+  - name: stage-7da76f95
+    displayName: 未命名
+    strategy: naturally
+    trigger: auto
+    executor: []
+    steps:
+      - step: publish@release_artifacts
+        name: publish_release_artifacts
+        displayName: 发布
+        dependArtifact: MyNote-Gitbook-html
+        version: 1.0.0.0
+        autoIncrement: true
 permissions:
   - role: admin
     members: []
