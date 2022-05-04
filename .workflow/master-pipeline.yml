@@ -21,6 +21,7 @@ stages:
         nodeVersion: 12.16.1
         commands:
           - cd Markdown-notebook
+          - npm install gitbook-cli
           - npm install && rm -rf ./_book && npm run build
         artifacts:
           - name: BUILD_ARTIFACT
