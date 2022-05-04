@@ -11,14 +11,14 @@ stages:
   - name: stage-abc8d104
     displayName: build
     strategy: naturally
-    trigger: manual
+    trigger: auto
     executor:
       - PaperDragon
     steps:
       - step: build@nodejs
         name: build_nodejs
         displayName: Nodejs 构建
-        nodeVersion: 10.17.0
+        nodeVersion: 8.16.2
         commands:
           - cd Markdown-notebook
           - npm install gitbook-cli
@@ -30,7 +30,7 @@ stages:
         artifacts:
           - name: BUILD_ARTIFACT
             path:
-              - _book
+              - /Markdown-notebook/_book
   - name: stage-7a9ba091
     displayName: test
     strategy: naturally
