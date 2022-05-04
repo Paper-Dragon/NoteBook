@@ -44,18 +44,6 @@ stages:
         displayName: 上传制品
         dependArtifact: BUILD_ARTIFACT
         artifactName: output
-  - name: stage-f8aa5e2d
-    displayName: Deploy_web
-    strategy: naturally
-    trigger: manual
-    executor: []
-    steps:
-      - step: publish@release_artifacts
-        name: publish_release_artifacts
-        displayName: 发布
-        dependArtifact: output
-        version: 1.0.0.0
-        autoIncrement: true
 permissions:
   - role: admin
     members: []
