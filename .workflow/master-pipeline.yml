@@ -30,7 +30,7 @@ stages:
         artifacts:
           - name: BUILD_ARTIFACT
             path:
-              - /Markdown-notebook/_book
+              - Markdown-notebook/_book
   - name: stage-7a9ba091
     displayName: test
     strategy: naturally
