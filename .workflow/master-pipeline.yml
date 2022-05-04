@@ -18,15 +18,19 @@ stages:
       - step: build@nodejs
         name: build_nodejs
         displayName: Nodejs 构建
-        nodeVersion: 12.16.1
+        nodeVersion: 10.17.0
         commands:
           - cd Markdown-notebook
           - npm install gitbook-cli
-          - npm install && rm -rf ./_book && npm run build
+          - 'npm install '
+          - 'rm -rf ./_book '
+          - npm run build
+          - pwd
+          - ls -la ./
         artifacts:
           - name: BUILD_ARTIFACT
             path:
-              - ./_book
+              - _book
       - step: publish@general_artifacts
         name: publish_general_artifacts
         displayName: 上传制品
