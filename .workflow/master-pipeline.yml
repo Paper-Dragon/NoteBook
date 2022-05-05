@@ -27,7 +27,7 @@ stages:
           - npm run build
           - pwd
           - ls -la ./
-          - sed -i 's/if(m)for(n.handler/if\(false\)for\(n.handler/g' _book/gitbook/theme.js
+          - '#sed -i ''s/if(m)for(n.handler/if\(false\)for\(n.handler/g'' _book/gitbook/theme.js'
         artifacts:
           - name: BUILD_ARTIFACT
             path:
@@ -45,7 +45,7 @@ stages:
         dependArtifact: BUILD_ARTIFACT
         artifactName: MyNote-Gitbook-html
   - name: stage-7da76f95
-    displayName: 未命名
+    displayName: Deploy_Release
     strategy: naturally
     trigger: auto
     executor: []
@@ -54,7 +54,7 @@ stages:
         name: publish_release_artifacts
         displayName: 发布
         dependArtifact: MyNote-Gitbook-html
-        version: 1.0.0.0
+        version: 1.0.0.2
         autoIncrement: true
 permissions:
   - role: admin
