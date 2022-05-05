@@ -1,3 +1,0 @@
-# Introduction
-
-## NoteBook By JokerDragon 

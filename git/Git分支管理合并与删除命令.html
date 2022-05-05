@@ -1,0 +1,3099 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Git分支管理合并与删除命令 · 书名</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="JokerDragon">
+        <meta name="identifier" content="图书编号" scheme="ISBN">
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ancre-navigation/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-beauty/css/beauty.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-beauty/css/navigation.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-beauty/css/copy-button.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="git更新远程分支.html" />
+    
+    
+
+    </head>
+    <body>
+        
+
+<div class="book">
+	<div class="header-inner">
+		<!-- LOGO -->
+		<div class="logo"></div>
+		<span class="title"></span>
+
+		<!-- Search -->
+		
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+
+		<!-- Nav -->
+		<ul class="header-nav">
+			
+		</ul>
+	</div>
+
+	<div class="book-summary">
+		<div class="book-summary-title">文档目录</div>
+		
+		
+		<nav role="navigation">
+			
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Git
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.1" data-path="Git分支管理合并与删除命令.html">
+            
+                <a href="Git分支管理合并与删除命令.html">
+            
+                    
+                    Git分支管理合并与删除命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="git更新远程分支.html">
+            
+                <a href="git更新远程分支.html">
+            
+                    
+                    git更新远程分支
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../JumperServer/">
+            
+                <a href="../JumperServer/">
+            
+                    
+                    Jumper Server
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../JumperServer/Docker_Deploy.html">
+            
+                <a href="../JumperServer/Docker_Deploy.html">
+            
+                    
+                    Docker Deploy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../JumperServer/HA_Deploy.html">
+            
+                <a href="../JumperServer/HA_Deploy.html">
+            
+                    
+                    HA Deploy
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    My SQL
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../MySQL/国内源.html">
+            
+                <a href="../MySQL/国内源.html">
+            
+                    
+                    国内源
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    Open Stack
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../OpenStack/OpenStack-Queens版搭建详解.html">
+            
+                <a href="../OpenStack/OpenStack-Queens版搭建详解.html">
+            
+                    
+                    OpenStack-Queens版搭建详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    RD
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../RD/C_Language/">
+            
+                <a href="../RD/C_Language/">
+            
+                    
+                    C Language
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../RD/Python%20- 100天从新手到大师/README.md">
+            
+                <span>
+            
+                    
+                    Python - 100天从新手到大师
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" >
+            
+                <span>
+            
+                    
+                    Day 01 15
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1.1" data-path="../RD/Python%20- 100天从新手到大师/Day01-15/01.初识Python.md">
+            
+                <span>
+            
+                    
+                    01.初识Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.1.2" data-path="../RD/Python%20- 100天从新手到大师/Day01-15/02.语言元素.md">
+            
+                <span>
+            
+                    
+                    02.语言元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.1.3" data-path="../RD/Python%20- 100天从新手到大师/Day01-15/03.分支结构.md">
+            
+                <span>
+            
+                    
+                    03.分支结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.1.4" data-path="../RD/Python%20- 100天从新手到大师/Day01-15/04.循环结构.md">
+            
+                <span>
+            
+                    
+                    04.循环结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.1.5" data-path="../RD/Python%20- 100天从新手到大师/Day01-15/05.构造程序逻辑.md">
+            
+                <span>
+            
+                    
+                    05.构造程序逻辑
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.1.6" data-path="../RD/Python%20- 100天从新手到大师/Day01-15/06.函数和模块的使用.md">
+            
+                <span>
+            
+                    
+                    06.函数和模块的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.1.7" data-path="../RD/Python%20- 100天从新手到大师/Day01-15/07.字符串和常用数据结构.md">
+            
+                <span>
+            
+                    
+                    07.字符串和常用数据结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.1.8" data-path="../RD/Python%20- 100天从新手到大师/Day01-15/08.面向对象编程基础.md">
+            
+                <span>
+            
+                    
+                    08.面向对象编程基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.1.9" data-path="../RD/Python%20- 100天从新手到大师/Day01-15/09.面向对象进阶.md">
+            
+                <span>
+            
+                    
+                    09.面向对象进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.1.10" data-path="../RD/Python%20- 100天从新手到大师/Day01-15/10.图形用户界面和游戏开发.md">
+            
+                <span>
+            
+                    
+                    10.图形用户界面和游戏开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.1.11" data-path="../RD/Python%20- 100天从新手到大师/Day01-15/11.文件和异常.md">
+            
+                <span>
+            
+                    
+                    11.文件和异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.1.12" data-path="../RD/Python%20- 100天从新手到大师/Day01-15/12.字符串和正则表达式.md">
+            
+                <span>
+            
+                    
+                    12.字符串和正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.1.13" data-path="../RD/Python%20- 100天从新手到大师/Day01-15/13.进程和线程.md">
+            
+                <span>
+            
+                    
+                    13.进程和线程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.1.14" data-path="../RD/Python%20- 100天从新手到大师/Day01-15/14.网络编程入门和网络应用开发.md">
+            
+                <span>
+            
+                    
+                    14.网络编程入门和网络应用开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.1.15" data-path="../RD/Python%20- 100天从新手到大师/Day01-15/15.图像和办公文档处理.md">
+            
+                <span>
+            
+                    
+                    15.图像和办公文档处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2" >
+            
+                <span>
+            
+                    
+                    Day 16 20
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.2.1" data-path="../RD/Python%20- 100天从新手到大师/Day16-20/16-20.Python语言进阶.md">
+            
+                <span>
+            
+                    
+                    16-20.Python语言进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.3" >
+            
+                <span>
+            
+                    
+                    Day 21 30
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.3.1" data-path="../RD/Python%20- 100天从新手到大师/Day21-30/21-30.Web前端概述.md">
+            
+                <span>
+            
+                    
+                    21-30.Web前端概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.4" >
+            
+                <span>
+            
+                    
+                    Day 31 35
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.4.1" data-path="../RD/Python%20- 100天从新手到大师/Day31-35/31-35.玩转Linux操作系统.md">
+            
+                <span>
+            
+                    
+                    31-35.玩转Linux操作系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.5" >
+            
+                <span>
+            
+                    
+                    Day 36 40
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.5.1" data-path="../RD/Python%20- 100天从新手到大师/Day36-40/36-38.关系型数据库MySQL.md">
+            
+                <span>
+            
+                    
+                    36-38.关系型数据库MySQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.5.2" data-path="../RD/Python%20- 100天从新手到大师/Day36-40/39-40.NoSQL入门.md">
+            
+                <span>
+            
+                    
+                    39-40.NoSQL入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.6" >
+            
+                <span>
+            
+                    
+                    Day 41 55
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.6.1" data-path="../RD/Python%20- 100天从新手到大师/Day41-55/41.快速上手.md">
+            
+                <span>
+            
+                    
+                    41.快速上手
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.6.2" data-path="../RD/Python%20- 100天从新手到大师/Day41-55/42.深入模型.md">
+            
+                <span>
+            
+                    
+                    42.深入模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.6.3" data-path="../RD/Python%20- 100天从新手到大师/Day41-55/43.静态资源和Ajax请求.md">
+            
+                <span>
+            
+                    
+                    43.静态资源和Ajax请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.6.4" data-path="../RD/Python%20- 100天从新手到大师/Day41-55/44.表单的应用.md">
+            
+                <span>
+            
+                    
+                    44.表单的应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.6.5" data-path="../RD/Python%20- 100天从新手到大师/Day41-55/45.Cookie和Session.md">
+            
+                <span>
+            
+                    
+                    45.Cookie和Session
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.6.6" data-path="../RD/Python%20- 100天从新手到大师/Day41-55/46.报表和日志.md">
+            
+                <span>
+            
+                    
+                    46.报表和日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.6.7" data-path="../RD/Python%20- 100天从新手到大师/Day41-55/47.中间件的应用.md">
+            
+                <span>
+            
+                    
+                    47.中间件的应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.6.8" data-path="../RD/Python%20- 100天从新手到大师/Day41-55/48.前后端分离开发入门.md">
+            
+                <span>
+            
+                    
+                    48.前后端分离开发入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.6.9" data-path="../RD/Python%20- 100天从新手到大师/Day41-55/49.RESTful架构和DRF入门.md">
+            
+                <span>
+            
+                    
+                    49.RESTful架构和DRF入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.6.10" data-path="../RD/Python%20- 100天从新手到大师/Day41-55/50.RESTful架构和DRF进阶.md">
+            
+                <span>
+            
+                    
+                    50.RESTful架构和DRF进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.6.11" data-path="../RD/Python%20- 100天从新手到大师/Day41-55/51.使用缓存.md">
+            
+                <span>
+            
+                    
+                    51.使用缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.6.12" data-path="../RD/Python%20- 100天从新手到大师/Day41-55/52.文件上传和富文本编辑.md">
+            
+                <span>
+            
+                    
+                    52.文件上传和富文本编辑
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.6.13" data-path="../RD/Python%20- 100天从新手到大师/Day41-55/53.短信和邮件.md">
+            
+                <span>
+            
+                    
+                    53.短信和邮件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.6.14" data-path="../RD/Python%20- 100天从新手到大师/Day41-55/54.异步任务和定时任务.md">
+            
+                <span>
+            
+                    
+                    54.异步任务和定时任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.6.15" data-path="../RD/Python%20- 100天从新手到大师/Day41-55/55.单元测试和项目上线.md">
+            
+                <span>
+            
+                    
+                    55.单元测试和项目上线
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.7" >
+            
+                <span>
+            
+                    
+                    Day 56 60
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.7.1" data-path="../RD/Python%20- 100天从新手到大师/Day56-60/56.Flask入门.md">
+            
+                <span>
+            
+                    
+                    56.Flask入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.7.2" data-path="../RD/Python%20- 100天从新手到大师/Day56-60/57.模板的使用.md">
+            
+                <span>
+            
+                    
+                    57.模板的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.7.3" data-path="../RD/Python%20- 100天从新手到大师/Day56-60/58.表单的处理.md">
+            
+                <span>
+            
+                    
+                    58.表单的处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.7.4" data-path="../RD/Python%20- 100天从新手到大师/Day56-60/59.数据库操作.md">
+            
+                <span>
+            
+                    
+                    59.数据库操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.7.5" data-path="../RD/Python%20- 100天从新手到大师/Day56-60/60.项目实战.md">
+            
+                <span>
+            
+                    
+                    60.项目实战
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.8" >
+            
+                <span>
+            
+                    
+                    Day 61 65
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.8.1" data-path="../RD/Python%20- 100天从新手到大师/Day61-65/61.预备知识.md">
+            
+                <span>
+            
+                    
+                    61.预备知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.8.2" data-path="../RD/Python%20- 100天从新手到大师/Day61-65/62.Tornado入门.md">
+            
+                <span>
+            
+                    
+                    62.Tornado入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.8.3" data-path="../RD/Python%20- 100天从新手到大师/Day61-65/63.异步化.md">
+            
+                <span>
+            
+                    
+                    63.异步化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.8.4" data-path="../RD/Python%20- 100天从新手到大师/Day61-65/64.WebSocket的应用.md">
+            
+                <span>
+            
+                    
+                    64.WebSocket的应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.8.5" data-path="../RD/Python%20- 100天从新手到大师/Day61-65/65.项目实战.md">
+            
+                <span>
+            
+                    
+                    65.项目实战
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.9" >
+            
+                <span>
+            
+                    
+                    Day 66 75
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.9.1" data-path="../RD/Python%20- 100天从新手到大师/Day66-75/66.网络爬虫和相关工具.md">
+            
+                <span>
+            
+                    
+                    66.网络爬虫和相关工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.9.2" data-path="../RD/Python%20- 100天从新手到大师/Day66-75/67.数据采集和解析.md">
+            
+                <span>
+            
+                    
+                    67.数据采集和解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.9.3" data-path="../RD/Python%20- 100天从新手到大师/Day66-75/68.存储数据.md">
+            
+                <span>
+            
+                    
+                    68.存储数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.9.4" data-path="../RD/Python%20- 100天从新手到大师/Day66-75/69.并发下载.md">
+            
+                <span>
+            
+                    
+                    69.并发下载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.9.5" data-path="../RD/Python%20- 100天从新手到大师/Day66-75/70.解析动态内容.md">
+            
+                <span>
+            
+                    
+                    70.解析动态内容
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.9.6" data-path="../RD/Python%20- 100天从新手到大师/Day66-75/71.表单交互和验证码处理.md">
+            
+                <span>
+            
+                    
+                    71.表单交互和验证码处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.9.7" data-path="../RD/Python%20- 100天从新手到大师/Day66-75/72.Scrapy入门.md">
+            
+                <span>
+            
+                    
+                    72.Scrapy入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.9.8" data-path="../RD/Python%20- 100天从新手到大师/Day66-75/73.Scrapy高级应用.md">
+            
+                <span>
+            
+                    
+                    73.Scrapy高级应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.9.9" data-path="../RD/Python%20- 100天从新手到大师/Day66-75/74.Scrapy分布式实现.md">
+            
+                <span>
+            
+                    
+                    74.Scrapy分布式实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.9.10" data-path="../RD/Python%20- 100天从新手到大师/Day66-75/75.爬虫项目实战.md">
+            
+                <span>
+            
+                    
+                    75.爬虫项目实战
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.9.11" data-path="../RD/Python%20- 100天从新手到大师/Day66-75/常见反爬策略及应对方案.md">
+            
+                <span>
+            
+                    
+                    常见反爬策略及应对方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.10" >
+            
+                <span>
+            
+                    
+                    Day 76 90
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.10.1" data-path="../RD/Python%20- 100天从新手到大师/Day76-90/76.机器学习基础.md">
+            
+                <span>
+            
+                    
+                    76.机器学习基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.10.2" data-path="../RD/Python%20- 100天从新手到大师/Day76-90/77.Pandas的应用.md">
+            
+                <span>
+            
+                    
+                    77.Pandas的应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.10.3" data-path="../RD/Python%20- 100天从新手到大师/Day76-90/78.NumPy和SciPy的应用.md">
+            
+                <span>
+            
+                    
+                    78.NumPy和SciPy的应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.10.4" data-path="../RD/Python%20- 100天从新手到大师/Day76-90/79.Matplotlib和数据可视化.md">
+            
+                <span>
+            
+                    
+                    79.Matplotlib和数据可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.10.5" data-path="../RD/Python%20- 100天从新手到大师/Day76-90/80.k最近邻分类.md">
+            
+                <span>
+            
+                    
+                    80.k最近邻分类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.10.6" data-path="../RD/Python%20- 100天从新手到大师/Day76-90/81.决策树.md">
+            
+                <span>
+            
+                    
+                    81.决策树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.10.7" data-path="../RD/Python%20- 100天从新手到大师/Day76-90/82.贝叶斯分类.md">
+            
+                <span>
+            
+                    
+                    82.贝叶斯分类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.10.8" data-path="../RD/Python%20- 100天从新手到大师/Day76-90/83.支持向量机.md">
+            
+                <span>
+            
+                    
+                    83.支持向量机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.10.9" data-path="../RD/Python%20- 100天从新手到大师/Day76-90/84.K-均值聚类.md">
+            
+                <span>
+            
+                    
+                    84.K-均值聚类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.10.10" data-path="../RD/Python%20- 100天从新手到大师/Day76-90/85.回归分析.md">
+            
+                <span>
+            
+                    
+                    85.回归分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.10.11" data-path="../RD/Python%20- 100天从新手到大师/Day76-90/86.大数据分析入门.md">
+            
+                <span>
+            
+                    
+                    86.大数据分析入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.10.12" data-path="../RD/Python%20- 100天从新手到大师/Day76-90/87.大数据分析进阶.md">
+            
+                <span>
+            
+                    
+                    87.大数据分析进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.10.13" data-path="../RD/Python%20- 100天从新手到大师/Day76-90/88.Tensorflow入门.md">
+            
+                <span>
+            
+                    
+                    88.Tensorflow入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.10.14" data-path="../RD/Python%20- 100天从新手到大师/Day76-90/89.Tensorflow实战.md">
+            
+                <span>
+            
+                    
+                    89.Tensorflow实战
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.10.15" data-path="../RD/Python%20- 100天从新手到大师/Day76-90/90.推荐系统实战.md">
+            
+                <span>
+            
+                    
+                    90.推荐系统实战
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.11" >
+            
+                <span>
+            
+                    
+                    Day 91 100
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.11.1" data-path="../RD/Python%20- 100天从新手到大师/Day91-100/100.Python面试题集.md">
+            
+                <span>
+            
+                    
+                    100.Python面试题集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.11.2" data-path="../RD/Python%20- 100天从新手到大师/Day91-100/91.团队项目开发的问题和解决方案.md">
+            
+                <span>
+            
+                    
+                    91.团队项目开发的问题和解决方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.11.3" data-path="../RD/Python%20- 100天从新手到大师/Day91-100/92.Docker容器详解.md">
+            
+                <span>
+            
+                    
+                    92.Docker容器详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.11.4" data-path="../RD/Python%20- 100天从新手到大师/Day91-100/93.MySQL性能优化.md">
+            
+                <span>
+            
+                    
+                    93.MySQL性能优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.11.5" data-path="../RD/Python%20- 100天从新手到大师/Day91-100/94.网络API接口设计.md">
+            
+                <span>
+            
+                    
+                    94.网络API接口设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.11.6" data-path="../RD/Python%20- 100天从新手到大师/Day91-100/95.使用Django开发商业项目.md">
+            
+                <span>
+            
+                    
+                    95.使用Django开发商业项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.11.7" data-path="../RD/Python%20- 100天从新手到大师/Day91-100/96.软件测试和自动化测试.md">
+            
+                <span>
+            
+                    
+                    96.软件测试和自动化测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.11.8" data-path="../RD/Python%20- 100天从新手到大师/Day91-100/97.电商网站技术要点剖析.md">
+            
+                <span>
+            
+                    
+                    97.电商网站技术要点剖析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.11.9" data-path="../RD/Python%20- 100天从新手到大师/Day91-100/98.项目部署上线和性能调优.md">
+            
+                <span>
+            
+                    
+                    98.项目部署上线和性能调优
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.11.10" data-path="../RD/Python%20- 100天从新手到大师/Day91-100/99.面试中的公共问题.md">
+            
+                <span>
+            
+                    
+                    99.面试中的公共问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.12" >
+            
+                <span>
+            
+                    
+                    公开课
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.12.1" >
+            
+                <span>
+            
+                    
+                    文档
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.12.1.1" >
+            
+                <span>
+            
+                    
+                    第04次公开课-好玩的Python
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.12.1.1.1" data-path="../RD/Python%20- 100天从新手到大师/公开课/文档/第04次公开课-好玩的Python/好玩的Python.md">
+            
+                <span>
+            
+                    
+                    好玩的Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.12.1.2" >
+            
+                <span>
+            
+                    
+                    第05次公开课-算法入门系列1-周而复始
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.12.1.2.1" data-path="../RD/Python%20- 100天从新手到大师/公开课/文档/第05次公开课-算法入门系列1-周而复始/算法入门系列1-周而复始.md">
+            
+                <span>
+            
+                    
+                    算法入门系列1-周而复始
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.12.1.3" >
+            
+                <span>
+            
+                    
+                    第06次公开课-算法入门系列2-在水一方
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.12.1.3.1" data-path="../RD/Python%20- 100天从新手到大师/公开课/文档/第06次公开课-算法入门系列2-在水一方/算法入门系列2 - 在水一方.md">
+            
+                <span>
+            
+                    
+                    算法入门系列2 - 在水一方
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.13" >
+            
+                <span>
+            
+                    
+                    番外篇
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.13.1" data-path="../RD/Python%20- 100天从新手到大师/番外篇/Python面试题汇总.md">
+            
+                <span>
+            
+                    
+                    Python面试题汇总
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.13.2" data-path="../RD/Python%20- 100天从新手到大师/番外篇/一个小例子助你彻底理解协程.md">
+            
+                <span>
+            
+                    
+                    一个小例子助你彻底理解协程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.13.3" data-path="../RD/Python%20- 100天从新手到大师/番外篇/使用Hexo搭建自己的博客.md">
+            
+                <span>
+            
+                    
+                    使用Hexo搭建自己的博客
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.13.4" data-path="../RD/Python%20- 100天从新手到大师/番外篇/我为什么选择了Python.md">
+            
+                <span>
+            
+                    
+                    我为什么选择了Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.13.5" data-path="../RD/Python%20- 100天从新手到大师/番外篇/用函数还是用复杂的表达式.md">
+            
+                <span>
+            
+                    
+                    用函数还是用复杂的表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.13.6" data-path="../RD/Python%20- 100天从新手到大师/番外篇/知乎问题回答.md">
+            
+                <span>
+            
+                    
+                    知乎问题回答
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.13.7" data-path="../RD/Python%20- 100天从新手到大师/番外篇/租房网项目接口文档.md">
+            
+                <span>
+            
+                    
+                    租房网项目接口文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.13.8" data-path="../RD/Python%20- 100天从新手到大师/番外篇/英语面试.md">
+            
+                <span>
+            
+                    
+                    英语面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.13.9" data-path="../RD/Python%20- 100天从新手到大师/番外篇/那些年我们踩过的那些坑.md">
+            
+                <span>
+            
+                    
+                    那些年我们踩过的那些坑
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.14" data-path="../RD/Python%20- 100天从新手到大师/PEP8风格指南.md">
+            
+                <span>
+            
+                    
+                    PEP8风格指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.15" data-path="../RD/Python%20- 100天从新手到大师/Python之禅.md">
+            
+                <span>
+            
+                    
+                    Python之禅
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.16" data-path="../RD/Python%20- 100天从新手到大师/Python参考书籍.md">
+            
+                <span>
+            
+                    
+                    Python参考书籍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.17" data-path="../RD/Python%20- 100天从新手到大师/Python编程惯例.md">
+            
+                <span>
+            
+                    
+                    Python编程惯例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.18" data-path="../RD/Python%20- 100天从新手到大师/更新日志.md">
+            
+                <span>
+            
+                    
+                    更新日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.19" data-path="../RD/Python%20- 100天从新手到大师/玩转PyCharm.md">
+            
+                <span>
+            
+                    
+                    玩转PyCharm
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" >
+            
+                <span>
+            
+                    
+                    python基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.3.1" data-path="../RD/python基础/01_认识Python.html">
+            
+                <a href="../RD/python基础/01_认识Python.html">
+            
+                    
+                    01_认识Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.2" data-path="../RD/python基础/02_第一个Python程序.html">
+            
+                <a href="../RD/python基础/02_第一个Python程序.html">
+            
+                    
+                    02_第一个Python程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.3" data-path="../RD/python基础/03_Pycharm%20初始设置（知道）.md">
+            
+                <span>
+            
+                    
+                    03_Pycharm 初始设置（知道）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.4" data-path="../RD/python基础/04_多文件项目的演练.html">
+            
+                <a href="../RD/python基础/04_多文件项目的演练.html">
+            
+                    
+                    04_多文件项目的演练
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.5" data-path="../RD/python基础/05_注释.html">
+            
+                <a href="../RD/python基础/05_注释.html">
+            
+                    
+                    05_注释
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.6" data-path="../RD/python基础/06_算数运算符.html">
+            
+                <a href="../RD/python基础/06_算数运算符.html">
+            
+                    
+                    06_算数运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.7" data-path="../RD/python基础/07_程序执行原理（科普）.html">
+            
+                <a href="../RD/python基础/07_程序执行原理（科普）.html">
+            
+                    
+                    07_程序执行原理（科普）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.8" data-path="../RD/python基础/08_变量的基本使用.html">
+            
+                <a href="../RD/python基础/08_变量的基本使用.html">
+            
+                    
+                    08_变量的基本使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.9" data-path="../RD/python基础/09_变量的命名.html">
+            
+                <a href="../RD/python基础/09_变量的命名.html">
+            
+                    
+                    09_变量的命名
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.10" data-path="../RD/python基础/10_判断（if）语句.html">
+            
+                <a href="../RD/python基础/10_判断（if）语句.html">
+            
+                    
+                    10_判断（if）语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.11" data-path="../RD/python基础/11_运算符.html">
+            
+                <a href="../RD/python基础/11_运算符.html">
+            
+                    
+                    11_运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.12" data-path="../RD/python基础/12_循环.html">
+            
+                <a href="../RD/python基础/12_循环.html">
+            
+                    
+                    12_循环
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.13" data-path="../RD/python基础/13_函数基础.html">
+            
+                <a href="../RD/python基础/13_函数基础.html">
+            
+                    
+                    13_函数基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.14" data-path="../RD/python基础/14_高级变量类型.html">
+            
+                <a href="../RD/python基础/14_高级变量类型.html">
+            
+                    
+                    14_高级变量类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.15" data-path="../RD/python基础/15_综合应用%20—— 名片管理系统.md">
+            
+                <span>
+            
+                    
+                    15_综合应用 —— 名片管理系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.16" data-path="../RD/python基础/16_变量进阶（理解）.html">
+            
+                <a href="../RD/python基础/16_变量进阶（理解）.html">
+            
+                    
+                    16_变量进阶（理解）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.17" data-path="../RD/python基础/17_函数进阶.html">
+            
+                <a href="../RD/python基础/17_函数进阶.html">
+            
+                    
+                    17_函数进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../RD/从零学Python/">
+            
+                <a href="../RD/从零学Python/">
+            
+                    
+                    从零学Python
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.4.1" >
+            
+                <span>
+            
+                    
+                    Day 01
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.4.1.1" data-path="../RD/从零学Python/Day01/Linux下安装Python3.html">
+            
+                <a href="../RD/从零学Python/Day01/Linux下安装Python3.html">
+            
+                    
+                    Linux下安装Python3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4.1.2" data-path="../RD/从零学Python/Day01/PyCharm小技巧.html">
+            
+                <a href="../RD/从零学Python/Day01/PyCharm小技巧.html">
+            
+                    
+                    PyCharm小技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4.1.3" data-path="../RD/从零学Python/Day01/PyCharm常用快捷键和设置.html">
+            
+                <a href="../RD/从零学Python/Day01/PyCharm常用快捷键和设置.html">
+            
+                    
+                    PyCharm常用快捷键和设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4.1.4" data-path="../RD/从零学Python/Day01/弱类型、强类型、动态类型、静态类型语言的区别是什么.html">
+            
+                <a href="../RD/从零学Python/Day01/弱类型、强类型、动态类型、静态类型语言的区别是什么.html">
+            
+                    
+                    弱类型、强类型、动态类型、静态类型语言的区别是什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4.1.5" data-path="../RD/从零学Python/Day01/爬取套图之新手攻略以及注意事项.html">
+            
+                <a href="../RD/从零学Python/Day01/爬取套图之新手攻略以及注意事项.html">
+            
+                    
+                    爬取套图之新手攻略以及注意事项
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4.2" >
+            
+                <span>
+            
+                    
+                    Day 02
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.4.2.1" data-path="../RD/从零学Python/Day02/Python实现mysql数据库连接池.html">
+            
+                <a href="../RD/从零学Python/Day02/Python实现mysql数据库连接池.html">
+            
+                    
+                    Python实现mysql数据库连接池
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4.2.2" data-path="../RD/从零学Python/Day02/Python操作数据库.html">
+            
+                <a href="../RD/从零学Python/Day02/Python操作数据库.html">
+            
+                    
+                    Python操作数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4.3" >
+            
+                <span>
+            
+                    
+                    Day 03
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.4.3.1" data-path="../RD/从零学Python/Day03/if%20__name__ == '__main__' 是个什么鬼？.md">
+            
+                <span>
+            
+                    
+                    if name == 'main' 是个什么鬼？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4.3.2" data-path="../RD/从零学Python/Day03/python3codecs.open和open的区别.html">
+            
+                <a href="../RD/从零学Python/Day03/python3codecs.open和open的区别.html">
+            
+                    
+                    python3codecs.open和open的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4.3.3" data-path="../RD/从零学Python/Day03/爬取小说相关指南.html">
+            
+                <a href="../RD/从零学Python/Day03/爬取小说相关指南.html">
+            
+                    
+                    爬取小说相关指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4.4" >
+            
+                <span>
+            
+                    
+                    Day 04
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.4.4.1" data-path="../RD/从零学Python/Day04/爬取小说存入数据库.html">
+            
+                <a href="../RD/从零学Python/Day04/爬取小说存入数据库.html">
+            
+                    
+                    爬取小说存入数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4.5" >
+            
+                <span>
+            
+                    
+                    Day 05
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.4.5.1" data-path="../RD/从零学Python/Day05/Django切换MySQL数据库.html">
+            
+                <a href="../RD/从零学Python/Day05/Django切换MySQL数据库.html">
+            
+                    
+                    Django切换MySQL数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4.5.2" data-path="../RD/从零学Python/Day05/今天出现的一些小问题.html">
+            
+                <a href="../RD/从零学Python/Day05/今天出现的一些小问题.html">
+            
+                    
+                    今天出现的一些小问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4.5.3" data-path="../RD/从零学Python/Day05/关于json.dumps中的参数详解.html">
+            
+                <a href="../RD/从零学Python/Day05/关于json.dumps中的参数详解.html">
+            
+                    
+                    关于json.dumps中的参数详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4.6" >
+            
+                <span>
+            
+                    
+                    Day 06
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.4.6.1" data-path="../RD/从零学Python/Day06/Python3开发一个web项目.html">
+            
+                <a href="../RD/从零学Python/Day06/Python3开发一个web项目.html">
+            
+                    
+                    Python3开发一个web项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4.7" >
+            
+                <span>
+            
+                    
+                    Day 08
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.4.7.1" data-path="../RD/从零学Python/Day08/微信机器人预警通知.html">
+            
+                <a href="../RD/从零学Python/Day08/微信机器人预警通知.html">
+            
+                    
+                    微信机器人预警通知
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4.8" >
+            
+                <span>
+            
+                    
+                    Day 10
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.4.8.1" data-path="../RD/从零学Python/Day10/Python3+Django2配置后台管理.html">
+            
+                <a href="../RD/从零学Python/Day10/Python3+Django2配置后台管理.html">
+            
+                    
+                    Python3+Django2配置后台管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4.9" >
+            
+                <span>
+            
+                    
+                    Day 13
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.4.9.1" data-path="../RD/从零学Python/Day13/Python学习案例之二维码生成和识别.html">
+            
+                <a href="../RD/从零学Python/Day13/Python学习案例之二维码生成和识别.html">
+            
+                    
+                    Python学习案例之二维码生成和识别
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4.10" >
+            
+                <span>
+            
+                    
+                    Day 15
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.4.10.1" data-path="../RD/从零学Python/Day15/上传二维码并解析.html">
+            
+                <a href="../RD/从零学Python/Day15/上传二维码并解析.html">
+            
+                    
+                    上传二维码并解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4.11" >
+            
+                <span>
+            
+                    
+                    Day 17
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.4.11.1" data-path="../RD/从零学Python/Day17/在线百度语音播报.html">
+            
+                <a href="../RD/从零学Python/Day17/在线百度语音播报.html">
+            
+                    
+                    在线百度语音播报
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4.12" data-path="../RD/从零学Python/Day19/">
+            
+                <a href="../RD/从零学Python/Day19/">
+            
+                    
+                    Day 19
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4.13" >
+            
+                <span>
+            
+                    
+                    Day 24
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.4.13.1" data-path="../RD/从零学Python/Day24/读我.html">
+            
+                <a href="../RD/从零学Python/Day24/读我.html">
+            
+                    
+                    读我
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4.14" >
+            
+                <span>
+            
+                    
+                    Day 29
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.4.14.1" data-path="../RD/从零学Python/Day29/下小姐姐视频.html">
+            
+                <a href="../RD/从零学Python/Day29/下小姐姐视频.html">
+            
+                    
+                    下小姐姐视频
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4.15" data-path="../RD/从零学Python/python基本语法.html">
+            
+                <a href="../RD/从零学Python/python基本语法.html">
+            
+                    
+                    python基本语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4.16" data-path="../RD/从零学Python/python高级语法.html">
+            
+                <a href="../RD/从零学Python/python高级语法.html">
+            
+                    
+                    python高级语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4.17" data-path="../RD/从零学Python/常用python模块.html">
+            
+                <a href="../RD/从零学Python/常用python模块.html">
+            
+                    
+                    常用python模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    RHEL
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../RHEL/firewalld配置.html">
+            
+                <a href="../RHEL/firewalld配置.html">
+            
+                    
+                    firewalld配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    Vim
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../Vim/vi编辑器.html">
+            
+                <a href="../Vim/vi编辑器.html">
+            
+                    
+                    vi编辑器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../zabbix/zabbix.html">
+            
+                <a href="../zabbix/zabbix.html">
+            
+                    
+                    Zabbix
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+		</nav>
+		
+		
+	</div>
+
+	<!-- Content nav -->
+	<!-- <div class="book-anchor">
+		<div class="book-anchor-title">在这篇文章中:</div>
+		<div class="book-anchor-body">
+
+		</div>
+	</div> -->
+
+	<div class="book-body">
+		
+		<div class="body-inner">
+			
+			
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Git分支管理合并与删除命令</a>
+    </h1>
+</div>
+
+
+
+
+			<div class="page-wrapper" tabindex="-1" role="main">
+				<div class="page-inner">
+					
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+					<section class="normal markdown-section">
+						
+						<div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#git&#x5206;&#x652F;"><b></b>Git&#x5206;&#x652F;</a></li><ul><ul><li><span class="title-icon "></span><a href="#git&#x4FDD;&#x5B58;&#x6570;&#x636E;&#x7684;&#x65B9;&#x5F0F;"><b></b>Git&#x4FDD;&#x5B58;&#x6570;&#x636E;&#x7684;&#x65B9;&#x5F0F;</a></li></ul><li><span class="title-icon "></span><a href="#git&#x5206;&#x652F;_1"><b></b>Git&#x5206;&#x652F;</a></li><li><span class="title-icon "></span><a href="#git&#x5206;&#x652F;&#x521B;&#x5EFA;"><b></b>Git&#x5206;&#x652F;&#x521B;&#x5EFA;</a></li><li><span class="title-icon "></span><a href="#git&#x7684;&#x5206;&#x652F;&#x5408;&#x5E76;&#x3001;&#x5220;&#x9664;"><b></b>Git&#x7684;&#x5206;&#x652F;&#x5408;&#x5E76;&#x3001;&#x5220;&#x9664;</a></li><li><span class="title-icon "></span><a href="#git&#x5206;&#x652F;&#x5220;&#x9664;"><b></b>Git&#x5206;&#x652F;&#x5220;&#x9664;</a></li></ul></ul></div><a href="#git&#x5206;&#x652F;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#git&#x5206;&#x652F;"><b></b>Git&#x5206;&#x652F;</a></li><ul><li><span class="title-icon "></span><a href="#git&#x5206;&#x652F;_1"><b></b>Git&#x5206;&#x652F;</a></li><li><span class="title-icon "></span><a href="#git&#x5206;&#x652F;&#x521B;&#x5EFA;"><b></b>Git&#x5206;&#x652F;&#x521B;&#x5EFA;</a></li><li><span class="title-icon "></span><a href="#git&#x7684;&#x5206;&#x652F;&#x5408;&#x5E76;&#x3001;&#x5220;&#x9664;"><b></b>Git&#x7684;&#x5206;&#x652F;&#x5408;&#x5E76;&#x3001;&#x5220;&#x9664;</a></li><li><span class="title-icon "></span><a href="#git&#x5206;&#x652F;&#x5220;&#x9664;"><b></b>Git&#x5206;&#x652F;&#x5220;&#x9664;</a></li></ul></ul></div><a href="#git&#x5206;&#x652F;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="git&#x5206;&#x652F;"><a name="git&#x5206;&#x652F;" class="anchor-navigation-ex-anchor" href="#git&#x5206;&#x652F;"><i class="fa fa-link" aria-hidden="true"></i></a>Git&#x5206;&#x652F;</h1>
+<p>&#x51E0;&#x4E4E;&#x6240;&#x6709;&#x7684;&#x7248;&#x672C;&#x63A7;&#x5236;&#x7CFB;&#x7EDF;&#x90FD;&#x4EE5;&#x67D0;&#x79CD;&#x5F62;&#x5F0F;&#x652F;&#x6301;&#x5206;&#x652F;&#x3002; &#x4F7F;&#x7528;&#x5206;&#x652F;&#x610F;&#x5473;&#x7740;&#x4F60;&#x53EF;&#x4EE5;&#x628A;&#x4F60;&#x7684;&#x5DE5;&#x4F5C;&#x4ECE;&#x5F00;&#x53D1;&#x4E3B;&#x7EBF;&#x4E0A;&#x5206;&#x79BB;&#x5F00;&#x6765;&#xFF0C;&#x4EE5;&#x514D;&#x5F71;&#x54CD;&#x5F00;&#x53D1;&#x4E3B;&#x7EBF;&#x3002; &#x5728;&#x5F88;&#x591A;&#x7248;&#x672C;&#x63A7;&#x5236;&#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x7565;&#x5FAE;&#x4F4E;&#x6548;&#x7684;&#x8FC7;&#x7A0B;&#x2014;&#x2014;&#x5E38;&#x5E38;&#x9700;&#x8981;&#x5B8C;&#x5168;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6E90;&#x4EE3;&#x7801;&#x76EE;&#x5F55;&#x7684;&#x526F;&#x672C;&#x3002;&#x5BF9;&#x4E8E;&#x5927;&#x9879;&#x76EE;&#x6765;&#x8BF4;&#xFF0C;&#x8FD9;&#x6837;&#x7684;&#x8FC7;&#x7A0B;&#x4F1A;&#x8017;&#x8D39;&#x5F88;&#x591A;&#x65F6;&#x95F4;&#x3002;&#x800C;Git&#x7684;&#x5206;&#x652F;&#x6A21;&#x578B;&#x5219;&#x522B;&#x5177;&#x4E00;&#x683C;&#xFF0C;&#x521B;&#x5EFA;&#x5206;&#x652F;&#x975E;&#x5E38;&#x7684;&#x5FEB;&#xFF0C;&#x5728;&#x4E0D;&#x540C;&#x5206;&#x652F;&#x4E4B;&#x95F4;&#x5207;&#x6362;&#x4E5F;&#x5341;&#x5206;&#x7684;&#x5FEB;&#xFF0C;&#x8FD9;&#x4E00;&#x4F18;&#x52BF;&#x4E5F;&#x4F7F;&#x5F97;Git&#x9F13;&#x52B1;&#x4EBA;&#x4EEC;&#x66F4;&#x591A;&#x5730;&#x4F7F;&#x7528;&#x5206;&#x652F;&#x3002;</p>
+<h3 id="git&#x4FDD;&#x5B58;&#x6570;&#x636E;&#x7684;&#x65B9;&#x5F0F;"><span name="git&#x4FDD;&#x5B58;&#x6570;&#x636E;&#x7684;&#x65B9;&#x5F0F;">Git&#x4FDD;&#x5B58;&#x6570;&#x636E;&#x7684;&#x65B9;&#x5F0F;</span></h3>
+<p>&#x5728;&#x4E86;&#x89E3;&#x5206;&#x652F;&#x4E4B;&#x524D;&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x5148;&#x6765;&#x770B;&#x770B;Git&#x662F;&#x5982;&#x4F55;&#x4FDD;&#x5B58;&#x6570;&#x636E;&#x7684;&#x3002;&#x6211;&#x7684;&#x7406;&#x89E3;&#x662F;&#x6211;&#x4EEC;&#x6BCF;&#x6B21;&#x63D0;&#x4EA4;&#x5230;Git&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x5B83;&#x5E76;&#x4E0D;&#x662F;&#x53EA;&#x4FDD;&#x5B58;&#x6BCF;&#x6B21;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x5DEE;&#x5F02;&#xFF0C;&#x800C;&#x662F;&#x7C7B;&#x4F3C;&#x4E8E;&#x7167;&#x7247;&#x90A3;&#x6837;&#x5C06;&#x6574;&#x4E2A;&#x6587;&#x4EF6;&#x90FD;&#x5728;&#x91CD;&#x65B0;&#x4FDD;&#x5B58;&#x4E00;&#x4EFD;</p>
+<h2 id="git&#x5206;&#x652F;_1"><a name="git&#x5206;&#x652F;_1" class="anchor-navigation-ex-anchor" href="#git&#x5206;&#x652F;_1"><i class="fa fa-link" aria-hidden="true"></i></a>Git&#x5206;&#x652F;</h2>
+<p>Git &#x4F1A;&#x628A;&#x4ED3;&#x5E93;&#x4E2D;&#x7684;&#x6BCF;&#x6B21;&#x63D0;&#x4EA4;&#x4E32;&#x6210;&#x4E00;&#x6761;&#x65F6;&#x95F4;&#x7EBF;&#xFF0C;&#x8FD9;&#x6761;&#x65F6;&#x95F4;&#x7EBF;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x5206;&#x652F;&#x3002;&#x5728; Git &#x91CC;&#xFF0C;&#x6BCF;&#x4E2A;&#x4ED3;&#x5E93;&#x90FD;&#x4F1A;&#x6709;&#x4E00;&#x4E2A;&#x4E3B;&#x5206;&#x652F;&#xFF0C;&#x5373;master&#x5206;&#x652F;&#x3002;HEAD&#x4E25;&#x683C;&#x6765;&#x8BF4;&#x4E0D;&#x662F;&#x6307;&#x5411;&#x63D0;&#x4EA4;&#xFF0C;&#x800C;&#x662F;&#x6307;&#x5411;master&#xFF0C;master&#x624D;&#x662F;&#x6307;&#x5411;&#x63D0;&#x4EA4;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;HEAD&#x6307;&#x5411;&#x7684;&#x5C31;&#x662F;&#x5F53;&#x524D;&#x5206;&#x652F;&#x3002;
+&#x4E00;&#x5F00;&#x59CB;&#x7684;&#x65F6;&#x5019;&#xFF0C;master&#x5206;&#x652F;&#x662F;&#x4E00;&#x6761;&#x7EBF;&#xFF0C;Git &#x7528;master&#x6307;&#x5411;&#x6700;&#x65B0;&#x7684;&#x63D0;&#x4EA4;&#xFF0C;&#x518D;&#x7528;HEAD&#x6307;&#x5411;master&#xFF0C;&#x5C31;&#x80FD;&#x786E;&#x5B9A;&#x5F53;&#x524D;&#x5206;&#x652F;&#xFF0C;&#x4EE5;&#x53CA;&#x5F53;&#x524D;&#x5206;&#x652F;&#x7684;&#x63D0;&#x4EA4;&#x70B9;&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#xFF1A;</p>
+<p><a href="Git%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86%E5%90%88%E5%B9%B6%E4%B8%8E%E5%88%A0%E9%99%A4%E5%91%BD%E4%BB%A4.assets/16513693237692.png" data-lightbox="1081d76a-d529-4468-a586-a599d3b1d1a9" data-title="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"><img src="Git%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86%E5%90%88%E5%B9%B6%E4%B8%8E%E5%88%A0%E9%99%A4%E5%91%BD%E4%BB%A4.assets/16513693237692.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></a></p>
+<p>&#x6BCF;&#x6B21;&#x63D0;&#x4EA4;&#xFF0C;master&#x5206;&#x652F;&#x90FD;&#x4F1A;&#x5411;&#x524D;&#x79FB;&#x52A8;&#x4E00;&#x6B65;&#xFF0C;&#x8FD9;&#x6837;&#xFF0C;&#x968F;&#x7740;&#x4F60;&#x4E0D;&#x65AD;&#x63D0;&#x4EA4;&#xFF0C;master&#x5206;&#x652F;&#x7684;&#x7EBF;&#x4E5F;&#x8D8A;&#x6765;&#x8D8A;&#x957F;&#x3002;</p>
+<h2 id="git&#x5206;&#x652F;&#x521B;&#x5EFA;"><a name="git&#x5206;&#x652F;&#x521B;&#x5EFA;" class="anchor-navigation-ex-anchor" href="#git&#x5206;&#x652F;&#x521B;&#x5EFA;"><i class="fa fa-link" aria-hidden="true"></i></a>Git&#x5206;&#x652F;&#x521B;&#x5EFA;</h2>
+<p>&#x5F53;&#x6211;&#x4EEC;&#x521B;&#x5EFA;&#x65B0;&#x7684;&#x5206;&#x652F;&#xFF0C;&#x4F8B;&#x5982;dev&#x65F6;&#xFF0C;Git &#x65B0;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;&#x6307;&#x9488;&#x53EB;dev&#xFF0C;&#x6307;&#x5411;master&#x76F8;&#x540C;&#x7684;&#x63D0;&#x4EA4;&#xFF0C;&#x518D;&#x628A;HEAD&#x6307;&#x5411;dev&#xFF0C;&#x5C31;&#x8868;&#x793A;&#x5F53;&#x524D;&#x5206;&#x652F;&#x5728;dev&#x4E0A;&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#xFF1A;</p>
+<p><a href="Git%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86%E5%90%88%E5%B9%B6%E4%B8%8E%E5%88%A0%E9%99%A4%E5%91%BD%E4%BB%A4.assets/image-20220501094306011.png" data-lightbox="8a21d4cf-decc-4ee0-8686-8414cc06265a" data-title="image-20220501094306011"><img src="Git%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86%E5%90%88%E5%B9%B6%E4%B8%8E%E5%88%A0%E9%99%A4%E5%91%BD%E4%BB%A4.assets/image-20220501094306011.png" alt="image-20220501094306011"></a></p>
+<p>&#x6240;&#x4EE5;Git &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5206;&#x652F;&#x5F88;&#x5FEB;&#xFF0C;&#x56E0;&#x4E3A;&#x9664;&#x4E86;&#x589E;&#x52A0;&#x4E00;&#x4E2A;dev&#x6307;&#x9488;&#xFF0C;&#x6539;&#x53D8;HEAD&#x7684;&#x6307;&#x5411;&#xFF0C;&#x5DE5;&#x4F5C;&#x533A;&#x7684;&#x6587;&#x4EF6;&#x5219;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x53D8;&#x5316;&#x3002;
+&#x5728;&#x521B;&#x5EFA;&#x5B8C;&#x65B0;&#x7684;&#x5206;&#x652F;&#x4EE5;&#x540E;&#xFF0C;&#x5BF9;&#x5DE5;&#x4F5C;&#x533A;&#x7684;&#x4FEE;&#x6539;&#x548C;&#x63D0;&#x4EA4;&#x5C31;&#x662F;&#x9488;&#x5BF9;dev&#x5206;&#x652F;&#x4E86;&#xFF0C;&#x6BD4;&#x5982;&#x65B0;&#x63D0;&#x4EA4;&#x4E00;&#x6B21;&#x540E;&#xFF0C;dev&#x6307;&#x9488;&#x5F80;&#x524D;&#x79FB;&#x52A8;&#x4E00;&#x6B65;&#xFF0C;&#x800C;master&#x6307;&#x9488;&#x4E0D;&#x53D8;&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#xFF1A;</p>
+<p><a href="Git%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86%E5%90%88%E5%B9%B6%E4%B8%8E%E5%88%A0%E9%99%A4%E5%91%BD%E4%BB%A4.assets/image-20220501094410400.png" data-lightbox="23b82c7b-8230-4482-80a8-7a69362b7b89" data-title="image-20220501094410400"><img src="Git%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86%E5%90%88%E5%B9%B6%E4%B8%8E%E5%88%A0%E9%99%A4%E5%91%BD%E4%BB%A4.assets/image-20220501094410400.png" alt="image-20220501094410400"></a></p>
+<p>&#x5177;&#x4F53;&#x521B;&#x5EFA;&#x5206;&#x652F;&#x547D;&#x4EE4;&#x5982;&#x4E0B;</p>
+<pre><code class="lang-bash">    git branch dev //&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;dev&#x5206;&#x652F;
+    git checkout dev //&#x5207;&#x6362;&#x5230;&#x8BE5;&#x5206;&#x652F;&#x4E0A;
+</code></pre>
+<p>&#x5F53;&#x7136;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;git checkout -b dev&#x6216;&#x8005;git switch -c dev&#x521B;&#x5EFA;dev&#x5E76;&#x5207;&#x6362;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;&#x4EE5;&#x4E0A;&#x4E24;&#x6761;&#x547D;&#x4EE4;&#x3002;&#x6700;&#x65B0;&#x7248;&#x672C;&#x7684; Git &#x63D0;&#x4F9B;&#x4E86;&#x65B0;&#x7684;git switch&#x547D;&#x4EE4;&#x6765;&#x5207;&#x6362;&#x5206;&#x652F;&#xFF0C;&#x4EE5;&#x4FBF;&#x66F4;&#x597D;&#x7684;&#x4E0E;git checkout &#x8FDB;&#x884C;&#x533A;&#x5206;&#x3002;
+&#x521B;&#x5EFA;&#x597D;&#x65B0;&#x7684;&#x5206;&#x652F;&#x4EE5;&#x540E;&#xFF0C;&#x5F53;&#x6211;&#x4EEC;&#x60F3;&#x67E5;&#x770B;&#x65B0;&#x7684;&#x5206;&#x652F;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;</p>
+<pre><code class="lang-bash">    git branch
+</code></pre>
+<p>&#x8BE5;&#x547D;&#x4EE4;&#x4F1A;&#x5217;&#x51FA;&#x6240;&#x6709;&#x7684;&#x5206;&#x652F;&#xFF0C;&#x800C;&#x5F53;&#x524D;&#x5206;&#x652F;&#x524D;&#x9762;&#x4F1A;&#x6807;&#x4E00;&#x4E2A;*&#x53F7;&#x3002;
+<a href="Git%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86%E5%90%88%E5%B9%B6%E4%B8%8E%E5%88%A0%E9%99%A4%E5%91%BD%E4%BB%A4.assets/image-20220501094442966.png" data-lightbox="9599a712-eded-4bd5-a917-43b62a2b01e1" data-title="image-20220501094442966"><img src="Git%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86%E5%90%88%E5%B9%B6%E4%B8%8E%E5%88%A0%E9%99%A4%E5%91%BD%E4%BB%A4.assets/image-20220501094442966.png" alt="image-20220501094442966"></a>
+&#x5728;&#x5206;&#x652F;&#x4E4B;&#x95F4;&#x6765;&#x56DE;&#x5207;&#x6362;&#x4F7F;&#x7528;git switch master&#x6216;&#x8005;git checkout &#x5206;&#x652F;&#x540D;</p>
+<h2 id="git&#x7684;&#x5206;&#x652F;&#x5408;&#x5E76;&#x3001;&#x5220;&#x9664;"><a name="git&#x7684;&#x5206;&#x652F;&#x5408;&#x5E76;&#x3001;&#x5220;&#x9664;" class="anchor-navigation-ex-anchor" href="#git&#x7684;&#x5206;&#x652F;&#x5408;&#x5E76;&#x3001;&#x5220;&#x9664;"><i class="fa fa-link" aria-hidden="true"></i></a>Git&#x7684;&#x5206;&#x652F;&#x5408;&#x5E76;&#x3001;&#x5220;&#x9664;</h2>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x5F53;&#x6211;&#x4EEC;&#x5728;dev&#x5206;&#x652F;&#x63D0;&#x4EA4;&#x4FEE;&#x6539;&#x7684;&#x6587;&#x4EF6;&#x5207;&#x6362;&#x56DE;&#x4E3B;&#x5206;&#x652F;&#x662F;&#x67E5;&#x770B;&#x4E0D;&#x5230;&#x7684;&#xFF0C;&#x6B64;&#x65F6;&#x5982;&#x679C;&#x60F3;&#x63D0;&#x4EA4;&#x5230;&#x4E3B;&#x5206;&#x652F;&#x4E0A;&#x53BB;&#x5C31;&#x9700;&#x8981;&#x5408;&#x5E76;&#x5206;&#x652F;&#x3002;
+Git&#x5206;&#x652F;&#x5408;&#x5E76;&#x975E;&#x5E38;&#x7684;&#x4FBF;&#x6377;&#xFF0C;&#x76F4;&#x63A5;&#x628A;master&#x6307;&#x5411;dev&#x7684;&#x5F53;&#x524D;&#x63D0;&#x4EA4;&#xFF0C;&#x5C31;&#x5B8C;&#x6210;&#x4E86;&#x5408;&#x5E76;&#xFF0C;&#x53EA;&#x662F;&#x6539;&#x53D8;&#x4E86;&#x6307;&#x9488;&#xFF0C;&#x5DE5;&#x4F5C;&#x533A;&#x5185;&#x5BB9;&#x4E0D;&#x53D8;&#xFF0C;&#x5408;&#x5E76;&#x5B8C;&#x5206;&#x652F;&#x540E;&#xFF0C;&#x751A;&#x81F3;&#x53EF;&#x4EE5;&#x5220;&#x9664;dev&#x5206;&#x652F;&#x3002;&#x5220;&#x9664;dev&#x5206;&#x652F;&#x5C31;&#x662F;&#x628A;dev&#x6307;&#x9488;&#x7ED9;&#x5220;&#x6389;&#xFF0C;&#x5220;&#x6389;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x5269;&#x4E0B;&#x4E86;&#x4E00;&#x6761;master&#x5206;&#x652F;&#x3002;</p>
+<p><a href="Git%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86%E5%90%88%E5%B9%B6%E4%B8%8E%E5%88%A0%E9%99%A4%E5%91%BD%E4%BB%A4.assets/image-20220501094456380.png" data-lightbox="fd45c660-7300-4c35-9ff0-8cb26aaa7c3b" data-title="image-20220501094456380"><img src="Git%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86%E5%90%88%E5%B9%B6%E4%B8%8E%E5%88%A0%E9%99%A4%E5%91%BD%E4%BB%A4.assets/image-20220501094456380.png" alt="image-20220501094456380"></a></p>
+<p>&#x6211;&#x4EEC;&#x5408;&#x5E76;&#x5206;&#x652F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;git merge&#x8BE5;&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x5408;&#x5E76;&#x6307;&#x5B9A;&#x5206;&#x652F;&#x5230;&#x5F53;&#x524D;&#x5206;&#x652F;&#x3002;
+&#x5206;&#x652F;&#x5408;&#x5E76;&#xFF0C;Git&#x4E00;&#x822C; &#x4F1A;&#x7528;Fast forward&#x6A21;&#x5F0F;&#xFF0C;&#x4F46;&#x8FD9;&#x79CD;&#x6A21;&#x5F0F;&#x4E0B;&#xFF0C;&#x5220;&#x9664;&#x5206;&#x652F;&#x540E;&#xFF0C;&#x4F1A;&#x4E22;&#x6389;&#x5206;&#x652F;&#x4FE1;&#x606F;&#x3002;&#x5982;&#x679C;&#x8981;&#x5F3A;&#x5236;&#x7981;&#x7528;Fast forward&#x6A21;&#x5F0F;&#xFF0C;Git &#x5C31;&#x4F1A;&#x5728;merge&#x65F6;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x65B0;&#x7684;commit&#xFF0C;&#x8FD9;&#x6837;&#xFF0C;&#x4ECE;&#x5206;&#x652F;&#x5386;&#x53F2;&#x4E0A;&#x5C31;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#x5206;&#x652F;&#x4FE1;&#x606F;&#x3002;
+&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;</p>
+<pre><code class="lang-bash">    git merge --no-ff -m <span class="hljs-string">&quot;&#x7981;&#x7528;Fast forward&#x6A21;&#x5F0F;&quot;</span> dev
+</code></pre>
+<p>&#x6765;&#x7981;&#x7528;Fast forward&#x6A21;&#x5F0F;&#x3002;&#x5408;&#x5E76;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x7528;git log&#x770B;&#x770B;&#x5206;&#x652F;&#x5386;&#x53F2;&#xFF1A;</p>
+<p><a href="Git%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86%E5%90%88%E5%B9%B6%E4%B8%8E%E5%88%A0%E9%99%A4%E5%91%BD%E4%BB%A4.assets/image-20220501094710786.png" data-lightbox="db29f055-ffbb-4980-9847-fd5818c04f05" data-title="image-20220501094710786"><img src="Git%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86%E5%90%88%E5%B9%B6%E4%B8%8E%E5%88%A0%E9%99%A4%E5%91%BD%E4%BB%A4.assets/image-20220501094710786.png" alt="image-20220501094710786"></a></p>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x4E0D;&#x4F7F;&#x7528;Fast forward&#x6A21;&#x5F0F;&#xFF0C;merge&#x540E;&#x5C31;&#x50CF;&#x8FD9;&#x6837;&#xFF1A;</p>
+<p><a href="Git%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86%E5%90%88%E5%B9%B6%E4%B8%8E%E5%88%A0%E9%99%A4%E5%91%BD%E4%BB%A4.assets/image-20220501094728685.png" data-lightbox="7c929fbe-9ddf-4b40-8580-ab68c7ec7c4c" data-title="image-20220501094728685"><img src="Git%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86%E5%90%88%E5%B9%B6%E4%B8%8E%E5%88%A0%E9%99%A4%E5%91%BD%E4%BB%A4.assets/image-20220501094728685.png" alt="image-20220501094728685"></a></p>
+<h2 id="git&#x5206;&#x652F;&#x5220;&#x9664;"><a name="git&#x5206;&#x652F;&#x5220;&#x9664;" class="anchor-navigation-ex-anchor" href="#git&#x5206;&#x652F;&#x5220;&#x9664;"><i class="fa fa-link" aria-hidden="true"></i></a>Git&#x5206;&#x652F;&#x5220;&#x9664;</h2>
+<p>&#x4F7F;&#x7528;&#x547D;&#x4EE4;</p>
+<pre><code class="lang-bash">git branch <span class="hljs-_">-d</span> dev
+</code></pre>
+<p><a href="Git%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86%E5%90%88%E5%B9%B6%E4%B8%8E%E5%88%A0%E9%99%A4%E5%91%BD%E4%BB%A4.assets/image-20220501094741087.png" data-lightbox="c166bddb-a311-4612-bde4-ff60a5267c7c" data-title="image-20220501094741087"><img src="Git%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86%E5%90%88%E5%B9%B6%E4%B8%8E%E5%88%A0%E9%99%A4%E5%91%BD%E4%BB%A4.assets/image-20220501094741087.png" alt="image-20220501094741087"></a></p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; JokerDragon 2022 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2022-05-01 16:08:24
+</span></footer>
+						
+					</section>
+					
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+				</div>
+			</div>
+			
+		</div>
+
+		
+		
+		
+		<a href="git更新远程分支.html" class="navigation navigation-next navigation-unique" aria-label="Next page: git更新远程分支">
+			<i class="fa fa-angle-right"></i>
+		</a>
+		
+		
+		
+	</div>
+	<script>
+		var gitbook = gitbook || [];
+		gitbook.push(function() {
+			gitbook.page.hasChanged({"page":{"title":"Git分支管理合并与删除命令","level":"1.2.1","depth":2,"next":{"title":"git更新远程分支","level":"1.2.2","depth":2,"path":"git/git更新远程分支.md","ref":"git/git更新远程分支.md","articles":[]},"previous":{"title":"Git","level":"1.2","depth":1,"ref":"","articles":[{"title":"Git分支管理合并与删除命令","level":"1.2.1","depth":2,"path":"git/Git分支管理合并与删除命令.md","ref":"git/Git分支管理合并与删除命令.md","articles":[]},{"title":"git更新远程分支","level":"1.2.2","depth":2,"path":"git/git更新远程分支.md","ref":"git/git更新远程分支.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","code","expandable-chapters","splitter","ancre-navigation","donate","pageview-count","lightbox","tbfed-pagefooter","edit-link","theme-beauty"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"theme-beauty":{"copyButtons":true,"search-placeholder":"输入关键字搜索","logo":"./logo.png","favicon":"./favicon.ico"},"tbfed-pagefooter":{"copyright":"Copyright &copy JokerDragon 2022","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"splitter":{},"search-pro":{},"code":{"copyButtons":true},"donate":{"title":"","button":"赏","wechat":"https://s3.bmp.ovh/imgs/2022/04/30/608cd8e1afcb7690.png","alipay":"https://s3.bmp.ovh/imgs/2022/04/30/bcc87e0a2a510deb.jpg","wechatText":"微信打赏","alipayText":"支付宝打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true,"sameUuid":false},"pageview-count":{},"ancre-navigation":{"mode":"float","pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"showLevel":true,"printLog":false,"minTocSize":2,"multipleH1":true,"associatedWithSummary":true,"float":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"maxTocDepth":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"编辑此页面","base":"https://gitee.com/PaperDragon/note-book/edit/master/Markdown-notebook/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"JokerDragon","lang":"zh-hans","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"图书编号","variables":{},"title":"书名","language":"zh-hans","links":{},"gitbook":"*","description":"描述"},"file":{"path":"git/Git分支管理合并与删除命令.md","mtime":"2022-05-01T08:08:24.138Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-05-05T03:35:23.973Z"},"basePath":"..","book":{"language":""}});
+		});
+	</script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-beauty/js/beauty.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-beauty/js/copy-button.js"></script>
+        
+    
+
+    </body>
+</html>
+
