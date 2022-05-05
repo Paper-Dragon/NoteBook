@@ -20,6 +20,9 @@ stages:
         displayName: Nodejs 构建
         nodeVersion: 8.16.2
         commands:
+          - git branch -D review
+          - git branch review
+          - git checkout review
           - cd Markdown-notebook
           - npm install gitbook-cli
           - 'npm install '
@@ -28,6 +31,18 @@ stages:
           - pwd
           - ls -la ./
           - '#sed -i ''s/if(m)for(n.handler/if\(false\)for\(n.handler/g'' _book/gitbook/theme.js'
+          - cd ../
+          - git remote -v
+          - git remote rm origin
+          - git remote add origin git@gitee.com:PaperDragon/note-book.git
+          - echo ${ssh_key} > ~/.ssh/id_rsa
+          - chmod 600 ~/.ssh/id_rsa
+          - ls -la ~/.ssh
+          - cp -f Markdown-notebook/_book ./book
+          - cd book
+          - git add .
+          - git commit -m "Bot:review"
+          - git push origin review --force
         artifacts:
           - name: BUILD_ARTIFACT
             path:
@@ -54,7 +69,7 @@ stages:
         name: publish_release_artifacts
         displayName: 发布
         dependArtifact: MyNote-Gitbook-html
-        version: 1.0.0.2
+        version: 1.0.0.4
         autoIncrement: true
 permissions:
   - role: admin
