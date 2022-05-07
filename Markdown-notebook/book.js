@@ -1,6 +1,6 @@
 module.exports = {
   // 书籍信息
-  title: '书名',
+  title: '运维绿皮书',
   description: '描述',
   isbn: '图书编号',
   author: 'JokerDragon',
