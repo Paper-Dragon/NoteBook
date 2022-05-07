@@ -23,7 +23,7 @@ stages:
           PATH=$PATH:/opt/node/bin
           cd note-book/Markdown-notebook/
           npm install gitbook-cli -g
-          npm install -g
+          npm install 
           rm -rf ./_book
           npm run build 
           pwd
