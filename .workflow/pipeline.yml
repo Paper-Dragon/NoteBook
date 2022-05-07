@@ -22,8 +22,8 @@ stages:
           git clone https://gitee.com/PaperDragon/note-book.git
           PATH=$PATH:/opt/node/bin
           cd note-book/Markdown-notebook/
-          npm install gitbook-cli
-          npm install
+          npm install gitbook-cli -g
+          npm install -g
           rm -rf ./_book
           npm run build 
           pwd
