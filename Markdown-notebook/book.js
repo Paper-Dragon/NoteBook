@@ -21,7 +21,8 @@ module.exports = {
     "lightbox", // 弹出大图
     "tbfed-pagefooter", //为页面添加页脚
     "edit-link", // Edit This Page
-    "theme-beauty"
+    "theme-beauty", //主题
+    "hide-element" // 隐藏元素
   ],
 
   // 插件全局配置
@@ -56,6 +57,9 @@ module.exports = {
       "search-placeholder": "输入关键字搜索", //搜索框提示信息
       "logo": "./logo.png", //logo地址
       "favicon": "./favicon.ico" //ico地址
+    },
+    "hide-element": {
+            "elements": [".gitbook-link"]
     }
 
   },
