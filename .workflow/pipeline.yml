@@ -1,0 +1,36 @@
+version: '1.0'
+name: pipeline
+displayName: pipeline
+triggers:
+  trigger: manual
+  push:
+    branches:
+      precise:
+        - master
+stages:
+  - name: stage-0e16e07b
+    displayName: runner
+    strategy: naturally
+    trigger: auto
+    executor: []
+    steps:
+      - step: shell@agent
+        name: execute_shell
+        displayName: Shell 脚本执行
+        hostGroupID: NodeGroup
+        script: |-
+          git clone https://gitee.com/PaperDragon/note-book.git
+          PATH=$PATH:/opt/node/bin
+          cd note-book/Markdown-notebook/
+          npm install gitbook-cli -g
+          npm install -g
+          rm -rf ./_book
+          npm run build 
+          pwd
+          ls -la ./
+          cd _book &&  pwd && ls -la ./
+          rm -rf /var/www/html/*
+          mv * /var/www/html/
+permissions:
+  - role: admin
+    members: []
