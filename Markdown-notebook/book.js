@@ -21,7 +21,8 @@ module.exports = {
     "lightbox", // 弹出大图
     "tbfed-pagefooter", //为页面添加页脚
     "edit-link", // Edit This Page
-    "theme-beauty"
+    "theme-beauty", //主题
+    "hide-element" // 隐藏元素
   ],
 
   // 插件全局配置
@@ -35,8 +36,8 @@ module.exports = {
       "minTocSize": 2
     },
     "donate": {
-      "wechat": "https://s3.bmp.ovh/imgs/2022/04/30/608cd8e1afcb7690.png",
-      "alipay": "https://s3.bmp.ovh/imgs/2022/04/30/bcc87e0a2a510deb.jpg",
+      "wechat": "https://s3.bmp.ovh/imgs/2022/05/07/2e59126e11bfd303.jpg",
+      "alipay": "https://s3.bmp.ovh/imgs/2022/05/07/220360fa2a0df5d4.jpg",
       "title": "",
       "button": "赏",
       "alipayText": "支付宝打赏",
@@ -56,6 +57,9 @@ module.exports = {
       "search-placeholder": "输入关键字搜索", //搜索框提示信息
       "logo": "./logo.png", //logo地址
       "favicon": "./favicon.ico" //ico地址
+    },
+    "hide-element": {
+            "elements": [".gitbook-link"]
     }
 
   },
