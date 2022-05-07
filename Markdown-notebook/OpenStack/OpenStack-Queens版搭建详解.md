@@ -3,11 +3,15 @@
 ## 1.1 节点硬件规划
 
 本次搭建使用VMware Workstation虚拟出3台CentOS7虚拟机作为主机节点，节点架构：1个controller控制节点、1个compute计算节点、1个cinder块存储节点。硬件配置具体如下：
+
 |节点名称 	| CPU	| 内存 |	磁盘 |	操作系统镜像|
-| ------------- |:-------------:| -----:|
+| ------------- |-------------| -----|----|----|
 |controller节点 |	2VCPU	|	4GB	|50GB	|CentOS-7-x86_64-Minimal-1804.iso|
 |compute1节点 |	2VCPU	|4GB	|50GB|	CentOS-7-x86_64-Minimal-1804.iso|
 |cinder1节点 |2VCPU	|4GB|	50GB系统盘，50GB存储盘|	CentOS-7-x86_64-Minimal-1804.iso|
+
+
+
 说明：硬件规划可以根据自己需求灵活调整，这里使用CentOS-7-x86_64-Minimal-1804，minimal版占用资源更少，下载地址：https://www.centos.org/。
 
 **Vmware Workstation虚拟机开启虚拟化引擎：**
