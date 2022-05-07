@@ -1,0 +1,34 @@
+version: '1.0'
+name: pipeline
+displayName: pipeline
+triggers:
+  trigger: manual
+  push:
+    branches:
+      precise:
+        - master
+stages:
+  - name: stage-0e16e07b
+    displayName: 未命名
+    strategy: naturally
+    trigger: auto
+    executor: []
+    steps:
+      - step: shell@agent
+        name: execute_shell
+        displayName: Shell 脚本执行
+        hostGroupID: NodeGroup
+        script: |-
+          # 请在此输入您想执行的脚本
+          echo 'Hello Gitee!'
+          cd Markdown-notebook/
+          npm install gitbook-cli
+          npm install
+          rm -rf ./_book
+          npm run build 
+          pwd
+          ls -la ./
+          cd _book &&  pwd && ls -la ./
+permissions:
+  - role: admin
+    members: []
