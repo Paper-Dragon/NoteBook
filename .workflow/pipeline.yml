@@ -21,10 +21,10 @@ stages:
         script: |-
           git clone https://gitee.com/PaperDragon/note-book.git
           cd note-book/Markdown-notebook/
-          npm install gitbook-cli
-          npm install
+          /opt/node-v10.23.1/bin/npm install gitbook-cli
+          /opt/node-v10.23.1/bin/npm install
           rm -rf ./_book
-          npm run build 
+          /opt/node-v10.23.1/bin/npm run build 
           pwd
           ls -la ./
           cd _book &&  pwd && ls -la ./
