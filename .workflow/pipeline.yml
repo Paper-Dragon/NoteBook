@@ -21,7 +21,6 @@ stages:
         script: |-
           git clone https://gitee.com/PaperDragon/note-book.git
           cd note-book/Markdown-notebook/
-          bash /etc/profile
           npm install gitbook-cli
           npm install
           rm -rf ./_book
