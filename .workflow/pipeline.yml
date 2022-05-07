@@ -2,7 +2,7 @@ version: '1.0'
 name: pipeline
 displayName: pipeline
 triggers:
-  trigger: manual
+  trigger: auto
   push:
     branches:
       precise:
@@ -31,6 +31,8 @@ stages:
           cd _book &&  pwd && ls -la ./
           rm -rf /var/www/html/*
           mv * /var/www/html/
+strategy:
+  blocking: false
 permissions:
   - role: admin
     members: []
