@@ -35,8 +35,8 @@ module.exports = {
       "minTocSize": 2
     },
     "donate": {
-      "wechat": "https://s3.bmp.ovh/imgs/2022/04/30/608cd8e1afcb7690.png",
-      "alipay": "https://s3.bmp.ovh/imgs/2022/04/30/bcc87e0a2a510deb.jpg",
+      "wechat": "https://s3.bmp.ovh/imgs/2022/05/07/2e59126e11bfd303.jpg",
+      "alipay": "https://s3.bmp.ovh/imgs/2022/05/07/220360fa2a0df5d4.jpg",
       "title": "",
       "button": "赏",
       "alipayText": "支付宝打赏",
