@@ -9,7 +9,7 @@ triggers:
         - master
 stages:
   - name: stage-0e16e07b
-    displayName: 未命名
+    displayName: runner
     strategy: naturally
     trigger: auto
     executor: []
@@ -19,9 +19,8 @@ stages:
         displayName: Shell 脚本执行
         hostGroupID: NodeGroup
         script: |-
-          # 请在此输入您想执行的脚本
-          echo 'Hello Gitee!'
-          cd Markdown-notebook/
+          git clone https://gitee.com/PaperDragon/note-book.git
+          cd note-book/Markdown-notebook/
           npm install gitbook-cli
           npm install
           rm -rf ./_book
