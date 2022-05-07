@@ -124,23 +124,51 @@
 //}
 
 
+//int main(int argc, char *argv[]) {
+//    char s[] = "hello";
+//    char *p = strchr(s, 'l');
+//    char c = *p;
+//    *p = '\0';
+//    p = strchr(p + 1, 'l');
+//    printf("p=%s\n", p);
+//    // 将搜索的结果复制到另外的地方去
+//    char *t = (char *) malloc(strlen(p) + 1);
+//    strcpy(t, p);
+//    printf("t=%s\n", t);
+//    free(t);
+//    // 找到除了搜索外的其他的
+//    char *e = (char *) malloc(strlen(s) + 1);
+//    strcpy(e, s);
+//    printf("e=%s\n", e);
+//    free(e);
+//    *p = c;
+//    return 0;
+//}
+
+const int red = 0;
+const int yellow = 1;
+const int green = 2;
+
 int main(int argc, char *argv[]) {
-    char s[] = "hello";
-    char *p = strchr(s, 'l');
-    char c = *p;
-    *p = '\0';
-    p = strchr(p + 1, 'l');
-    printf("p=%s\n", p);
-    // 将搜索的结果复制到另外的地方去
-    char *t = (char *) malloc(strlen(p) + 1);
-    strcpy(t, p);
-    printf("t=%s\n", t);
-    free(t);
-    // 找到除了搜索外的其他的
-    char *e = (char *) malloc(strlen(s) + 1);
-    strcpy(e, s);
-    printf("e=%s\n", e);
-    free(e);
-    *p = c;
+    int color = -1;
+    char *colorName = NULL;
+
+    printf("Input Color Code");
+    scanf("%d", &color);
+    switch (color) {
+        case red:
+            colorName = "red";
+            break;
+        case yellow:
+            colorName = "yellow";
+            break;
+        case green:
+            colorName = "green";
+            break;
+        default:
+            colorName = "unKnown";
+            break;
+    }
+    printf("Your favourite color is %s", colorName);
     return 0;
 }
