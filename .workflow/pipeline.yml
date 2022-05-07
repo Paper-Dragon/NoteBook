@@ -20,11 +20,13 @@ stages:
         hostGroupID: NodeGroup
         script: |-
           git clone https://gitee.com/PaperDragon/note-book.git
+          PATH=$PATH:/opt/node/bin
+          export $PATH
           cd note-book/Markdown-notebook/
-          /opt/node-v10.23.1/bin/npm install gitbook-cli
-          /opt/node-v10.23.1/bin/npm install
+          npm install gitbook-cli
+          npm install
           rm -rf ./_book
-          /opt/node-v10.23.1/bin/npm run build 
+          npm run build 
           pwd
           ls -la ./
           cd _book &&  pwd && ls -la ./
