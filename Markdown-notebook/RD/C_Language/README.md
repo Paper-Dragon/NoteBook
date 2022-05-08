@@ -988,3 +988,134 @@ int main(int argc,char const * argv[]){
 }
 ```
 
+## 宏
+
+> ① __ FILE __: 表示当前源文件编译的目录; 
+>
+>
+> ② __ TIME __: 文件被编译的时间； 
+>
+>
+> ③ __ DATE __: 文件被编译的日期； 
+>
+>
+> ④ __ LINE __: 当前文件所在的行号； 
+>
+> ⑤ __ STDC__ 如果此[编译器](https://so.csdn.net/so/search?q=编译器&spm=1001.2101.3001.7020)遵循ANSI  C，其值为一，否则未定义； 
+
+```c
+#include<stdio.h>
+#include<windows.h>
+int main()
+{
+	printf("%d\n",__LINE__);
+	printf("%s\n",__FILE__);
+  printf("%s\n",__DATE__);
+	printf("%s\n",__TIME__);
+	printf("%d\n",__STDC__);
+	system("pause");
+	return 0;
+}
+```
+
+### 带参数的宏
+
+- #define cube (x) ((x)\*(x)\* (x))
+- 宏可以带参数
+
+```c
+#define cube(x) ((x)*(x)*(x))
+int main(int argc, char const * argv[]){
+    printf("%d\n", cube(5));
+
+    return 0;
+}
+```
+
+### 错误定义的宏
+
+- #define RADTODEG(x)  (x * 57.29578)
+- #define RADTODEG(x)  (x) * 57.29578
+
+```c
+
+#define RADTODEG1 (x)  (x * 57.29578)
+#define RADTODEG2 (x)  (x) * 57.29578
+
+
+int main(int argc, char const *argv[]) {
+    printf("%f\n", RADTODEG1(5 + 2));
+    printf("%f\n", 180 / RADTODEG2(1));
+    return 0;
+}
+```
+
+- 也可以带多个参数
+  - #define MIN(a,b) ((a)>(b)?(b):(a))
+- 也可以嵌套使用其他宏
+
+
+
+- 在大型程序的代码中使用非常普遍
+- 可以非常复杂，如“产生”函数
+  - 在# 和 ## 这两个运算符的帮助下
+- 存在中西方文化的差异
+- 部分宏会不inline函数替代
+
+### #define中的 #与##
+
+```c
+ 在#define中，标准只定义了#和##两种操作。#用来把参数转换成字符串，##则用来连接两个前后两个参数，把它们变成一个字符串。 
+```
+
+
+
+在#define中，标准只定义了#和##两种操作。
+
+#用来把参数转换成字符串，
+
+##则用来连接两个前后两个参数，把它们变成一个字符串。
+
+```c
+#include <stdio.h>
+#define paster(n) printf("token"#n"=%d\n",token##n)
+ 
+int main()
+{
+	int token9=10;
+	paster(9);
+	getchar();
+	return 0;
+}
+
+```
+
+输出：
+
+token9=10
+
+再举一例：
+
+ __SOCKADDR_COMMON (sin_);
+
+实际上为：
+
+sa_family_t sin_family;
+
+由于做了宏定义：
+
+```c
+#define	__SOCKADDR_COMMON(sa_prefix) \
+  sa_family_t sa_prefix##family
+```
+
+## 多个源代码文件
+
+- 多个.c文件
+  - main()里的代码太长了适合分成几个函数
+  - 一个源代码文件太撑了适合分成几个文件
+  - 两个独立的源代码文件不能编译形成可执行的程序
+
+### 条件定义
+
+- ifndef  __MAX_H\_    ---  define \_\_MAX_H\_

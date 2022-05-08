@@ -336,24 +336,39 @@
 //}
 
 
-typedef union {
-    int i;
-    char ch[sizeof(int)];
-} CHI;
+//typedef union {
+//    int i;
+//    char ch[sizeof(int)];
+//} CHI;
+//
+//int main(int argc,char const * argv[]){
+//    CHI chi;
+//    int i;
+//    chi.i = 1234;
+//    for (i = 0; i< sizeof(int ); i++ ) {
+//        printf("%02hhX",chi.ch[i]);
+//    }
+//    printf("\n");
+//    return 0;
+//}
 
-int main(int argc,char const * argv[]){
-    CHI chi;
-    int i;
-    chi.i = 1234;
-    for (i = 0; i< sizeof(int ); i++ ) {
-        printf("%02hhX",chi.ch[i]);
-    }
-    printf("\n");
-    return 0;
-}
 
+//#define cube(x) ((x)*(x)*(x))
+//int main(int argc, char const * argv[]){
+//    printf("%d\n", cube(5));
+//
+//    return 0;
+//}
 
-
+//#define RADTODEG1 (x)  (x * 57.29578)
+//#define RADTODEG2 (x)  (x) * 57.29578
+//
+//
+//int main(int argc, char const *argv[]) {
+//    printf("%f\n", RADTODEG1(5 + 2));
+//    printf("%f\n", 180 / RADTODEG2(1));
+//    return 0;
+//}
 
 
 
