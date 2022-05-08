@@ -34,7 +34,8 @@ stages:
           rm -rf /var/www/html/*
           mv * /var/www/html/
           echo "删除旧的构建"
-          bash ../../../clean_build.sh /root/gitee_go_agent/workspace/
+          ln -s /root/gitee_go_agent/workspace/clean_build.sh .
+          bash clean_build.sh /root/gitee_go_agent/workspace/
 strategy:
   blocking: false
 permissions:
