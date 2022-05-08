@@ -19,9 +19,11 @@ stages:
         displayName: Shell 脚本执行
         hostGroupID: NodeGroup
         script: |-
-          git clone https://gitee.com/PaperDragon/note-book.git
           PATH=$PATH:/opt/node/bin
-          cd note-book/Markdown-notebook/
+          cd /opt/note-book/Markdown-notebook/
+          git fetch --all
+          git reset --hard origin/master
+          git pull
           npm install gitbook-cli -g
           npm install 
           rm -rf ./_book
