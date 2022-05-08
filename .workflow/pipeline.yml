@@ -31,7 +31,7 @@ stages:
           npm run build 
           pwd
           ls -la ./
-          cp _book book-html
+          cp -rf  _book book-html
           cd _book &&  pwd && ls -la ./
           rm -rf /var/www/html/*
           mv * /var/www/html/
