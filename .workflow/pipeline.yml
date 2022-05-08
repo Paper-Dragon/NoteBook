@@ -20,13 +20,14 @@ stages:
         hostGroupID: NodeGroup
         script: |-
           PATH=$PATH:/opt/node/bin
-          cd /opt/note-book/Markdown-notebook/
+          ln -s /opt/src/note-book/ .
+          cd note-book/Markdown-notebook/
           git fetch --all
           git reset --hard origin/master
           git pull
           npm install gitbook-cli -g
-          npm install 
           rm -rf ./_book
+          sed -i "s/title:.*$/title\: \'运维开发绿皮书-${GITEE_COMMIT}\'\,/g" book.js
           npm run build 
           pwd
           ls -la ./
