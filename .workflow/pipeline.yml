@@ -26,14 +26,42 @@ stages:
           git reset --hard origin/master
           git pull
           npm install gitbook-cli -g
-          rm -rf ./_book
+          rm -rf ./_book ./book-html
           sed -i "s/title:.*$/title\: \'运维开发绿皮书-${GITEE_COMMIT}\'\,/g" book.js
           npm run build 
           pwd
           ls -la ./
+          cp _book book-html
           cd _book &&  pwd && ls -la ./
           rm -rf /var/www/html/*
           mv * /var/www/html/
+        artifacts:
+          - name: BUILD_ARTIFACT
+            path:
+              - ./Markdown-notebook/book-html
+  - name: stage-7a5a0838
+    displayName: upload
+    strategy: naturally
+    trigger: auto
+    executor: []
+    steps:
+      - step: publish@general_artifacts
+        name: publish_general_artifacts
+        displayName: 上传制品
+        dependArtifact: BUILD_ARTIFACT
+        artifactName: output
+  - name: stage-9b33c478
+    displayName: deploy
+    strategy: naturally
+    trigger: auto
+    executor: []
+    steps:
+      - step: publish@release_artifacts
+        name: publish_release_artifacts
+        displayName: 发布
+        dependArtifact: output
+        version: 1.0.0.0
+        autoIncrement: true
 strategy:
   blocking: false
 permissions:
