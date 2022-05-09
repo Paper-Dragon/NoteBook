@@ -1124,6 +1124,8 @@ sa_family_t sin_family;
 
 - 用 > 和 < 做重定向
 
+### 文件的输入输出
+
 示例代码
 
 ```c
@@ -1140,6 +1142,10 @@ int main(void ) {
 }
 
 
+// FILE fopen(const char * restrict path, const char * restrict mode)
+// int fclose(FILE * stream)
+// fscanf(FILE * , ...)
+// fprintf(FILE * , ...)
 
 int main(void ) {
     FILE * fp = fopen("I:\\note-book\\Markdown-notebook\\RD\\C_Language\\note-6\\12.ini", "r");
@@ -1154,4 +1160,219 @@ int main(void ) {
     return 0;
 }
 ```
+
+#### fopen
+
+| 方式 | 含义                                                 |
+| ---- | ---------------------------------------------------- |
+| r    | 只读打开                                             |
+| r+   | 打开读写，从文件头开始                               |
+| w    | 打开只写，不存在则新建，如果存在则清空               |
+| w+   | 打开读写，如果不存在则新建，如果存在则清空           |
+| a    | 打开追加，如果不存在则新建，如果存在则从文件尾部开始 |
+| ..x  | 只新建，如果文件已存在则不能打开                     |
+
+
+
+
+
+### 二进制文件
+
+- 其实所有的文件最终都是二进制的
+- 文本文件无非是用最简单的方式可以读写的文件
+  - more、tail
+  - cat
+  - vi 
+- 而二进制文件是需要专门的程序来读写的文件
+- 文本文件的输入输出是格式化，可能经过转码
+
+### 文本VS二进制
+
+- Unix喜欢用文本文件来做数据存储和程序配置
+
+  - 交互式终端的出现使得人们喜欢用文本和计算机talk
+  - Unix的shell提供了一些读写文本的小程序
+
+- Windows喜欢用二进制文件
+
+  - DOS是草根文化，并不继承和熟悉Unix文化
+
+  - PC刚开始的时候能力有限，DOS的能力钢有限，二进制更接近底层
+
+- 文本的优势是方便人类读写，而且跨平台
+- 文本的缺点是程序输入输出要经过格式化，开销大
+- 二进制的缺点是人类读写困难，而且不跨平台
+  - int的大小不一致，大小端的问题……
+- 二进制的优点是程序读写快
+
+### 程序为什么要文件
+
+- **配置**：Unix用文本，Windows用注册表
+- **数据**：稍微有点量的数据都放数据库了
+- **媒体**：这个只能是二进制的
+- **现实是**，程序通过第三方库来读写文件，很少直接读写二进制文件了
+
+### 二进制读写
+
+- size_t fread(void *restrict ptr,size_t size,size_t nitems,FILE *restrict stream);
+- size_t fwrite(const void *restrict ptr,size_t size,size_t nitems,FILE *restrict stream);
+- 注意FILE指针是最后一个参数
+- 返回的是成功读写的字节数
+
+### 为什么nitem?
+
+- 因为二进制文件的读写一般都是通过对一个结构变量的操作来进行的
+- 于是nitem就是用来说明这次读写几个结构变量
+
+
+
+```c
+//
+// Created by SuperNu1L on 2022/5/9.
+//
+#define STR_LEN 20
+#ifndef C_LANGUAGE_1_H
+#define C_LANGUAGE_1_H
+
+
+//const int STR_LEN = 20;
+
+
+typedef struct _student {
+    char name[STR_LEN];
+    int gender;
+    int age;
+} Student;
+
+#endif //C_LANGUAGE_1_H
+
+
+
+//
+// Created by SuperNu1L on 2022/5/9.
+//
+
+#include <stdbool.h>
+#include "1.h"
+#include "stdio.h"
+
+
+void getList(Student pStudent[], int number);
+
+bool save(Student pStudent[], int number);
+
+int main(int argc, char *argv[]) {
+    int number = 0;
+    printf("Number of student:");
+    scanf("%d", &number);
+    Student aStu[number];
+
+    getList(aStu, number);
+    if (save(aStu, number)) {
+        printf("Save Success");
+    } else {
+        printf("Save Fail");
+    }
+    return 0;
+}
+
+bool save(Student aStu[], int number) {
+    int ret = -1;
+    FILE *fp = fopen("I:\\note-book\\Markdown-notebook\\RD\\C_Language\\note-7\\student.txt", "w");
+    if (fp) {
+        ret = fwrite(aStu, sizeof(Student), number, fp);
+        fclose(fp);
+    }
+    return ret == number;
+}
+
+void getList(Student aStu[], int number) {
+    char format[STR_LEN];
+    sprintf(format, "%%%ds", STR_LEN - 1);
+    for (int i = 0; i < number; ++i) {
+        printf("The %d 's Student:\n",i + 1 );
+        printf("\t Name:");
+        scanf(format, aStu[i].name);
+        printf("gender:(0-man,1-wenmon,2-other):\n");
+        scanf("%d", &aStu[i].gender);
+        printf("Age:");
+        scanf("%d", &aStu[i].age);
+    }
+}
+
+
+```
+
+
+
+### 在文件中定位
+
+- 知道现在处在文件的什么位置上，也可以直接跑到文件的某个地方去
+- long ftell(FILE *stream);
+- int fseek(FILE *stream,long offset,nt whence);
+  - SEEK_SET:从头开始
+  - SEEK_CUR:从当前位置开始
+  - SEEK_END:从尾开始（倒过来）
+
+```c
+//
+// Created by SuperNu1L on 2022/5/9.
+//
+
+
+#include <stdio.h>
+#include "1.h"
+
+void read(FILE *fp, int i);
+
+int main(void) {
+    FILE *fp = fopen("student.txt", "r");
+    if (fp) {
+        fseek(fp, 0L, SEEK_END);
+        long size = ftell(fp);
+        int number = size / sizeof(Student);
+        int index = 0;
+        printf("There are %d data,How the index number do you want? :", number);
+        scanf("%d", &index);
+        read(fp, index - 1);
+        fclose(fp);
+    }
+    return 0;
+}
+
+void read(FILE *fp, int index) {
+    fseek(fp, index*sizeof(Student), SEEK_SET);
+    Student stu;
+    if (fread(&stu, sizeof(Student) , 1, fp) == 1) {
+        printf("The %d 's Student:\n",index + 1);
+        printf("\t Name: %s\n",stu.name);
+
+        printf("Age: %d", stu.age);
+        switch (stu.gender) {
+            case 0:
+                printf("man\n");
+                break;
+            case 1:
+                printf("wamen\n");
+                break;
+            case 2:
+                printf("other\n");
+                break;
+            default:
+                printf("%d\n",stu.gender);
+        }
+
+    }
+}
+
+```
+
+### 可移植性
+
+- 这样的二进制文件不具有可移植性
+  - 在int为32位的机器上写成的数据文件无法直接在int为64位的机器上正确读出
+- 解决方案之一是放弃使用int，二是typedef具有明确大小的类型
+- 更好的方案是用文本
+
+## 按位运算
 
