@@ -21,6 +21,7 @@ set(CMAKE_C_STANDARD 11)
 #add_executable(C_Language
 #         note-4/1.c note-4/1.h note-5/1.c note-5/1.h)
 add_executable(C_Language
-         note-6/1.c)
+         #note-7/1.c
+        note-7/1.h note-7/research_file.c)
 #set(CMAKE_BUILD_TYPE Debug)
 
