@@ -3,12 +3,12 @@
 - Git
   * [Git分支管理合并与删除命令](git/Git分支管理合并与删除命令.md)
   * [git更新远程分支](git/git更新远程分支.md)
-- [Jumper Server](JumperServer/README.md)
+- [JumperServer](JumperServer/README.md)
   * [Docker Deploy](JumperServer/Docker_Deploy.md)
   * [HA Deploy](JumperServer/HA_Deploy.md)
-- My SQL
+- MySQL
   * [国内源](MySQL/国内源.md)
-- Open Stack
+- OpenStack
   * [OpenStack-Queens版搭建详解](OpenStack/OpenStack-Queens版搭建详解.md)
 - RD
   - [C Language](RD/C_Language/README.md)
@@ -148,7 +148,7 @@
     * [16_变量进阶（理解）](RD/python基础/16_变量进阶（理解）.md)
     * [17_函数进阶](RD/python基础/17_函数进阶.md)
   - python面向对象
-    * [01_面向对象(OOP)基本概念](RD/python面向对象/01_面向对象(OOP)基本概念.md)
+    * [01_面向对象(OOP)基本概念](RD/python面向对象/01_面向对象(OOP\)基本概念.md)
     * [02_类和对象](RD/python面向对象/02_类和对象.md)
     * [03_面相对象基础语法](RD/python面向对象/03_面相对象基础语法.md)
     * [04_面向对象封装案例](RD/python面向对象/04_面向对象封装案例.md)
@@ -245,5 +245,5 @@
 * [tomcat]
 * [nodejs]
 * [OpenWrt]
-* [RabbixM
+* [RabbitMQ]
 * [SUMMARY](SUMMARY.md)
