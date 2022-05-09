@@ -26,7 +26,7 @@ stages:
           git reset --hard origin/master
           git pull
           rm -rf ./_book ./book-html
-          sed -i "s/title:.*$/title\: \'运维开发绿皮书-${GITEE_COMMIT}\'\,/g" book.js
+          sed -i "s/title:.*$/title\: \'运维开发绿皮书   Version: ${GITEE_COMMIT}.\'\,/g" book.js
           npm run build 
           pwd
           ls -la ./
