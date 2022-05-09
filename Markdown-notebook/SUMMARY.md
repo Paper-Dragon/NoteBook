@@ -112,7 +112,7 @@
         - 第05次公开课-算法入门系列1-周而复始
           * [算法入门系列1-周而复始](RD/Python-100天从新手到大师/公开课/文档/第05次公开课-算法入门系列1-周而复始/算法入门系列1-周而复始.md)
         - 第06次公开课-算法入门系列2-在水一方
-          * [算法入门系列2 - 在水一方](RD/Python-100天从新手到大师/公开课/文档/第06次公开课-算法入门系列2-在水一方/算法入门系列2%20- 在水一方.md)
+          * [算法入门系列2 - 在水一方](RD/Python-100天从新手到大师/公开课/文档/第06次公开课-算法入门系列2-在水一方/算法入门系列2 - 在水一方.md)
     - 番外篇
       * [Python面试题汇总](RD/Python-100天从新手到大师/番外篇/Python面试题汇总.md)
       * [一个小例子助你彻底理解协程](RD/Python-100天从新手到大师/番外篇/一个小例子助你彻底理解协程.md)
@@ -132,7 +132,7 @@
   - python基础
     * [01_认识Python](RD/python基础/01_认识Python.md)
     * [02_第一个Python程序](RD/python基础/02_第一个Python程序.md)
-    * [03_Pycharm 初始设置（知道）](RD/python基础/03_Pycharm%20初始设置（知道）.md)
+    * [03_Pycharm 初始设置（知道）](RD/python基础/03_Pycharm 初始设置（知道）.md)
     * [04_多文件项目的演练](RD/python基础/04_多文件项目的演练.md)
     * [05_注释](RD/python基础/05_注释.md)
     * [06_算数运算符](RD/python基础/06_算数运算符.md)
@@ -144,7 +144,7 @@
     * [12_循环](RD/python基础/12_循环.md)
     * [13_函数基础](RD/python基础/13_函数基础.md)
     * [14_高级变量类型](RD/python基础/14_高级变量类型.md)
-    * [15_综合应用 —— 名片管理系统](RD/python基础/15_综合应用%20—— 名片管理系统.md)
+    * [15_综合应用 —— 名片管理系统](RD/python基础/15_综合应用 —— 名片管理系统.md)
     * [16_变量进阶（理解）](RD/python基础/16_变量进阶（理解）.md)
     * [17_函数进阶](RD/python基础/17_函数进阶.md)
   - python面向对象
@@ -152,7 +152,7 @@
     * [02_类和对象](RD/python面向对象/02_类和对象.md)
     * [03_面相对象基础语法](RD/python面向对象/03_面相对象基础语法.md)
     * [04_面向对象封装案例](RD/python面向对象/04_面向对象封装案例.md)
-    * [05_面向对象封装案例 II](RD/python面向对象/05_面向对象封装案例%20II.md)
+    * [05_面向对象封装案例 II](RD/python面向对象/05_面向对象封装案例 II.md)
     * [06_私有属性和私有方法](RD/python面向对象/06_私有属性和私有方法.md)
     * [07_单例](RD/python面向对象/07_单例.md)
     * [08_多态](RD/python面向对象/08_多态.md)
@@ -164,13 +164,13 @@
     * [14_异常](RD/python面向对象/14_异常.md)
   - python飞机大战视频及备课代码
     - python飞机大战_markdown
-      * [pygame 快速入门](RD/python飞机大战视频及备课代码/python飞机大战_markdown/pygame%20快速入门.md)
+      * [pygame 快速入门](RD/python飞机大战视频及备课代码/python飞机大战_markdown/pygame 快速入门.md)
       * [敌机出场](RD/python飞机大战视频及备课代码/python飞机大战_markdown/敌机出场.md)
       * [游戏框架搭建](RD/python飞机大战视频及备课代码/python飞机大战_markdown/游戏框架搭建.md)
       * [游戏背景](RD/python飞机大战视频及备课代码/python飞机大战_markdown/游戏背景.md)
       * [碰撞检测](RD/python飞机大战视频及备课代码/python飞机大战_markdown/碰撞检测.md)
       * [英雄登场](RD/python飞机大战视频及备课代码/python飞机大战_markdown/英雄登场.md)
-      * [项目实战 —— 飞机大战](RD/python飞机大战视频及备课代码/python飞机大战_markdown/项目实战%20—— 飞机大战.md)
+      * [项目实战 —— 飞机大战](RD/python飞机大战视频及备课代码/python飞机大战_markdown/项目实战 —— 飞机大战.md)
   - [从零学Python](RD/从零学Python/README.md)
     - Day 01
       * [Linux下安装Python3](RD/从零学Python/Day01/Linux下安装Python3.md)
@@ -182,7 +182,7 @@
       * [Python实现mysql数据库连接池](RD/从零学Python/Day02/Python实现mysql数据库连接池.md)
       * [Python操作数据库](RD/从零学Python/Day02/Python操作数据库.md)
     - Day 03
-      * [if __name__ == '__main__' 是个什么鬼？](RD/从零学Python/Day03/if%20__name__ == '__main__' 是个什么鬼？.md)
+      * [if __name__ == '__main__' 是个什么鬼？](RD/从零学Python/Day03/if __name__ == '__main__' 是个什么鬼？.md)
       * [python3codecs.open和open的区别](RD/从零学Python/Day03/python3codecs.open和open的区别.md)
       * [爬取小说相关指南](RD/从零学Python/Day03/爬取小说相关指南.md)
     - Day 04
@@ -215,10 +215,10 @@
   * [firewalld配置](RHEL/firewalld配置.md)
 - Ubtuntu
   - [Media](Ubtuntu/media/README.md)
-  * [Linux 终端命令格式](Ubtuntu/Linux%20终端命令格式.md)
-  * [Ubuntu 图形界面入门](Ubtuntu/Ubuntu%20图形界面入门.md)
+  * [Linux 终端命令格式](Ubtuntu/Linux 终端命令格式.md)
+  * [Ubuntu 图形界面入门](Ubtuntu/Ubuntu 图形界面入门.md)
   * [其他命令](Ubtuntu/其他命令.md)
-  * [常用 Linux 命令的基本使用](Ubtuntu/常用%20Linux 命令的基本使用.md)
+  * [常用 Linux 命令的基本使用](Ubtuntu/常用 Linux 命令的基本使用.md)
   * [操作系统（科普章节）](Ubtuntu/操作系统（科普章节）.md)
   * [操作系统的发展史（科普章节）](Ubtuntu/操作系统的发展史（科普章节）.md)
   * [文件和目录（理解）](Ubtuntu/文件和目录（理解）.md)
