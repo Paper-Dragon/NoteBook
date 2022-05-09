@@ -19,18 +19,23 @@ stages:
         displayName: Shell 脚本执行
         hostGroupID: NodeGroup
         script: |-
-          git clone https://gitee.com/PaperDragon/note-book.git
           PATH=$PATH:/opt/node/bin
+          ln -s /opt/src/note-book/ .
           cd note-book/Markdown-notebook/
-          npm install gitbook-cli -g
-          npm install 
-          rm -rf ./_book
+          git fetch --all
+          git reset --hard origin/master
+          git pull
+          rm -rf ./_book ./book-html
+          sed -i "s/title:.*$/title\: \'运维开发绿皮书-${GITEE_COMMIT}\'\,/g" book.js
           npm run build 
           pwd
           ls -la ./
           cd _book &&  pwd && ls -la ./
           rm -rf /var/www/html/*
           mv * /var/www/html/
+          echo "删除旧的构建"
+          ln -s /root/gitee_go_agent/workspace/clean_build.sh .
+          bash clean_build.sh /root/gitee_go_agent/workspace/
 strategy:
   blocking: false
 permissions:
