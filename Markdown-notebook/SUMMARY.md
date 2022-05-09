@@ -147,6 +147,30 @@
     * [15_综合应用 —— 名片管理系统](RD/python基础/15_综合应用%20—— 名片管理系统.md)
     * [16_变量进阶（理解）](RD/python基础/16_变量进阶（理解）.md)
     * [17_函数进阶](RD/python基础/17_函数进阶.md)
+  - python面向对象
+    * [01_面向对象(OOP)基本概念](RD/python面向对象/01_面向对象(OOP)基本概念.md)
+    * [02_类和对象](RD/python面向对象/02_类和对象.md)
+    * [03_面相对象基础语法](RD/python面向对象/03_面相对象基础语法.md)
+    * [04_面向对象封装案例](RD/python面向对象/04_面向对象封装案例.md)
+    * [05_面向对象封装案例 II](RD/python面向对象/05_面向对象封装案例%20II.md)
+    * [06_私有属性和私有方法](RD/python面向对象/06_私有属性和私有方法.md)
+    * [07_单例](RD/python面向对象/07_单例.md)
+    * [08_多态](RD/python面向对象/08_多态.md)
+    * [09_继承](RD/python面向对象/09_继承.md)
+    * [10_类属性和类方法](RD/python面向对象/10_类属性和类方法.md)
+    * [11_eval函数](RD/python面向对象/11_eval函数.md)
+    * [12_模块和包](RD/python面向对象/12_模块和包.md)
+    * [13_文件](RD/python面向对象/13_文件.md)
+    * [14_异常](RD/python面向对象/14_异常.md)
+  - python飞机大战视频及备课代码
+    - python飞机大战_markdown
+      * [pygame 快速入门](RD/python飞机大战视频及备课代码/python飞机大战_markdown/pygame%20快速入门.md)
+      * [敌机出场](RD/python飞机大战视频及备课代码/python飞机大战_markdown/敌机出场.md)
+      * [游戏框架搭建](RD/python飞机大战视频及备课代码/python飞机大战_markdown/游戏框架搭建.md)
+      * [游戏背景](RD/python飞机大战视频及备课代码/python飞机大战_markdown/游戏背景.md)
+      * [碰撞检测](RD/python飞机大战视频及备课代码/python飞机大战_markdown/碰撞检测.md)
+      * [英雄登场](RD/python飞机大战视频及备课代码/python飞机大战_markdown/英雄登场.md)
+      * [项目实战 —— 飞机大战](RD/python飞机大战视频及备课代码/python飞机大战_markdown/项目实战%20—— 飞机大战.md)
   - [从零学Python](RD/从零学Python/README.md)
     - Day 01
       * [Linux下安装Python3](RD/从零学Python/Day01/Linux下安装Python3.md)
@@ -189,10 +213,23 @@
     * [常用python模块](RD/从零学Python/常用python模块.md)
 - RHEL
   * [firewalld配置](RHEL/firewalld配置.md)
+- Ubtuntu
+  - [Media](Ubtuntu/media/README.md)
+  * [Linux 终端命令格式](Ubtuntu/Linux%20终端命令格式.md)
+  * [Ubuntu 图形界面入门](Ubtuntu/Ubuntu%20图形界面入门.md)
+  * [其他命令](Ubtuntu/其他命令.md)
+  * [常用 Linux 命令的基本使用](Ubtuntu/常用%20Linux 命令的基本使用.md)
+  * [操作系统（科普章节）](Ubtuntu/操作系统（科普章节）.md)
+  * [操作系统的发展史（科普章节）](Ubtuntu/操作系统的发展史（科普章节）.md)
+  * [文件和目录（理解）](Ubtuntu/文件和目录（理解）.md)
+  * [文件和目录常用命令](Ubtuntu/文件和目录常用命令.md)
+  * [用户权限相关命令](Ubtuntu/用户权限相关命令.md)
+  * [系统信息相关命令](Ubtuntu/系统信息相关命令.md)
+  * [远程管理常用命令](Ubtuntu/远程管理常用命令.md)
 - Vim
   * [vi编辑器](Vim/vi编辑器.md)
 - [Zabbix](zabbix/zabbix.md)
-* [VPN]
+- * [VPN]
     * [广义VPN]
     * [狭义VPN]
 * [jenkins]
@@ -208,5 +245,5 @@
 * [tomcat]
 * [nodejs]
 * [OpenWrt]
-* [RabbixMQ]
-* [Ansible]
+* [RabbixM
+* [SUMMARY](SUMMARY.md)
