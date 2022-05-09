@@ -374,6 +374,18 @@
 
 
 
+int main(void ) {
+    FILE * fp = fopen("I:\\note-book\\Markdown-notebook\\RD\\C_Language\\note-6\\12.ini", "r");
+    if (fp) {
+        int num;
+        fscanf(fp, "%d", &num);
+        printf("%d ",num);
+        fclose(fp);
+    } else {
+        printf("Can not open The File\n");
+    }
+    return 0;
+}
 
 
 

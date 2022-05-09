@@ -1119,3 +1119,39 @@ sa_family_t sin_family;
 ### 条件定义
 
 - ifndef  __MAX_H\_    ---  define \_\_MAX_H\_
+
+## 文件的输入输出
+
+- 用 > 和 < 做重定向
+
+示例代码
+
+```c
+FILE * fp = fopen("file", r);
+
+
+int main(void ) {
+    if (fp) {
+        fscanf(fp,...);
+        fclose(fp);
+    } else {
+        ...
+    }
+}
+
+
+
+int main(void ) {
+    FILE * fp = fopen("I:\\note-book\\Markdown-notebook\\RD\\C_Language\\note-6\\12.ini", "r");
+    if (fp) {
+        int num;
+        fscanf(fp, "%d", &num);
+        printf("%d ",num);
+        fclose(fp);
+    } else {
+        printf("Can not open The File\n");
+    }
+    return 0;
+}
+```
+
