@@ -1,3 +1,7 @@
 .vscode
 .idea
 Markdown-notebook/RD/C_Language/cmake-build*
+Markdown-notebook/node_modules
+Markdown-notebook/_book
+Markdown-notebook/package-lock.json
+
