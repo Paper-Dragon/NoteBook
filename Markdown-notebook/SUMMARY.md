@@ -1,5 +1,6 @@
 # Your Book Title
-
+* [SUMMARY](SUMMARY.md)
+- [Ansible](Ansible/ansible自动化运维.md)
 - Git
   * [Git分支管理合并与删除命令](git/Git分支管理合并与删除命令.md)
   * [git更新远程分支](git/git更新远程分支.md)
@@ -233,7 +234,7 @@
     * [广义VPN]
     * [狭义VPN]
 * [jenkins]
-    * [jenkins构建持续化集成平台]
+    * [jenkins构建持续化集成平台](jenkins/jenkins构建持续化集成平台.md)
 * [ELK]
 * [kfaka]
 * [ha-lvs-keepalived]
@@ -246,4 +247,3 @@
 * [nodejs]
 * [OpenWrt]
 * [RabbitMQ]
-* [SUMMARY](SUMMARY.md)
