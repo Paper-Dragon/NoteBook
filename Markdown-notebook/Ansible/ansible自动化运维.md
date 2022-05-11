@@ -2,7 +2,7 @@
 
 ## **Logo** 
 
-![image-20211106190344512](ansible自动化运维.assets\image-20211106190344512-16361970262242.png)
+![image-20211106190344512](ansible自动化运维.assets/image-20211106190344512-16361970262242.png)
 
 ## 介绍
 
@@ -14,7 +14,7 @@ ansible是新出现的自动化运维工具，基于**Python**开发，集合了
 
 ## 工作原理
 
-![image-20211106190711608](ansible自动化运维.assets\image-20211106190711608-16361968349391.png)
+![image-20211106190711608](ansible自动化运维.assets/image-20211106190711608-16361968349391.png)
 
 # 2-部署
 
@@ -173,7 +173,7 @@ host2
 ansible webserver -m ping -u root -k -o
 ```
 
-![image-20211106203428201](H:\Ansible\Ansible_doc\ansible自动化运维.assets\image-20211106203428201-16362020696591.png)
+![image-20211106203428201](ansible自动化运维.assets/image-20211106203428201-16362020696591.png)
 
 ### 2 增加用户名 密码
 
@@ -192,11 +192,11 @@ host[1:2] ansible_ssh_user='root' ansible_ssh_pass='000000' //正则写法host[1
 
 ```
 
-![image-20211106203938296](H:\Ansible\Ansible_doc\ansible自动化运维.assets\image-20211106203938296-16362023797972.png)
+![image-20211106203938296](ansible自动化运维.assets/image-20211106203938296-16362023797972.png)
 
 
 
-![image-20211106204048953](H:\Ansible\Ansible_doc\ansible自动化运维.assets\image-20211106204048953-16362024510333.png)
+![image-20211106204048953](ansible自动化运维.assets/image-20211106204048953-16362024510333.png)
 
 ### 3 增加端口
 
@@ -255,7 +255,7 @@ host1 | UNREACHABLE!: Failed to connect to the host via ssh: ssh: connect to hos
 host2 | SUCCESS => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "ping": "pong"}
 ```
 
-![image-20211106205711119](H:\Ansible\Ansible_doc\ansible自动化运维.assets\image-20211106205711119-16362034325564.png)
+![image-20211106205711119](ansible自动化运维.assets/image-20211106205711119-16362034325564.png)
 
 vim /etc/ansible/hosts
 
@@ -290,7 +290,7 @@ host1 | SUCCESS => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin
 
 常用变量
 
-![image-20211106210837113](H:\Ansible\Ansible_doc\ansible自动化运维.assets\image-20211106210837113-16362041181815.png)
+![image-20211106210837113](ansible自动化运维.assets/image-20211106210837113-16362041181815.png)
 
 ### 5 子分组
 
@@ -1187,7 +1187,7 @@ host2 | SUCCESS => {
 
 
 
-![image-20211107165437747](H:\Ansible\Ansible_doc\ansible自动化运维.assets\image-20211107165437747-16362752793292.png)
+![image-20211107165437747](ansible自动化运维.assets/image-20211107165437747-16362752793292.png)
 
 ## **4.编写变量**
 
