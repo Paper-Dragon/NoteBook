@@ -2,7 +2,7 @@
 
 ## **Logo** 
 
-![image-20211106190344512](H:\Ansible\Ansible_doc\ansible自动化运维.assets\image-20211106190344512-16361970262242.png)
+![image-20211106190344512](ansible自动化运维.assets\image-20211106190344512-16361970262242.png)
 
 ## 介绍
 
@@ -14,7 +14,7 @@ ansible是新出现的自动化运维工具，基于**Python**开发，集合了
 
 ## 工作原理
 
-![image-20211106190711608](H:\Ansible\Ansible_doc\ansible自动化运维.assets\image-20211106190711608-16361968349391.png)
+![image-20211106190711608](ansible自动化运维.assets\image-20211106190711608-16361968349391.png)
 
 # 2-部署
 
