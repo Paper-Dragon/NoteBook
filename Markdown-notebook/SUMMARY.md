@@ -6,6 +6,8 @@
   * [Git分支管理合并与删除命令](git/Git分支管理合并与删除命令.md)
   * [git更新远程分支](git/git更新远程分支.md)
   * [Git识别项目的语言类型，及文件占比](git/Git识别项目的语言类型，及文件占比.md)
+- [Gitlab]
+  * [gitlab ci 编写](Gitlab/gitlab ci 编写.md)
 - [JumperServer](JumperServer/README.md)
   * [Docker Deploy](JumperServer/Docker_Deploy.md)
   * [HA Deploy](JumperServer/HA_Deploy.md)
