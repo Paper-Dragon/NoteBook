@@ -18,10 +18,11 @@
 //}
 
 struct U0 {
-    unsigned int leading: 3;
+    unsigned int leading: 2;
     unsigned int FLAG1: 1;
     unsigned int FLAG2: 1;
-    int trailing: 32;
+    unsigned int FLAG3: 2;
+    int trailing: 3;
 };
 
 void printBin(unsigned int number);
@@ -29,10 +30,11 @@ void printBin(unsigned int number);
 int main(int argc, char *argv[]) {
     struct U0 uu;
     uu.leading = 2;
-    uu.FLAG1 = 0;
+    uu.FLAG1 = 1;
     uu.FLAG2 = 1;
-    uu.trailing = 0;
-    printf("sizeof uu = %d\n", sizeof uu);
+    uu.FLAG3 = 2;
+    uu.trailing = 2;
+    printf("sizeof uu = %d  %p %d\n", sizeof uu, &uu, uu);
     printBin(*(int *) &uu);
     return 0;
 }
@@ -44,3 +46,10 @@ void printBin(unsigned int number) {
     }
     printf("\n");
 }
+
+// 000 00000000 00000000 00000000 10 010
+// 000 00000000 00000000 00000000 10 010
+// 000 00000000 00000000 00000000 10 010
+// 000 00000000 00000000 00001010 11 111
+
+// 0 1010 1110
