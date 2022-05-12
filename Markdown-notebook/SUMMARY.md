@@ -5,6 +5,7 @@
 - Git
   * [Git分支管理合并与删除命令](git/Git分支管理合并与删除命令.md)
   * [git更新远程分支](git/git更新远程分支.md)
+  * [Git识别项目的语言类型，及文件占比](git/Git识别项目的语言类型，及文件占比.md)
 - [JumperServer](JumperServer/README.md)
   * [Docker Deploy](JumperServer/Docker_Deploy.md)
   * [HA Deploy](JumperServer/HA_Deploy.md)
@@ -216,7 +217,6 @@
 - RHEL
   * [firewalld配置](RHEL/firewalld配置.md)
 - Ubtuntu
-  - [Media](Ubtuntu/media/README.md)
   * [Linux 终端命令格式](Ubtuntu/Linux 终端命令格式.md)
   * [Ubuntu 图形界面入门](Ubtuntu/Ubuntu 图形界面入门.md)
   * [其他命令](Ubtuntu/其他命令.md)
@@ -228,24 +228,24 @@
   * [用户权限相关命令](Ubtuntu/用户权限相关命令.md)
   * [系统信息相关命令](Ubtuntu/系统信息相关命令.md)
   * [远程管理常用命令](Ubtuntu/远程管理常用命令.md)
-- Vim
+- [Vim]
   * [vi编辑器](Vim/vi编辑器.md)
 - [Zabbix](zabbix/zabbix.md)
-- * [VPN]
-    * [广义VPN]
-    * [狭义VPN]
-* [jenkins]
-    * [jenkins构建持续化集成平台](jenkins/jenkins构建持续化集成平台.md)
-* [ELK]
-* [kfaka]
-* [ha-lvs-keepalived]
+- [VPN]
+  * [广义VPN]
+  * [狭义VPN]
+- [jenkins]
+  * [jenkins构建持续化集成平台](jenkins/jenkins构建持续化集成平台.md)
+- [ELK]
+- [kfaka]
+- [ha-lvs-keepalived]
 - [Kubernetes]
   * [使用 vmagent 代替 Prometheus 采集监控指标](Kubernetes/使用 vmagent 代替 Prometheus 采集监控指标.md)
-* [kvm]
-* [memcache-redis]
-* [mycat]
-* [nginx]
-* [tomcat]
-* [nodejs]
-* [OpenWrt]
-* [RabbitMQ]
+- [kvm]
+- [memcache-redis]
+- [mycat]
+- [nginx]
+- [tomcat]
+- [nodejs]
+- [OpenWrt]
+- [RabbitMQ]
