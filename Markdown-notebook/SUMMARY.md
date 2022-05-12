@@ -12,6 +12,8 @@
 - [JumperServer](JumperServer/README.md)
   * [Docker Deploy](JumperServer/Docker_Deploy.md)
   * [HA Deploy](JumperServer/HA_Deploy.md)
+- Etcd
+  * [etcd 二进制三节点集群部署.md](Etcd/etcd 二进制三节点集群部署.md)
 - MySQL
   * [国内源](MySQL/国内源.md)
 - OpenStack
