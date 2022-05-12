@@ -250,6 +250,8 @@
   * [Portainer 单机部署](Portainer/Portainer 单机部署.md)
 - [Kubernetes]
   * [使用 vmagent 代替 Prometheus 采集监控指标](Kubernetes/使用 vmagent 代替 Prometheus 采集监控指标.md)
+- [Harbor]
+  * [Harbor离线搭建](Harbor/Harbor离线搭建.md)
 - [kvm]
 - [memcache-redis]
 - [mycat]
