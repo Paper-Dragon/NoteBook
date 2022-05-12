@@ -237,7 +237,8 @@
 * [ELK]
 * [kfaka]
 * [ha-lvs-keepalived]
-* [Kubernetes]
+- [Kubernetes]
+  * [使用 vmagent 代替 Prometheus 采集监控指标](Kubernetes/使用 vmagent 代替 Prometheus 采集监控指标.md)
 * [kvm]
 * [memcache-redis]
 * [mycat]
