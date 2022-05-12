@@ -241,8 +241,9 @@
 - [VPN]
   * [广义VPN]
   * [狭义VPN]
-- [jenkins]
-  * [jenkins构建持续化集成平台](jenkins/jenkins构建持续化集成平台.md)
+- [Jenkins]
+  * [jenkins构建持续化集成平台](Jenkins/jenkins构建持续化集成平台.md)
+  * [修改Jenkins插件为国内](Jenkins/修改Jenkins插件为国内.md)
 - [ELK]
 - [kfaka]
 - [ha-lvs-keepalived]
