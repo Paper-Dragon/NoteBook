@@ -1374,5 +1374,391 @@ void read(FILE *fp, int index) {
 - 解决方案之一是放弃使用int，二是typedef具有明确大小的类型
 - 更好的方案是用文本
 
-## 按位运算
+# 按位运算
+
+## **按位运算**
+
+**·**  C有这些按位运算的运算符：
+
+·  &    按位的与
+
+·  |    按位的或
+
+·  ~    按位取反
+
+·  ^    按位的异或
+
+·  <<    左移
+
+·  >>    右移
+
+### 按位与  &
+
+
+
+![img](README.assets/v2-939f9b6b5f49c994ef21549a121e0643_720w.jpg)
+
+### 按位或  |
+
+
+
+![img](README.assets/v2-e240f1fba746983d826122cdd4a7b6ed_720w.jpg)
+
+
+
+
+
+### 按位取反  ~
+
+
+
+![img](README.assets/v2-e1e28c70a5e9c10db947ebe66e1201cd_720w.jpg)
+
+## 逻辑运算vs按位运算
+
+**·**  对于逻辑运算，它只看到两个值：0和1
+
+**·**  可以认为逻辑运算相当于把所有非0值都变成1，然后做按位运算
+
+**·**  5 & 4 —>4而5 && 4 —> 1 & 1 —> 1
+
+**·**  5 | 4 —> 5而 5 || 4 —> 1 | 1 —> 1
+
+**·**  ~4 —> 3而 ！4 —> !1 —> 0
+
+### 按位异或^
+
+![img](README.assets/v2-2e04a21f359954c26b3ebf2e80d9e2bd_720w.jpg)
+
+### 移位运算
+
+
+
+### 左移  <<
+
+·i  <<  j
+
+·i中所有的位向左移动j个位置，而右边填入0
+
+·所有小于int的类型，移位以int的方式来做，结果是int
+
+·x  <<=  1  等价于 x  *=  2
+
+·x  <<=  n  等价于 x  *=  2^n         （这是2的n次方）
+
+### 右移  >>
+
+·i  >>  j
+
+·i中所有的位向右移j位
+
+·所有小于int的类型，移位以int的方式来做，结果是int
+
+·对于unsigned的类型，左边填入0
+
+·对于signed的类型，左边填入原来的最高位（保持符号不变）
+
+·x  >>=  1  等价于 x  /=  2
+
+·x  >>=  n  等价于 x  /=  2^n
+
+### "no zuo no die"
+
+**·**  移位的位数不要用负数，这是没有定义的行为
+
+​    x  <<  -2    //!!NO!!
+
+## 位运算的例子
+
+```c
+// 输出一个数的二进制
+#include "stdio.h"
+
+
+
+int main(int argc, char const *argv[])
+{
+    int number;
+    scanf("%d",&number);
+    unsigned mask = 1u <<31;
+    for ( ; mask ; mask >>=1 ) {
+        printf("%d",number & mask?1:0);
+    }
+    printf("\n");
+
+    return 0;
+}
+```
+
+### MCU的SFR
+
+![img](README.assets/v2-5f35a905d5579efe9d753ff6d59c0e9e_720w.jpg)
+
+**·**  const unsigned int SBS = 1u << 2;
+
+**·**  const unsigned int PE = 1u << 3;
+
+**·**  U0LCR |= SBS | PE;  //使得某些比特为1 实现了将SBS和PE加进U0LCR
+
+**·**  U0LCR &= ~SBS;  // 使得某些比特为0 
+
+**·**  U0LCR &= ~(SBS | PE);  //  使得某些比特为0
+
+
+
+## 位段
+
+###  位段
+
+**·**  把一个int的若干位组合成一个结构
+
+```c
+struct {
+    unsigned int leading  :  3;
+    unsigned int FLAG1:  1;
+    unsigned int FLAG2:  1;
+    int trailing:  11;
+};
+```
+
+**·**  可以直接用位段的成员名称来访问
+
+**·**  比移位、与、或还方便
+
+**·**  编译器会安排其中的位的排列，不具有可移植性c
+
+**·**  当所需的位超过一个int时会采
+
+```c
+struct U0 {
+    unsigned int leading: 3;
+    unsigned int FLAG1: 1;
+    unsigned int FLAG2: 1;
+    int trailing: 32;
+};
+
+void printBin(unsigned int number);
+
+int main(int argc, char *argv[]) {
+    struct U0 uu;
+    uu.leading = 2;
+    uu.FLAG1 = 0;
+    uu.FLAG2 = 1;
+    uu.trailing = 0;
+    printf("sizeof uu = %d\n", sizeof uu);
+    printBin(*(int *) &uu);
+    return 0;
+}
+
+void printBin(unsigned int number) {
+    unsigned mask = 1u << 31;
+    for (; mask; mask >>= 1) {
+        printf("%d", number & mask ? 1 : 0);
+    }
+    printf("\n");
+}
+
+
+```
+
+
+
+## 可变数组
+
+
+
+### Resizable Array
+
+**·**  Think about a set of functions that provide a mechanism of resizable array of int.
+
+**·**  Growable
+
+**·**  Get the current size
+
+**·**  Access to the elements
+
+### the Interface
+
+**·**  Array array_create(int init_size);
+
+**·**  void array_free(Array *a);
+
+**·**  int array_size(const Array *a);
+
+**·**  int *array_at(Array* a, int index);
+
+**·**  void array_inflate(Array *a, int more_size);
+
+### array_create()
+
+```c
+Array array_create(int init_size) {
+    Array a;
+    a.array = (int*)malloc(sizeof(int)*init_size);
+    a.size = init_size;
+    return a;
+}
+```
+
+## 14.1-2 可变数组的数据访问
+
+```c
+#include "array.h"
+#include<stdio.h>
+#include<stdlib.h>
+
+// typedef struct {
+//  int *array;
+//  int size;
+// } Array;c
+
+Array array_create(int init_size)
+{
+	Array a;
+	a.size = init_size;
+	a.array = (int*)malloc(sizeof(int)*a.size);
+	return a;
+}
+
+void array_free(Array *a)
+{
+	free(a=>array);
+	a->array = NULL;
+	a->size = 0; 
+}
+
+//  封装  
+int array_size(const Array *a)
+{
+	return a->size;
+}
+int* array_at(Array *a, int index);
+{
+	return a->array  
+}
+
+int array_get(Array *a, int index)
+{
+	return a->array[index];
+}
+
+void array_set(Array *a, int index, int value)
+{
+	a->array[index] = value;
+}
+void array_inflate(Array *a, int more_size);
+
+int main(int argc, char const *argv[])
+{
+	Array a= array_create(100);
+	printf("&d\n",array_size(&a);
+	*array_at(&a, 0) = 10;
+	printf("%d\n", *array_at(&a, 0));
+	
+	array_free(&a);
+	
+	return 0;
+}
+```
+
+## 14.1-3 可变数组的自动增长
+
+```c
+#include "array.h"
+#include<stdio.h>
+#include<stdlib.h>
+
+const BLOCK_SIZE = 20;
+c
+// typedef struct {
+//  int *array;
+//  int size;
+// } Array;
+
+Array array_create(int init_size)
+{
+	Array a;
+	a.size = init_size;
+	a.array = (int*)malloc(sizeof(int)*a.size);
+	return a;
+}
+
+void array_free(Array *a)
+{
+	free(a=>array);
+	a->array = NULL;
+	a->size = 0; 
+}
+
+//  封装  
+int array_size(const Array *a)
+{
+	return a->size;
+}
+int* array_at(Array *a, int index)
+{
+	if ( index >= a->size ) {
+		array_inflate(a, (index/BLOCK_SIZE+1)*BLOCK_SIZE-a->size);
+	}
+	return &(a->array[index]);  
+}
+
+int array_get(Array *a, int index)
+{
+	return a->array[index];
+}
+
+void array_set(Array *a, int index, int value)
+{
+	a->array[index] = value;
+}
+void array_inflate(Array *a, int more_size)
+{
+	int *p = (int*)malloc(sizeof(int)(a->size + more_size));
+	int i;
+	for ( i=0; i<a->size; i++ ) {
+		p[i] = a->array[i];
+	}
+	free(a->array);
+	a->array = p;
+	a->size += more_size;
+}
+
+int main(int argc, char const *argv[])
+{
+	Array a= array_create(100);
+	printf("&d\n",array_size(&a);
+	*array_at(&a, 0) = 10;
+	printf("%d\n", *array_at(&a, 0));
+	int number = 0;
+	int cnt = 0;
+	while (number != -1) {
+		scanf("%d",&number);
+		if ( number != -1){
+			*array_at(&a, cnt++) = number;
+		}
+	}
+	array_free(&a);c
+	
+	return 0;
+}
+```
+
+## 14.2-1 可变数组的缺陷
+
+### issues
+
+**·**  Allocate new memory each time it inflates is an easy and clean way. But
+
+**·**  It takes time to copy, and
+
+**·**  may fail in memory restricted situation
+
+![img](README.assets/v2-6f47fc468f823d8575878fdf2b264f30_720w.jpg)
+
+### linked blocks
+
+**·**  No copy
+
+![img](README.assets/v2-8a97680061e364325b1cf4032a0544be_720w.jpg)
 
