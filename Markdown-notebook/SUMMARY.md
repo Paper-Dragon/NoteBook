@@ -8,6 +8,7 @@
   * [Git识别项目的语言类型，及文件占比](git/Git识别项目的语言类型，及文件占比.md)
 - [Gitlab]
   * [gitlab ci 编写](Gitlab/gitlab ci 编写.md)
+  * [gitlab ci 部署](Gitlab/gitlab ci 部署.md)
 - [JumperServer](JumperServer/README.md)
   * [Docker Deploy](JumperServer/Docker_Deploy.md)
   * [HA Deploy](JumperServer/HA_Deploy.md)
