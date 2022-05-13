@@ -27,7 +27,7 @@ stages:
           git pull
           rm -rf ./_book ./book-html
           sed -i "s/title:.*$/title\: \'运维开发绿皮书   Version: ${GITEE_COMMIT}.\'\,/g" book.js
-          npm run build 
+          gitbook build --log debug
           pwd
           ls -la ./
           cd _book &&  pwd && ls -la ./
