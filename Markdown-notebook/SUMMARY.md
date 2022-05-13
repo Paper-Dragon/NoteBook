@@ -243,7 +243,7 @@
   * [狭义VPN]
 - [Jenkins]
   * [jenkins构建持续化集成平台](Jenkins/jenkins构建持续化集成平台.md)
-  * [修改Jenkins插件为国内](Jenkins/修改Jenkins插件为国内.md)
+  * [修改Jenkins插件为国内](Jenkins/修改Jenkins插件为国内源.md)
 - [ELK]
 - [kfaka]
 - [ha-lvs-keepalived]
