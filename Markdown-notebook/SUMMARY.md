@@ -223,6 +223,7 @@
     * [常用python模块](RD/从零学Python/常用python模块.md)
 - RHEL
   * [firewalld配置](RHEL/firewalld配置.md)
+  * [配置SSH免密码验证](RHEL/配置SSH免密码验证.md)
 - Ubtuntu
   * [Linux 终端命令格式](Ubtuntu/Linux 终端命令格式.md)
   * [Ubuntu 图形界面入门](Ubtuntu/Ubuntu 图形界面入门.md)
@@ -243,7 +244,7 @@
   * [狭义VPN]
 - [Jenkins]
   * [jenkins构建持续化集成平台](Jenkins/jenkins构建持续化集成平台.md)
-  * [修改Jenkins插件为国内](Jenkins/修改Jenkins插件为国内源.md)
+  * [修改Jenkins插件为国内源](Jenkins/修改Jenkins插件为国内源.md)
 - [ELK]
 - [kfaka]
 - [ha-lvs-keepalived]
