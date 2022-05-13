@@ -238,7 +238,8 @@
   * [远程管理常用命令](Ubtuntu/远程管理常用命令.md)
 - [Vim]
   * [vi编辑器](Vim/vi编辑器.md)
-- [Zabbix](zabbix/zabbix.md)
+- [Zabbix]
+  * [Zabbix 构建企业级监控告警平台](zabbix/zabbix.md)
 - [VPN]
   * [广义VPN]
   * [狭义VPN]
