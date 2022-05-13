@@ -1716,6 +1716,7 @@ void array_inflate(Array *a, int more_size)
 {
 	int *p = (int*)malloc(sizeof(int)(a->size + more_size));
 	int i;
+  // 可以使用库memcpy替代
 	for ( i=0; i<a->size; i++ ) {
 		p[i] = a->array[i];
 	}
@@ -1738,7 +1739,7 @@ int main(int argc, char const *argv[])
 			*array_at(&a, cnt++) = number;
 		}
 	}
-	array_free(&a);c
+	array_free(&a);
 	
 	return 0;
 }
@@ -1761,4 +1762,14 @@ int main(int argc, char const *argv[])
 **·**  No copy
 
 ![img](README.assets/v2-8a97680061e364325b1cf4032a0544be_720w.jpg)
+
+# 链表
+
+
+
+![image-20220513181454363](README.assets/image-20220513181454363.png)
+
+
+
+
 

@@ -26,6 +26,6 @@ set(CMAKE_C_STANDARD 11)
 
 
 add_executable(C_Language
-        note-8/1.c note-8/1.h)
+        可变数组/1.c 可变数组/1.h)
 #set(CMAKE_BUILD_TYPE Debug)
 
