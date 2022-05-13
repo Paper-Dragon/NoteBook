@@ -22,7 +22,8 @@ module.exports = {
     "tbfed-pagefooter", //为页面添加页脚
     "edit-link", // Edit This Page
     "theme-beauty", //主题
-    "hide-element" // 隐藏元素
+    "hide-element", // 隐藏元素
+    "sitemap3" // sitemap
   ],
 
   // 插件全局配置
@@ -59,7 +60,10 @@ module.exports = {
       "favicon": "./favicon.ico" //ico地址
     },
     "hide-element": {
-            "elements": [".gitbook-link"]
+      "elements": [".gitbook-link"]
+    },
+    "sitemap3": {
+      "hostname": "http://book.itools.top/"
     }
 
   },
@@ -79,10 +83,10 @@ module.exports = {
 
   //左侧自定义链接
   links: {
-  // "sidebar": {
-  //   "Home": "https://www.baidu.com",
-  //   "邮箱": "2678885646@qq.com",
-  // },
+    // "sidebar": {
+    //   "Home": "https://www.baidu.com",
+    //   "邮箱": "2678885646@qq.com",
+    // },
   }
 
 
