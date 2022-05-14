@@ -238,6 +238,9 @@
   * [远程管理常用命令](Ubtuntu/远程管理常用命令.md)
 - [Vim]
   * [vi编辑器](Vim/vi编辑器.md)
+- [Domain Network System]
+  * [Bind9的安装和使用](Domain Network System/Bind9的使用.md)
+  * [Linux下DNS服务Web管理](Domain Network System/NamedManager.md)
 - [Zabbix]
   * [Zabbix 构建企业级监控告警平台](zabbix/zabbix.md)
 - [VPN]
