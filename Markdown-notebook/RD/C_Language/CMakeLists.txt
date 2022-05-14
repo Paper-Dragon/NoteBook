@@ -6,26 +6,7 @@ set(CMAKE_C_STANDARD 11)
 #set(CMAKE_C_FLAGS -m32)
 #set(CMAKE_CXX_FLAGS -m32)
 
-
-#add_executable(C_Language
-#        note-1/1.c)
-
-
-#add_executable(C_Language
-#        note-2/1.c note-2/include/function.h)
-
-
-#add_executable(C_Language
-#        note-3/1.c note-3/1.c note-3/function.h)
-
-#add_executable(C_Language
-#         note-4/1.c note-4/1.h note-5/1.c note-5/1.h)
-#add_executable(C_Language
-#         #note-7/1.c
-#        note-7/1.h note-7/research_file.c)
-
-
 add_executable(C_Language
-        note-8/1.c note-8/1.h)
+        链表/1.c 链表/1.h)
 #set(CMAKE_BUILD_TYPE Debug)
 
