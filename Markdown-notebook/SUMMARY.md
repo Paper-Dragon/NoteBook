@@ -244,6 +244,10 @@
 - [S3 Simple Storage Service]
   * [使用Docker部署MiniO](S3 Simple Storage Service/MiniO_Docker_Deploy.md)
   * [部署MiniO的一些问题和解决方案](S3 Simple Storage Service/bug and Issue.md)
+- [Samba]
+  * [Linux samba服务器设置简单匿名共享](Samba/Linux samba服务器设置简单匿名共享.md)
+  * [Linux于Windows使用Samba共享文件时文件属性nobody nogroup的解决办法](Samba/Linux于Windows使用Samba共享文件时文件属性nobody nogroup的解决办法.md)
+  * [Simple Config](Samba/simpleConfig.md)
 - [Zabbix]
   * [Zabbix 构建企业级监控告警平台](zabbix/zabbix.md)
 - [VPN]
