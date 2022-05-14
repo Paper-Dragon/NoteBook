@@ -241,6 +241,9 @@
 - [Domain Network System]
   * [Bind9的安装和使用](Domain Network System/Bind9的使用.md)
   * [Linux下DNS服务Web管理](Domain Network System/NamedManager.md)
+- [S3 Simple Storage Service]
+  * [使用Docker部署MiniO](S3 Simple Storage Service/MiniO_Docker_Deploy.md)
+  * [部署MiniO的一些问题和解决方案](S3 Simple Storage Service/bug and Issue.md)
 - [Zabbix]
   * [Zabbix 构建企业级监控告警平台](zabbix/zabbix.md)
 - [VPN]
