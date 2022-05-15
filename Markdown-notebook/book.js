@@ -68,24 +68,22 @@ module.exports = {
 
   },
   variables: {
-    "themeBeauty":{
-      "nav":[
-          {
-              "url":"https://gitee.com/PaperDragon/note-book/issues/new?issue",
-              "target":"_blank",
-              "name": "向作者提出建议和意见"
-          }
+    "themeBeauty": {
+      "nav": [
+        {
+          "url": "https://gitee.com/PaperDragon/note-book/issues/new?issue",
+          "target": "_blank",
+          "name": "向作者提出建议和意见",
+        }
       ]
+    }
   },
-
-
   //左侧自定义链接
   links: {
     // "sidebar": {
     //   "Home": "https://www.baidu.com",
     //   "邮箱": "2678885646@qq.com",
     // },
-  }
-
+  },
 
 };
