@@ -67,17 +67,15 @@ module.exports = {
     }
 
   },
-
-
   variables: {
-    // "themeBeauty":{
-    //   "nav":[
-    //       {
-    //           "url":"http://...",
-    //           "target":"_blank",
-    //           "name": "简易教程"
-    //       }
-    //   ]
+    "themeBeauty":{
+      "nav":[
+          {
+              "url":"https://gitee.com/PaperDragon/note-book/issues/new?issue",
+              "target":"_blank",
+              "name": "向作者提出建议和意见"
+          }
+      ]
   },
 
 

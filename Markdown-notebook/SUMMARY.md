@@ -1,8 +1,9 @@
-# Your Book Title
+# 运维开发绿皮书
+
 * [SUMMARY](SUMMARY.md)
 - [Ansible]
   * [ansible自动化运维](Ansible/ansible自动化运维.md)
-- Git
+- [Git]
   * [Git分支管理合并与删除命令](git/Git分支管理合并与删除命令.md)
   * [git更新远程分支](git/git更新远程分支.md)
   * [Git识别项目的语言类型，及文件占比](git/Git识别项目的语言类型，及文件占比.md)
@@ -14,13 +15,13 @@
 - [JumperServer](JumperServer/README.md)
   * [Docker Deploy](JumperServer/Docker_Deploy.md)
   * [HA Deploy](JumperServer/HA_Deploy.md)
-- Etcd
+- [Etcd]
   * [etcd 二进制三节点集群部署.md](Etcd/etcd 二进制三节点集群部署.md)
-- MySQL
+- [MySQL]
   * [国内源](MySQL/国内源.md)
-- OpenStack
+- [OpenStack]
   * [OpenStack-Queens版搭建详解](OpenStack/OpenStack-Queens版搭建详解.md)
-- RD
+- [Research&Develop]
   - [C Language](RD/C_Language/README.md)
   - [Python-100天从新手到大师](RD/Python-100天从新手到大师/README.md)
     - Day 01 15
@@ -224,7 +225,7 @@
 - RHEL
   * [firewalld配置](RHEL/firewalld配置.md)
   * [配置SSH免密码验证](RHEL/配置SSH免密码验证.md)
-- Ubtuntu
+- [Ubtuntu]
   * [Linux 终端命令格式](Ubtuntu/Linux 终端命令格式.md)
   * [Ubuntu 图形界面入门](Ubtuntu/Ubuntu 图形界面入门.md)
   * [其他命令](Ubtuntu/其他命令.md)
@@ -262,7 +263,7 @@
 - [Portainer]
   * [Portainer 单机部署](Portainer/Portainer 单机部署.md)
 - [Kubernetes]
-  * [使用 vmagent 代替 Prometheus 采集监控指标](Kubernetes/使用 vmagent 代替 Prometheus 采集监控指标.md)
+  * [使用vmagent代替Prometheus采集监控指标](Kubernetes/使用 vmagent 代替 Prometheus 采集监控指标.md)
 - [Harbor]
   * [Harbor离线搭建](Harbor/Harbor离线搭建.md)
 - [kvm]
@@ -273,3 +274,5 @@
 - [nodejs]
 - [OpenWrt]
 - [RabbitMQ]
+- [PhotoShop]
+  * [ps如何去水印的4个方法](PhotoShop/ps如何去水印的4个方法.md)
