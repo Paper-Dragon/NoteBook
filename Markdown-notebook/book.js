@@ -11,6 +11,7 @@ module.exports = {
   plugins: [
     "-lunr",  // 默认搜索附带 This plugin provides a backend for the search plugin.
     "-search",  // 默认搜索
+    "-sharing", // 分享插件
     "search-pro",  //支持中文搜索
     "code", // 代码块加行号和复制按钮
     'expandable-chapters',  // 折叠菜单
