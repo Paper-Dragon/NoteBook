@@ -1,6 +1,6 @@
 # docker run --help
 
-```bash
+```
 
 --add-host list 添加自定义主机到 IP 映射 (host:ip)
   -a, --attach list 附加到 STDIN、STDOUT 或 STDERR
