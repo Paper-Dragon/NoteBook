@@ -1,3 +1,17 @@
 package-lock.json
 package.json
 .bookignore
+*.7z
+*.exe
+*.mp4
+*.flv
+*.zip
+*.key
+*.mp3
+*.pdf
+*.py
+*.txt
+.DS_Store
+*.sql
+*.sh
+cmake-build-*
