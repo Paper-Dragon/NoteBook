@@ -25,6 +25,22 @@
   * [etcd 二进制三节点集群部署.md](Etcd/etcd 二进制三节点集群部署.md)
 - [MySQL]
   * [国内源](MySQL/国内源.md)
+- [Opera Systems]
+  - [Red Hat Enterprise Linux]
+    * [firewalld配置](RHEL/firewalld配置.md)
+    * [配置SSH免密码验证](RHEL/配置SSH免密码验证.md)
+  - [Ubtuntu]
+    * [Linux 终端命令格式](Ubtuntu/Linux 终端命令格式.md)
+    * [Ubuntu 图形界面入门](Ubtuntu/Ubuntu 图形界面入门.md)
+    * [其他命令](Ubtuntu/其他命令.md)
+    * [常用 Linux 命令的基本使用](Ubtuntu/常用 Linux 命令的基本使用.md)
+    * [操作系统（科普章节）](Ubtuntu/操作系统（科普章节）.md)
+    * [操作系统的发展史（科普章节）](Ubtuntu/操作系统的发展史（科普章节）.md)
+    * [文件和目录（理解）](Ubtuntu/文件和目录（理解）.md)
+    * [文件和目录常用命令](Ubtuntu/文件和目录常用命令.md)
+    * [用户权限相关命令](Ubtuntu/用户权限相关命令.md)
+    * [系统信息相关命令](Ubtuntu/系统信息相关命令.md)
+    * [远程管理常用命令](Ubtuntu/远程管理常用命令.md)
 - [OpenStack]
   * [OpenStack-Queens版搭建详解](OpenStack/OpenStack-Queens版搭建详解.md)
 - [Research&Develop]
@@ -227,21 +243,7 @@
     * [python基本语法](Research&Develop/从零学Python/python基本语法.md)
     * [python高级语法](Research&Develop/从零学Python/python高级语法.md)
     * [常用python模块](Research&Develop/从零学Python/常用python模块.md)
-- [Red Hat Enterprise Linux]
-  * [firewalld配置](RHEL/firewalld配置.md)
-  * [配置SSH免密码验证](RHEL/配置SSH免密码验证.md)
-- [Ubtuntu]
-  * [Linux 终端命令格式](Ubtuntu/Linux 终端命令格式.md)
-  * [Ubuntu 图形界面入门](Ubtuntu/Ubuntu 图形界面入门.md)
-  * [其他命令](Ubtuntu/其他命令.md)
-  * [常用 Linux 命令的基本使用](Ubtuntu/常用 Linux 命令的基本使用.md)
-  * [操作系统（科普章节）](Ubtuntu/操作系统（科普章节）.md)
-  * [操作系统的发展史（科普章节）](Ubtuntu/操作系统的发展史（科普章节）.md)
-  * [文件和目录（理解）](Ubtuntu/文件和目录（理解）.md)
-  * [文件和目录常用命令](Ubtuntu/文件和目录常用命令.md)
-  * [用户权限相关命令](Ubtuntu/用户权限相关命令.md)
-  * [系统信息相关命令](Ubtuntu/系统信息相关命令.md)
-  * [远程管理常用命令](Ubtuntu/远程管理常用命令.md)
+
 - [Vim]
   * [vi编辑器](Vim/vi编辑器.md)
 - [Domain Network System]
