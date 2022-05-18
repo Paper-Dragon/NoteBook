@@ -3,10 +3,6 @@ name: pipeline
 displayName: pipeline
 triggers:
   trigger: auto
-  push:
-    branches:
-      precise:
-        - master
 stages:
   - name: stage-0e16e07b
     displayName: runner
