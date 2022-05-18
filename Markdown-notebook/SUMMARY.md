@@ -34,7 +34,7 @@
     * [Ubuntu 图形界面入门](Opera Systems/Ubtuntu/Ubuntu 图形界面入门.md)
     * [其他命令](Opera Systems/Ubtuntu/其他命令.md)
     * [常用 Linux 命令的基本使用](Opera Systems/Ubtuntu/常用 Linux 命令的基本使用.md)
-    * [操作系统（科普章节）](Opera SystemsUbtuntu/操作系统（科普章节）.md)
+    * [操作系统（科普章节）](Opera Systems/Ubtuntu/操作系统（科普章节）.md)
     * [操作系统的发展史（科普章节）](Opera Systems/Ubtuntu/操作系统的发展史（科普章节）.md)
     * [文件和目录（理解）](Opera Systems/Ubtuntu/文件和目录（理解）.md)
     * [文件和目录常用命令](Opera Systems/Ubtuntu/文件和目录常用命令.md)
