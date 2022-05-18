@@ -3,6 +3,10 @@ name: pipeline
 displayName: pipeline
 triggers:
   trigger: auto
+  pr:
+    branches:
+      prefix:
+        - ''
 stages:
   - name: stage-0e16e07b
     displayName: runner
