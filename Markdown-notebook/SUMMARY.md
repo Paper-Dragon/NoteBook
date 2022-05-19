@@ -26,6 +26,9 @@
 - [MySQL]
   * [国内源](MySQL/国内源.md)
 - [Opera Systems]
+  - [Opera Systems]
+    * [操作系统介绍](Opera Systems/Operating System Principle/操作系统介绍.md)
+    * [CPU的虚拟化](Opera Systems/Operating System Principle/CPU的虚拟化.md)
   - [Red Hat Enterprise Linux]
     * [firewalld配置](Opera Systems/Red Hat Enterprise Linux/firewalld配置.md)
     * [配置SSH免密码验证](Opera Systems/Red Hat Enterprise Linux/配置SSH免密码验证.md)
