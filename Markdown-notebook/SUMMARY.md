@@ -44,6 +44,7 @@
     * [用户权限相关命令](Opera Systems/Ubtuntu/用户权限相关命令.md)
     * [系统信息相关命令](Opera Systems/Ubtuntu/系统信息相关命令.md)
     * [远程管理常用命令](Opera Systems/Ubtuntu/远程管理常用命令.md)
+    * [ubuntu14.04 忘记了普通用户密码和root密码.md](Opera Systems/Ubtuntu/ubuntu14.04 忘记了普通用户密码和root密码.md)
 - [OpenStack]
   * [OpenStack-Queens版搭建详解](OpenStack/OpenStack-Queens版搭建详解.md)
 - [Research&Develop]
