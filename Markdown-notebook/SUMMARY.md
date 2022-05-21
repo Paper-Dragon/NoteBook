@@ -48,7 +48,7 @@
 - [OpenStack]
   * [OpenStack-Queens版搭建详解](OpenStack/OpenStack-Queens版搭建详解.md)
 - [Research&Develop]
-  - [C语言初级](Research&Develop/C_Language/README.md)
+  - [C语言初级](Research&Develop/C_Language/README.md)c
   - [Python-100天从新手到大师](Research&Develop/Python-100天从新手到大师/README.md)
     - Day 01 15
       * [01.初识Python](Research&Develop/Python-100天从新手到大师/Day01-15/01.初识Python.md)
