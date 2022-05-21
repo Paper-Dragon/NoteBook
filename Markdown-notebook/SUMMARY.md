@@ -282,6 +282,12 @@
   * [二进制安装kubernetes（五） kubelet组件安装](Kubernetes/二进制安装kubernetes（五） kubelet组件安装.md)
   * [二进制安装kubernetes（六） kube-proxy组件安装](Kubernetes/二进制安装kubernetes（六） kube-proxy组件安装.md)
   * [二进制安装kubernetes（七） 部署知识点总结](Kubernetes/二进制安装kubernetes（七） 部署知识点总结.md)
+  * [kubernetes进阶（一）kubectl工具使用详解](Kubernetes/kubernetes进阶（一）kubectl工具使用详解.md)
+  * [kubernetes进阶（二）核心网络插件Flannel](Kubernetes/kubernetes进阶（二）核心网络插件Flannel.md)
+  * [kubernetes进阶（三）服务发现-coredns](Kubernetes/kubernetes进阶（三）服务发现-coredns.md)
+  * [kubernetes进阶（四）服务暴露-ingress控制器之traefik](Kubernetes/kubernetes进阶（四）服务暴露-ingress控制器之traefik.md)
+  * [kubernetes进阶（五）dashboard--WEB管理](Kubernetes/kubernetes进阶（五）dashboard--WEB管理.md)
+  * [kubernetes进阶（六）k8s平滑升级](Kubernetes/kubernetes进阶（六）k8s平滑升级.md)
   * [Docker 的daemon.json](Kubernetes/Docker 的daemon.json.md)
   * [使用 vmagent 代替 Prometheus 采集监控指标](Kubernetes/使用 vmagent 代替 Prometheus 采集监控指标.md)
 - [ELK]
