@@ -13,7 +13,7 @@ triggers:
         - master
 stages:
   - name: stage-0e16e07b
-    displayName: runner
+    displayName: build_with_shell_script
     strategy: naturally
     trigger: auto
     executor: []
