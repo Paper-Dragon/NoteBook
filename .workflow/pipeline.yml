@@ -43,8 +43,7 @@ stages:
           rm -rf /var/www/html/*
           mv * /var/www/html/
 strategy:
-  blocking: true
-  stepTimeout: 20
+  blocking: false
 permissions:
   - role: admin
     members: []
