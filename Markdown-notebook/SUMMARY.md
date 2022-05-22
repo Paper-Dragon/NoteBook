@@ -265,8 +265,10 @@
 - [Zabbix]
   * [Zabbix 构建企业级监控告警平台](zabbix/zabbix.md)
 - [VPN]
-  * [广义VPN]
-  * [狭义VPN]
+  - [广义VPN]
+  - [狭义VPN]
+    * [优秀的落地框架 XrayR](VPN/狭义VPN/优秀的落地框架 XrayR.md)
+    * [连接CF WARP为服务器添加IPv4IPv6网络](VPN/狭义VPN/连接CF WARP为服务器添加IPv4IPv6网络.md)
 - [Jenkins]
   * [jenkins构建持续化集成平台](Jenkins/jenkins构建持续化集成平台.md)
   * [修改Jenkins插件为国内源](Jenkins/修改Jenkins插件为国内源.md)
