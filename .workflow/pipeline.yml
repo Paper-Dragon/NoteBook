@@ -19,7 +19,7 @@ stages:
     executor: []
     steps:
       - step: shell@agent
-        name: execute_shell
+        name: customer_runner
         displayName: Shell 脚本执行
         hostGroupID: NodeGroup
         script: |-
