@@ -7,32 +7,49 @@
 ## 目录结构如下
 
 ```bash
-[root@cidana0_183 ~]# tree -L 4 note-book/
-note-book/
-├── ipynb-notebook
-│   └── sample.ipynb
+root@ip-172-31-3-249:/opt/src/note-book# tree -L 2
+.
 ├── LICENSE
 ├── Markdown-notebook
+│   ├── Ansible
+│   ├── Docker
+│   ├── Domain Network System
+│   ├── Etcd
+│   ├── Gitlab
+│   ├── Harbor
+│   ├── Jenkins
 │   ├── JumperServer
-│   │   ├── Docker_Deploy.md
-│   │   ├── HA_Deploy.md
-│   │   ├── others
-│   │   │   └── jumper_Docker_deploy.sh
-│   │   ├── README.assets
-│   │   │   └── dashboard.png
-│   │   └── README.md
+│   ├── Kubernetes
 │   ├── MySQL
-│   │   └── 国内源.md
 │   ├── OpenStack
-│   │   └── OpenStack-Queens版搭建详解.md
-│   └── RHEL
-│       └── firewalld配置.md
-├── README.en.md
+│   ├── Opera Systems
+│   ├── PhotoShop
+│   ├── Portainer
+│   ├── README.assets
+│   ├── README.md
+│   ├── Research&Develop
+│   ├── S3 Simple Storage Service
+│   ├── SUMMARY.md
+│   ├── Samba
+│   ├── Vim
+│   ├── _book
+│   ├── book.js
+│   ├── git
+│   ├── node_modules
+│   ├── package-lock.json
+│   ├── package.json
+│   └── zabbix
 ├── README.md
+├── ipynb-notebook
+│   └── sample.ipynb
 └── tools
+    ├── IDM v6.38.7.2.rar
+    ├── cfssl
+    ├── node-v8.11.1-x64.msi
     └── typora-0-11-18.exe
 
-9 directories, 13 files
+27 directories, 11 files
+
 
 ```
 
