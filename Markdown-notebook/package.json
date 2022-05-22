@@ -5,9 +5,8 @@
   "main": "book.js",
   "scripts": {
     "serve": "gitbook serve",
-    "bs": "book bs",
-    "build": "gitbook build",
-    "make-web": "mv _book ../ && bash ../clean.sh ../ "
+    "bs": "book sm -o sm.md",
+    "build": "gitbook build"
   },
   "author": "",
   "license": "ISC",
