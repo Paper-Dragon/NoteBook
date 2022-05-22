@@ -26,7 +26,7 @@
 - [MySQL]
   * [国内源](MySQL/国内源.md)
 - [Opera Systems]
-  - [Opera Systems]
+  - [Opera Systems Principle]
     * [操作系统介绍](Opera Systems/Operating System Principle/操作系统介绍.md)
     * [CPU的虚拟化](Opera Systems/Operating System Principle/CPU的虚拟化.md)
   - [Red Hat Enterprise Linux]
