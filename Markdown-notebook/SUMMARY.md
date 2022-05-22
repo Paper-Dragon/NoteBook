@@ -16,8 +16,8 @@
   * [git远程仓库回退到指定版本.md](git/git远程仓库回退到指定版本.md)
   * [git 基础命令](git/git 基础命令.md)
 - [Gitlab]
-  * [gitlab ci 编写](Gitlab/gitlab ci 编写.md)
-  * [gitlab ci 部署](Gitlab/gitlab ci 部署.md)
+  * [gitlab ci 编写](Gitlab/CI/gitlab ci 编写.md)
+  * [gitlab ci 部署](Gitlab/CI/gitlab ci 部署.md)
 - [[JumperServer]](JumperServer/README.md)
   * [Docker Deploy](JumperServer/Docker_Deploy.md)
   * [HA Deploy](JumperServer/HA_Deploy.md)
