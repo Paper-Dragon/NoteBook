@@ -45,9 +45,9 @@
     * [系统信息相关命令](Opera Systems/Ubtuntu/系统信息相关命令.md)
     * [远程管理常用命令](Opera Systems/Ubtuntu/远程管理常用命令.md)
     * [ubuntu14.04 忘记了普通用户密码和root密码.md](Opera Systems/Ubtuntu/ubuntu14.04 忘记了普通用户密码和root密码.md)
-    * [linux关闭地址空间随机化(ASLR)](Opera Systems/linux关闭地址空间随机化(ASLR).md)
-    * [Linux下的ASLR（PIE）内存保护机制和绕过](Opera Systems/Linux下的ASLR（PIE）内存保护机制和绕过.md)
-    * [CPU和内存的架构 UMA和NUMA](Opera 0Systems/CPU和内存的架构 UMA和NUMA.md)
+    * [linux关闭地址空间随机化(ASLR)](Opera Systems/Ubtuntu/linux关闭地址空间随机化(ASLR).md)
+  - [Linux下的ASLR（PIE）内存保护机制和绕过](Opera Systems/Linux下的ASLR（PIE）内存保护机制和绕过.md)
+  - [CPU和内存的架构 UMA和NUMA](Opera Systems/CPU和内存的架构 UMA和NUMA.md)
 - [OpenStack]
   * [OpenStack-Queens版搭建详解](OpenStack/OpenStack-Queens版搭建详解.md)
 - [Research Develop]
