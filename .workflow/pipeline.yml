@@ -26,15 +26,20 @@ stages:
           PATH=$PATH:/opt/node/bin
           ln -s /opt/src/note-book/ .
           cd note-book/Markdown-notebook/
+          echo "远程仓库同步BEGIN"
           git fetch --all
           git reset --hard origin/master
           git pull
+          echo "远程仓库同步END"
+          echo "Github代码库同步BEGIN"
+          git push github master:master
+          echo "Github代码库同步END"
+          echo "clean workspace start"
           rm -rf ./_book ./book-html
+          echo "clean workspace end"
           sed -i "s/title:.*$/title\: \'运维开发绿皮书   Version: ${GITEE_COMMIT}.\'\,/g" book.js
           gitbook build 
-          pwd
-          ls -la ./
-          cd _book &&  pwd && ls -la ./
+          cd _book 
           rm -rf /var/www/html/*
           mv * /var/www/html/
 strategy:
