@@ -1,8 +1,44 @@
 # 运维开发绿皮书
 
 * [SUMMARY](SUMMARY.md)
-- [Ansible]
-  * [ansible自动化运维](Ansible/ansible自动化运维.md)
+- [Distributed System]
+  - [Ansible]
+    * [ansible自动化运维](Distributed System/Ansible/ansible自动化运维.md)
+  - [Jumper Server](Distributed System/JumperServer/README.md)
+    * [Docker Deploy](Distributed System/JumperServer/Docker_Deploy.md)
+    * [HA Deploy](Distributed System/JumperServer/HA_Deploy.md)
+  - [Kubernetes]
+    * [Docker 的daemon.json](Distributed System/Kubernetes/Docker 的daemon.json.md)
+    * [Kubernetes最小高可用架构图](Distributed System/Kubernetes/Kubernetes最小高可用架构图.md)
+    * [Kubernetes有哪些组件](Distributed System/Kubernetes/Kubernetes有哪些组件.md)
+    * [kubernetes进阶（一）kubectl工具使用详解](Distributed System/Kubernetes/kubernetes进阶（一）kubectl工具使用详解.md)
+    * [kubernetes进阶（三）服务发现-coredns](Distributed System/Kubernetes/kubernetes进阶（三）服务发现-coredns.md)
+    * [kubernetes进阶（二）核心网络插件Flannel](Distributed System/Kubernetes/kubernetes进阶（二）核心网络插件Flannel.md)
+    * [kubernetes进阶（五）dashboard--WEB管理](Distributed System/Kubernetes/kubernetes进阶（五）dashboard--WEB管理.md)
+    * [kubernetes进阶（六）k8s平滑升级](Distributed System/Kubernetes/kubernetes进阶（六）k8s平滑升级.md)
+    * [kubernetes进阶（四）服务暴露-ingress控制器之traefik](Distributed System/Kubernetes/kubernetes进阶（四）服务暴露-ingress控制器之traefik.md)
+    * [NameSpace 资源隔离隔离了什么](Distributed System/Kubernetes/NameSpace 资源隔离隔离了什么.md)
+    * [SSL证书签发](Distributed System/Kubernetes/SSL证书签发.md)
+    * [二进制安装kubernetes（七） 部署知识点总结](Distributed System/Kubernetes/二进制安装kubernetes（七） 部署知识点总结.md)
+    * [二进制安装kubernetes（三） kube-controller-manager组件安装](Distributed System/Kubernetes/二进制安装kubernetes（三） kube-controller-manager组件安装.md)
+    * [二进制安装kubernetes（二） kube-apiserver组件安装](Distributed System/Kubernetes/二进制安装kubernetes（二） kube-apiserver组件安装.md)
+    * [二进制安装kubernetes（五） kubelet组件安装](Distributed System/Kubernetes/二进制安装kubernetes（五） kubelet组件安装.md)
+    * [二进制安装kubernetes（六） kube-proxy组件安装](Distributed System/Kubernetes/二进制安装kubernetes（六） kube-proxy组件安装.md)
+    * [二进制安装kubernetes（四） kube-scheduler组件安装](Distributed System/Kubernetes/二进制安装kubernetes（四） kube-scheduler组件安装.md)
+    * [二进制部署Kubernetes](Distributed System/Kubernetes/二进制部署Kubernetes.md)
+    * [什么是Label和Label选择器](Distributed System/Kubernetes/什么是Label和Label选择器.md)
+    * [什么是Name和NameSpace](Distributed System/Kubernetes/什么是Name和NameSpace.md)
+    * [什么是Pod和Pod控制器](Distributed System/Kubernetes/什么是Pod和Pod控制器.md)
+    * [什么是Service和Ingress](Distributed System/Kubernetes/什么是Service和Ingress.md)
+    * [使用 vmagent 代替 Prometheus 采集监控指标](Distributed System/Kubernetes/使用 vmagent 代替 Prometheus 采集监控指标.md)
+  - [OpenStack]
+    * [OpenStack-Queens版搭建详解](Distributed System/OpenStack/OpenStack-Queens版搭建详解.md)
+  - [Zabbix](Distributed System/zabbix/zabbix.md)
+- [Database System]
+  - [Etcd]
+    * [etcd 二进制三节点集群部署](Database System/Etcd/etcd 二进制三节点集群部署.md)
+  - [MySQL]
+    * [国内源](Database System/MySQL/国内源.md)
 - [Docker]
   * [Docker 2375攻击和解决方案](Docker/Docker 2375攻击和解决方案.md)
   * [docker run 命令所有的选项](Docker/docker run 命令所有的选项.md)
@@ -18,13 +54,6 @@
 - [Gitlab]
   * [gitlab ci 编写](Gitlab/CI/gitlab ci 编写.md)
   * [gitlab ci 部署](Gitlab/CI/gitlab ci 部署.md)
-- [[JumperServer]](JumperServer/README.md)
-  * [Docker Deploy](JumperServer/Docker_Deploy.md)
-  * [HA Deploy](JumperServer/HA_Deploy.md)
-- [Etcd]
-  * [etcd 二进制三节点集群部署.md](Etcd/etcd 二进制三节点集群部署.md)
-- [MySQL]
-  * [国内源](MySQL/国内源.md)
 - [Opera Systems]
   - [Opera Systems Principle]
     * [操作系统介绍](Opera Systems/Operating System Principle/操作系统介绍.md)
@@ -48,8 +77,14 @@
     * [linux关闭地址空间随机化（ASLR）](Opera Systems/Ubtuntu/linux关闭地址空间随机化（ASLR）zi.md)
   - [Linux下的ASLR（PIE）内存保护机制和绕过](Opera Systems/Linux下的ASLR（PIE）内存保护机制和绕过.md)
   - [CPU和内存的架构 UMA和NUMA](Opera Systems/CPU和内存的架构 UMA和NUMA.md)
-- [OpenStack]
-  * [OpenStack-Queens版搭建详解](OpenStack/OpenStack-Queens版搭建详解.md)
+- [Linux Opera System]
+  - [Emacs](Linux Opera System/Emacs/README.md)
+  - [Samba]
+    * [Linux samba服务器设置简单匿名共享](Linux Opera System/Samba/Linux samba服务器设置简单匿名共享.md)
+    * [Linux于Windows使用Samba共享文件时文件属性nobody nogroup的解决办法](Linux Opera System/Samba/Linux于Windows使用Samba共享文件时文件属性nobody nogroup的解决办法.md)
+    * [Simple Config](Linux Opera System/Samba/simpleConfig.md)
+  - [Vim]
+    * [vi编辑器](Linux Opera System/Vim/vi编辑器.md)
 - [Research Develop]
   - [C](Research&Develop/C/README.md)
     - [ACL Lib](Research&Develop/C/ACLLib/ACLLib.md)
@@ -254,20 +289,12 @@
       * [python基本语法](Research&Develop/Python/从零学Python/python基本语法.md)
       * [python高级语法](Research&Develop/Python/从零学Python/python高级语法.md)
       * [常用python模块](Research&Develop/Python/从零学Python/常用python模块.md)
-- [Vim]
-  * [vi编辑器](Vim/vi编辑器.md)
 - [Domain Network System]
   * [Bind9的安装和使用](Domain Network System/Bind9的使用.md)
   * [Linux下DNS服务Web管理](Domain Network System/NamedManager.md)
 - [S3 Simple Storage Service]
   * [使用Docker部署MiniO](S3 Simple Storage Service/MiniO_Docker_Deploy.md)
   * [部署MiniO的一些问题和解决方案](S3 Simple Storage Service/bug and Issue.md)
-- [Samba]
-  * [Linux samba服务器设置简单匿名共享](Samba/Linux samba服务器设置简单匿名共享.md)
-  * [Linux于Windows使用Samba共享文件时文件属性nobody nogroup的解决办法](Samba/Linux于Windows使用Samba共享文件时文件属性nobody nogroup的解决办法.md)
-  * [Simple Config](Samba/simpleConfig.md)
-- [Zabbix]
-  * [Zabbix 构建企业级监控告警平台](zabbix/zabbix.md)
 - [VPN]
   - [广义VPN]
   - [狭义VPN]
@@ -276,30 +303,6 @@
 - [Jenkins]
   * [jenkins构建持续化集成平台](Jenkins/jenkins构建持续化集成平台.md)
   * [修改Jenkins插件为国内源](Jenkins/修改Jenkins插件为国内源.md)
-- [Kubernetes]
-  * [Kubernetes有哪些组件](Kubernetes/Kubernetes有哪些组件.md)
-  * [NameSpace 资源隔离隔离了什么](Kubernetes/NameSpace 资源隔离隔离了什么.md)
-  * [什么是Label和Label选择器](Kubernetes/什么是Label和Label选择器.md)
-  * [什么是Name和NameSpace](Kubernetes/什么是Name和NameSpace.md)
-  * [什么是Pod和Pod控制器](Kubernetes/什么是Pod和Pod控制器.md)
-  * [什么是Service和Ingress](Kubernetes/什么是Service和Ingress.md)
-  * [Kubernetes最小高可用架构图](Kubernetes/Kubernetes最小高可用架构图.md)
-  * [二进制部署Kubernetes](Kubernetes/二进制部署Kubernetes.md)
-  * [二进制安装kubernetes（一） SSL证书签发](Kubernetes/SSL证书签发.md)
-  * [二进制安装kubernetes（二） kube-apiserver组件安装](Kubernetes/二进制安装kubernetes（二） kube-apiserver组件安装.md)
-  * [二进制安装kubernetes（三） kube-controller-manager组件安装](Kubernetes/二进制安装kubernetes（三） kube-controller-manager组件安装.md)
-  * [二进制安装kubernetes（四） kube-scheduler组件安装](Kubernetes/二进制安装kubernetes（四） kube-scheduler组件安装.md)
-  * [二进制安装kubernetes（五） kubelet组件安装](Kubernetes/二进制安装kubernetes（五） kubelet组件安装.md)
-  * [二进制安装kubernetes（六） kube-proxy组件安装](Kubernetes/二进制安装kubernetes（六） kube-proxy组件安装.md)
-  * [二进制安装kubernetes（七） 部署知识点总结](Kubernetes/二进制安装kubernetes（七） 部署知识点总结.md)
-  * [kubernetes进阶（一）kubectl工具使用详解](Kubernetes/kubernetes进阶（一）kubectl工具使用详解.md)
-  * [kubernetes进阶（二）核心网络插件Flannel](Kubernetes/kubernetes进阶（二）核心网络插件Flannel.md)
-  * [kubernetes进阶（三）服务发现-coredns](Kubernetes/kubernetes进阶（三）服务发现-coredns.md)
-  * [kubernetes进阶（四）服务暴露-ingress控制器之traefik](Kubernetes/kubernetes进阶（四）服务暴露-ingress控制器之traefik.md)
-  * [kubernetes进阶（五）dashboard--WEB管理](Kubernetes/kubernetes进阶（五）dashboard--WEB管理.md)
-  * [kubernetes进阶（六）k8s平滑升级](Kubernetes/kubernetes进阶（六）k8s平滑升级.md)
-  * [Docker 的daemon.json](Kubernetes/Docker 的daemon.json.md)
-  * [使用 vmagent 代替 Prometheus 采集监控指标](Kubernetes/使用 vmagent 代替 Prometheus 采集监控指标.md)
 - [ELK]
 - [kfaka]
 - [ha-lvs-keepalived]
