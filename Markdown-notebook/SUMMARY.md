@@ -4,7 +4,7 @@
 - [Distributed System]
   - [Ansible]
     * [ansible自动化运维](Distributed System/Ansible/ansible自动化运维.md)
-  - [Jumper Server](Distributed System/JumperServer/README.md)
+  - [[JumperServer]](Distributed System/JumperServer/README.md)
     * [Docker Deploy](Distributed System/JumperServer/Docker_Deploy.md)
     * [HA Deploy](Distributed System/JumperServer/HA_Deploy.md)
   - [Kubernetes]
@@ -12,11 +12,11 @@
     * [Kubernetes最小高可用架构图](Distributed System/Kubernetes/Kubernetes最小高可用架构图.md)
     * [Kubernetes有哪些组件](Distributed System/Kubernetes/Kubernetes有哪些组件.md)
     * [kubernetes进阶（一）kubectl工具使用详解](Distributed System/Kubernetes/kubernetes进阶（一）kubectl工具使用详解.md)
-    * [kubernetes进阶（三）服务发现-coredns](Distributed System/Kubernetes/kubernetes进阶（三）服务发现-coredns.md)
     * [kubernetes进阶（二）核心网络插件Flannel](Distributed System/Kubernetes/kubernetes进阶（二）核心网络插件Flannel.md)
+    * [kubernetes进阶（三）服务发现-coredns](Distributed System/Kubernetes/kubernetes进阶（三）服务发现-coredns.md)
+    * [kubernetes进阶（四）服务暴露-ingress控制器之traefik](Distributed System/Kubernetes/kubernetes进阶（四）服务暴露-ingress控制器之traefik.md)
     * [kubernetes进阶（五）dashboard--WEB管理](Distributed System/Kubernetes/kubernetes进阶（五）dashboard--WEB管理.md)
     * [kubernetes进阶（六）k8s平滑升级](Distributed System/Kubernetes/kubernetes进阶（六）k8s平滑升级.md)
-    * [kubernetes进阶（四）服务暴露-ingress控制器之traefik](Distributed System/Kubernetes/kubernetes进阶（四）服务暴露-ingress控制器之traefik.md)
     * [NameSpace 资源隔离隔离了什么](Distributed System/Kubernetes/NameSpace 资源隔离隔离了什么.md)
     * [SSL证书签发](Distributed System/Kubernetes/SSL证书签发.md)
     * [二进制安装kubernetes（七） 部署知识点总结](Distributed System/Kubernetes/二进制安装kubernetes（七） 部署知识点总结.md)
@@ -74,7 +74,7 @@
     * [系统信息相关命令](Opera Systems/Ubtuntu/系统信息相关命令.md)
     * [远程管理常用命令](Opera Systems/Ubtuntu/远程管理常用命令.md)
     * [ubuntu14.04 忘记了普通用户密码和root密码.md](Opera Systems/Ubtuntu/ubuntu14.04 忘记了普通用户密码和root密码.md)
-    * [linux关闭地址空间随机化（ASLR）](Opera Systems/Ubtuntu/linux关闭地址空间随机化（ASLR）zi.md)
+    * [linux关闭地址空间随机化（ASLR）](Opera Systems/Ubtuntu/linux关闭地址空间随机化（ASLR）.md)
   - [Linux下的ASLR（PIE）内存保护机制和绕过](Opera Systems/Linux下的ASLR（PIE）内存保护机制和绕过.md)
   - [CPU和内存的架构 UMA和NUMA](Opera Systems/CPU和内存的架构 UMA和NUMA.md)
 - [Linux Opera System]
