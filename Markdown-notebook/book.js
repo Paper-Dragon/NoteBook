@@ -18,9 +18,8 @@ module.exports = {
     "splitter",   // splitter 侧边栏宽度可调节
     "ancre-navigation", // 悬浮目录
     "donate", //打赏插件
-    "pageview-busuanzi", // 阅读量计数
     "lightbox", // 弹出大图
-    "tbfed-pagefooter", //为页面添加页脚
+    "page-footer-copyright", //页尾和统计
     "edit-link", // Edit This Page
     "theme-beauty", //主题
     "hide-element", // 隐藏元素
