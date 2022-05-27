@@ -37,7 +37,9 @@ stages:
           echo "clean workspace start"
           rm -rf ./_book ./book-html
           echo "clean workspace end"
-          sed -i "s/title:.*$/title\: \'运维开发绿皮书   Version: ${GITEE_COMMIT}.\'\,/g" book.js
+          echo ${GITEE_COMMIT}  | cut -b -7
+          COMMIT_VERSION=`echo ${GITEE_COMMIT}  | cut -b -7`
+          sed -i "s/title:.*$/title\: \'运维开发绿皮书   Version: ${COMMIT_VERSION}.\'\,/g" book.js
           gitbook build 
           cd _book 
           rm -rf /var/www/html/*
