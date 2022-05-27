@@ -38,7 +38,8 @@ stages:
           rm -rf ./_book ./book-html
           echo "==========clean workspace end=========="
           sed -i "s/title:.*$/title\: \'运维开发绿皮书   Version: ${GITEE_SHORT_COMMIT}.\'\,/g" book.js
-          gitbook build --log debug | tee _book/build.log  ${web_home}build.log 2>&1 > /dev/null
+          gitbook build --log debug | tee ${web_home}build.txt build.txt 2>&1 > /dev/null
+          cp -rvf build.txt _book/build.txt
           cd _book 
           rm -rf ${web_home}*
           mv * ${web_home}
