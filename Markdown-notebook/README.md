@@ -50,4 +50,4 @@
 - 本网站通过通过流水线通过脚本自动生成，难免有些小错误，请大佬们[斧正](https://gitee.com/PaperDragon/note-book/issues/new)。
 
 
-[本次构建的实时更新日志](build.log)
+## [本次构建的实时更新日志](build.txt)
