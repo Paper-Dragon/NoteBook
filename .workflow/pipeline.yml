@@ -11,6 +11,9 @@ triggers:
     branches:
       precise:
         - master
+variables:
+  global:
+    - web_home
 stages:
   - name: stage-0e16e07b
     displayName: build_with_shell_script
