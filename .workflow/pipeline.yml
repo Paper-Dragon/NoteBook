@@ -26,24 +26,22 @@ stages:
           PATH=$PATH:/opt/node/bin
           ln -s /opt/src/note-book/ .
           cd note-book/Markdown-notebook/
-          echo "远程仓库同步BEGIN"
+          echo "==========远程仓库同步BEGIN=========="
           git fetch --all
           git reset --hard origin/master
           git pull
-          echo "远程仓库同步END"
-          echo "Github代码库同步BEGIN"
+          echo "==========远程仓库同步END=========="
+          echo "==========Github代码库同步BEGIN=========="
           git push github master:master
-          echo "Github代码库同步END"
-          echo "clean workspace start"
+          echo "==========Github代码库同步END=========="
+          echo "==========clean workspace start=========="
           rm -rf ./_book ./book-html
-          echo "clean workspace end"
-          echo ${GITEE_COMMIT}  | cut -b -7
-          COMMIT_VERSION=`echo ${GITEE_COMMIT}  | cut -b -7`
-          sed -i "s/title:.*$/title\: \'运维开发绿皮书   Version: ${COMMIT_VERSION}.\'\,/g" book.js
-          gitbook build 
+          echo "==========clean workspace end=========="
+          sed -i "s/title:.*$/title\: \'运维开发绿皮书   Version: ${GITEE_SHORT_COMMIT}.\'\,/g" book.js
+          gitbook build --log debug > _book/build.log
           cd _book 
-          rm -rf /var/www/html/*
-          mv * /var/www/html/
+          rm -rf ${web_home}*
+          mv * ${web_home}
 strategy:
   blocking: false
 permissions:
