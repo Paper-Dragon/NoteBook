@@ -78,6 +78,9 @@
     * [linux关闭地址空间随机化（ASLR）](Opera Systems/Ubtuntu/linux关闭地址空间随机化（ASLR）.md)
   - [Linux下的ASLR（PIE）内存保护机制和绕过](Opera Systems/Linux下的ASLR（PIE）内存保护机制和绕过.md)
   - [CPU和内存的架构 UMA和NUMA](Opera Systems/CPU和内存的架构 UMA和NUMA.md)
+  - [更换系统和命令行语言](Opera Systems/更换系统和命令行语言.md)
+  - [逻辑卷无法删除](Opera Systems/逻辑卷无法删除.md)
+  - [sysstat Linux状态工具包](Opera Systems/sysstat Linux状态工具包.md)
 - [Linux Opera System]
   - [Emacs](Linux Opera System/Emacs/README.md)
   - [Samba]
