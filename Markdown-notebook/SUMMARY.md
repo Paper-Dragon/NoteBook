@@ -1,6 +1,7 @@
 # 运维开发绿皮书
 
 * [SUMMARY](SUMMARY.md)
+* [Version log](log.md)
 - [Distributed System]
   - [Ansible]
     * [ansible自动化运维](Distributed System/Ansible/ansible自动化运维.md)
