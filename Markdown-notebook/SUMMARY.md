@@ -32,6 +32,7 @@
     * [kubernetes进阶（五）dashboard--WEB管理](Distributed System/Kubernetes/kubernetes进阶（五）dashboard--WEB管理.md)
     * [kubernetes进阶（六）k8s平滑升级](Distributed System/Kubernetes/kubernetes进阶（六）k8s平滑升级.md)
     * [使用 vmagent 代替 Prometheus 采集监控指标](Distributed System/Kubernetes/使用 vmagent 代替 Prometheus 采集监控指标.md)
+    * [Kubernetes crictl管理命令详解](Distributed System/Kubernetes/Kubernetes crictl管理命令详解.md)
   - [OpenStack]
     * [OpenStack-Queens版搭建详解](Distributed System/OpenStack/OpenStack-Queens版搭建详解.md)
   - [Zabbix](Distributed System/zabbix/zabbix.md)
