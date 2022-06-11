@@ -16,7 +16,7 @@ variables:
     - web_home
 stages:
   - name: stage-0e16e07b
-    displayName: build_with_shell_script
+    displayName: build
     strategy: naturally
     trigger: auto
     executor: []
@@ -41,6 +41,50 @@ stages:
           cd _book 
           rm -rf ${web_home}*
           mv * ${web_home}
+        strategy:
+          retry: '0'
+          expression: []
+      - step: build@nodejs
+        name: build_nodejs
+        displayName: Nodejs 构建
+        nodeVersion: 10.17.0
+        commands:
+          - cd Markdown-notebook/
+          - 'npm install '
+          - git log --date=iso --pretty=format:\|"%h"\|"%ad"\|%an\|%ae\|"%s"\| >> log.md
+          - 'sed -i "s/title:.*$/title\: \''运维开发绿皮书   Version: ${GITEE_SHORT_COMMIT}.\''\,/g" book.js'
+          - gitbook build --log debug | tee ${web_home}build.txt build.txt 2>&1 > /dev/null
+          - cp -rvf build.txt _book/build.txt
+          - 'cd _book '
+          - '#rm -rf ${web_home}*'
+          - '#mv * ${web_home}'
+        artifacts:
+          - name: BUILD_ARTIFACT
+            path:
+              - ./_book
+        strategy:
+          retry: '0'
+  - name: stage-de5b8e26
+    displayName: upload2Gitee
+    strategy: naturally
+    trigger: auto
+    executor: []
+    steps:
+      - step: publish@release_artifacts
+        name: publish_release_artifacts
+        displayName: 发布
+        dependArtifact: output
+        version: 1.0.0.0
+        autoIncrement: true
+        strategy:
+          retry: '0'
+      - step: publish@general_artifacts
+        name: publish_general_artifacts
+        displayName: 上传制品
+        dependArtifact: BUILD_ARTIFACT
+        artifactName: output
+        strategy:
+          retry: '0'
 strategy:
   blocking: false
 permissions:
