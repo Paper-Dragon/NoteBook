@@ -34,6 +34,7 @@
     * [使用 vmagent 代替 Prometheus 采集监控指标](Distributed System/Kubernetes/使用 vmagent 代替 Prometheus 采集监控指标.md)
     * [Kubernetes crictl管理命令详解](Distributed System/Kubernetes/Kubernetes crictl管理命令详解.md)
     * [使用 kubeadm 部署 Kubernetes 1.24 详细步骤总结](Distributed System/Kubernetes/使用 kubeadm 部署 Kubernetes 1.24 详细步骤总结.md)
+    * [Kubernetes的NetworkPlicy详解](Distributed System/Kubernetes/Kubernetes的NetworkPlicy.md)
   - [OpenStack]
     * [OpenStack-Queens版搭建详解](Distributed System/OpenStack/OpenStack-Queens版搭建详解.md)
   - [Zabbix](Distributed System/zabbix/zabbix.md)
