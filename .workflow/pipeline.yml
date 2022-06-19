@@ -50,7 +50,7 @@ stages:
         nodeVersion: 10.17.0
         commands:
           - cd Markdown-notebook/
-          - npm install gitbook-cli
+          - npm install gitbook-cli -g
           - npm install
           - git log --date=iso --pretty=format:\|"%h"\|"%ad"\|%an\|%ae\|"%s"\| >> log.md
           - 'sed -i "s/title:.*$/title\: \''运维开发绿皮书   Version: ${GITEE_SHORT_COMMIT}.\''\,/g" book.js'
