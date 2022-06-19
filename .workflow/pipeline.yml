@@ -58,11 +58,11 @@ stages:
         artifacts:
           - name: BUILD_ARTIFACT
             path:
-              - ./_book
+              - Markdown-notebook/_book
         strategy:
           retry: '0'
   - name: stage-de5b8e26
-    displayName: upload2Gitee
+    displayName: upload2Gitee 
     strategy: naturally
     trigger: auto
     executor: []
