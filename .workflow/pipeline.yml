@@ -54,7 +54,7 @@ stages:
           - npm install
           - git log --date=iso --pretty=format:\|"%h"\|"%ad"\|%an\|%ae\|"%s"\| >> log.md
           - 'sed -i "s/title:.*$/title\: \''运维开发绿皮书   Version: ${GITEE_SHORT_COMMIT}.\''\,/g" book.js'
-          - gitbook build --log debug
+          - gitbook build
         artifacts:
           - name: BUILD_ARTIFACT
             path:
