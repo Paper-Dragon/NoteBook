@@ -62,7 +62,20 @@ stages:
         strategy:
           retry: '0'
   - name: stage-de5b8e26
-    displayName: upload2Gitee 
+    displayName: upload2Gitee
+    strategy: naturally
+    trigger: auto
+    executor: []
+    steps:
+      - step: publish@general_artifacts
+        name: publish_general_artifacts
+        displayName: 上传制品
+        dependArtifact: BUILD_ARTIFACT
+        artifactName: notebook_html
+        strategy:
+          retry: '0'
+  - name: stage-63337412
+    displayName: depoly2Gitee
     strategy: naturally
     trigger: auto
     executor: []
@@ -70,16 +83,9 @@ stages:
       - step: publish@release_artifacts
         name: publish_release_artifacts
         displayName: 发布
-        dependArtifact: output
+        dependArtifact: notebook_html
         version: 1.0.0.0
         autoIncrement: true
-        strategy:
-          retry: '0'
-      - step: publish@general_artifacts
-        name: publish_general_artifacts
-        displayName: 上传制品
-        dependArtifact: BUILD_ARTIFACT
-        artifactName: output
         strategy:
           retry: '0'
 strategy:
