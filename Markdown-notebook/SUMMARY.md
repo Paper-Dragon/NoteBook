@@ -326,7 +326,9 @@
 - [kvm]
 - [memcache-redis]
 - [mycat]
-- [nginx]
+- [Nginx]
+  * [Nginx变量大全](Nginx/Nginx变量大全.md)
+  * [ginx的负载均衡和故障转移](Nginx/Nginx的负载均衡和故障转移.md)
 - [tomcat]
 - [nodejs]
 - [OpenWrt]
