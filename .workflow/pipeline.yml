@@ -34,7 +34,7 @@ stages:
           git pull
           # git push github master:master
           rm -rf ./_book ./book-html
-          git log --date=iso --pretty=format:\|"%h"\|"%ad"\|%an\|%ae\|"%s"\| | emojify >> log.md
+          git log --date=short --pretty=format:\|"%h"\|"%ad"\|%an\|%ae\|"%s"\| | emojify >> log.md
           sed -i "s/title:.*$/title\: \'运维开发绿皮书   Version: ${GITEE_SHORT_COMMIT}.\'\,/g" book.js
           gitbook build --log debug | tee ${web_home}build.txt build.txt 2>&1 > /dev/null
           cp -rvf build.txt _book/build.txt
@@ -52,7 +52,7 @@ stages:
           - cd Markdown-notebook/
           - npm install gitbook-cli -g
           - npm install
-          - git log --date=iso --pretty=format:\|"%h"\|"%ad"\|%an\|%ae\|"%s"\| | emojify >> log.md
+          - git log --date=iso --pretty=format:\|"%h"\|"%ad"\|%an\|%ae\|"%s"\| >> log.md
           - 'sed -i "s/title:.*$/title\: \''运维开发绿皮书   Version: ${GITEE_SHORT_COMMIT}.\''\,/g" book.js'
           - gitbook build
         artifacts:
