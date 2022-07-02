@@ -58,6 +58,7 @@
   * [Git识别项目的语言类型，及文件占比](git/Git识别项目的语言类型，及文件占比.md)
   * [git远程仓库回退到指定版本.md](git/git远程仓库回退到指定版本.md)
   * [git 基础命令](git/git 基础命令.md)
+  * [git 命令行显示gitmoji](git/命令行显示gitmoji.md)
 - [Gitlab]
   * [gitlab ci 编写](Gitlab/CI/gitlab ci 编写.md)
   * [gitlab ci 部署](Gitlab/CI/gitlab ci 部署.md)
