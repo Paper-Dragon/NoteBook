@@ -99,6 +99,8 @@
     * [vi编辑器](Linux Opera System/Vim/vi编辑器.md)
   - [Firewalld_Iptables]
     * [linux下IPTABLES配置详解](Linux Opera System/Firewalld_Iptables/linux下IPTABLES配置详解.md)
+- [Windows Opera System]
+  - [PowerShell 操作系统禁止运行脚本](Windows Opera System/PowerShell 操作系统禁止运行脚本.md)
 - [Research Develop]
   - [C](Research&Develop/C/README.md)
     - [ACL Lib](Research&Develop/C/ACLLib/ACLLib.md)
