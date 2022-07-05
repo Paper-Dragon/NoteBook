@@ -124,9 +124,3 @@ CFS规定了一个调度周期（schedule  latency），在一个调度周期内
 - 就绪的进程信息存储在红黑树中（按vruntime值插入树），这样的树每个CPU核心拥有一个（每个核心单独调度），在寻找当前vruntime最小的进程时即搜索了红黑树，时间复杂度为O(logN)。
 
 ## 
-
-20.205.9.49
-
-azureuser
-
-CfC4!Ya6HDxU
