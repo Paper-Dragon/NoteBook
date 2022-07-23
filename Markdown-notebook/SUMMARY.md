@@ -325,8 +325,7 @@
 - [Jenkins]
   * [jenkins构建持续化集成平台](Jenkins/jenkins构建持续化集成平台.md)
   * [修改Jenkins插件为国内源](Jenkins/修改Jenkins插件为国内源.md)
-- [ELK]
-- [kfaka]
+- [ELK+kafka构建高并发分布式日志收集系统](ELK+kafka构建高并发分布式日志收集系统/elk+kfaka.md)
 - [ha-lvs-keepalived]
 - [Portainer]
   * [Portainer 单机部署](Portainer/Portainer 单机部署.md)
