@@ -49,7 +49,7 @@ partition：
 
 ### 拓扑
 
-<img src="elk+kfaka.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ4MjkzNzQw,size_16,color_FFFFFF,t_70#pic_center.png" alt="在这里插入图片描述" style="zoom:200%;" />
+<img src="elk+kfaka.assets/基本架构.png" alt="在这里插入图片描述" style="zoom:200%;" />
 
 ### 说明
 
