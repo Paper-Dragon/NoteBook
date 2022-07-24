@@ -5,7 +5,7 @@
   "main": "book.js",
   "scripts": {
     "serve": "gitbook serve",
-    "bs": "book sm -o sm.md",   // npm install -g gitbook-summary
+    "bs": "book sm -o sm.md", 
     "build": "gitbook build"
   },
   "author": "",
