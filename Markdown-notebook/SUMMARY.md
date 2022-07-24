@@ -346,4 +346,4 @@
 - [PhotoShop]
   * [ps如何去水印的4个方法](PhotoShop/ps如何去水印的4个方法.md)
 - [ebook]
-  * [操作系统导论ostep](ebook/操作系统：三个简单的部分（OSTEP）.pdf)
+  * [电子书目录](ebook/ebook.md)
