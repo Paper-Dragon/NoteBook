@@ -8,7 +8,7 @@ package.json
 *.zip
 *.key
 *.mp3
-*.pdf
+# *.pdf
 *.py
 *.txt
 .DS_Store
